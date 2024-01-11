@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 234 17% 98%;
+  }
+
+  html.dark, [data-theme="dark"] {
+    --nextui-background: 234 17% 10%;
+  }
+
+  html, body {
+      @apply h-full;
+  }
+
+  /* To make the footer stay at the bottom despite there's not enough content */
+  /* Not sure from where these div come */
+  body > div[data-overlay-container="true"] {
+      @apply h-full; 
+  }
+}
