@@ -21,7 +21,7 @@ export const ThemeSwitcher = () => {
   return (
     <>
       <Switch
-        defaultSelected
+        defaultSelected={false}
         size="sm"
         color="default"
         startContent={<Sun />}
