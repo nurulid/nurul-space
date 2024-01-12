@@ -20,4 +20,18 @@
   body > div[data-overlay-container="true"]:first-child {
       @apply h-full; 
   }
+
+  div.card-label:nth-child(-n + 2) {
+    @apply bg-slate-300/70 text-slate-700;
+  }
+
+  .on-progress:before {
+    content: "On Progress";
+    @apply animate-pulse absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-70%] text-xl inline-flex items-center px-4 py-2 font-semibold leading-6 shadow rounded-full text-purple-500 bg-white dark:bg-slate-800 transition ease-in-out duration-150;
+  }
+
+  .team-project:after {
+    content: "Team Project";
+    @apply absolute -top-4 right-0 text-xs leading-5 font-semibold bg-yellow-200 text-yellow-900 rounded-full py-1 px-3 flex items-center space-x-2;
+  }
 }

@@ -9,7 +9,8 @@
             "thumbnail": "/portfolio/fylo-app.jpeg",
             "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
             "category": "CSS",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 2,
@@ -20,7 +21,8 @@
             "thumbnail": "/portfolio/sekolah-lp.jpeg",
             "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
             "category": "CSS",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 3,
@@ -31,7 +33,8 @@
             "thumbnail": "/portfolio/tajam-lp.jpeg",
             "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
             "category": "CSS",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 4,
@@ -42,29 +45,32 @@
             "thumbnail": "/portfolio/shawn-cruz-lp.jpeg",
             "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
             "category": "CSS",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 5,
-            "title": "Bento Layout",
-            "description": "",
+            "title": "Personal Website",
+            "description": "Bento layout, made with Tailwind CSS.",
             "previewURL": "https://nurul-personal-web.vercel.app/",
             "codeURL": "https://github.com/nurulid/nurul-personal-web",
             "thumbnail": "/portfolio/Nurul_s Personal Website.jpeg",
-            "labels": ["Tailwind CSS", "responsive", "bento", "layout"],
+            "labels": ["Tailwind CSS", "bento", "layout", "responsive"],
             "category": "CSS",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 6,
             "title": "Todo Lister",
-            "description": "",
+            "description": "CRUD Todo List, made with Next.js and Tailwind CSS",
             "previewURL": "https://todo-lister.vercel.app/",
             "codeURL": "https://github.com/nurulid/todo-lister",
             "thumbnail": "/portfolio/ToDo Lister.jpeg",
-            "labels": ["Tailwind CSS", "frontend", "Next.js", "CRUD"],
+            "labels": ["Next.js", "Tailwind CSS", "frontend", "CRUD"],
             "category": "frontend",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 7,
@@ -75,29 +81,32 @@
             "thumbnail": "/portfolio/Eventmakers NID.jpeg",
             "labels": ["Next.js", "Tailwind CSS", "NextUI", "frontend"],
             "category": "frontend",
-            "isDone": true
+            "isDone": true,
+            "isTeam": false
         },
         {
             "id": 8,
             "title": "Adopt Hunt",
-            "description": "",
+            "description": "Where pet lovers meet! A platform designed to make pet adoption easy and joyful.",
             "previewURL": "https://adopt-hunt.vercel.app/",
             "codeURL": "https://github.com/kemalmao19/adopt-hunt",
             "thumbnail": "/portfolio/Adopt-Hunt.jpeg",
-            "labels": ["Next.js", "Tailwind CSS", "NextUI", "Prisma", "fullstack"],
+            "labels": ["Next.js", "Prisma", "Tailwind CSS", "NextUI", "fullstack"],
             "category": "fullstack",
-            "isDone": true
+            "isDone": true,
+            "isTeam": true
         },
         {
             "id": 9,
             "title": "Focus Board",
-            "description": "",
+            "description": "Board to focus on today tasks.",
             "previewURL": "https://todayfocus.vercel.app/",
             "codeURL": "https://github.com/nurulid/focus-board",
-            "thumbnail": "/portfolio/focus-board-5.png",
-            "labels": ["Next.js", "Tailwind CSS", "NextUI", "Prisma", "fullstack"],
+            "thumbnail": "/portfolio/focus-board-2.png",
+            "labels": ["Next.js", "Prisma", "Tailwind CSS", "NextUI", "fullstack"],
             "category": "fullstack",
-            "isDone": false
+            "isDone": false,
+            "isTeam": false
         }
     ]
 }
