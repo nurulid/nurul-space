@@ -17,7 +17,7 @@
 
   /* To make the footer stay at the bottom despite there's not enough content */
   /* Not sure from where these div come */
-  body > div[data-overlay-container="true"] {
+  body > div[data-overlay-container="true"]:first-child {
       @apply h-full; 
   }
 }
