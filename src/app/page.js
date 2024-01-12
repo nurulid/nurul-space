@@ -16,7 +16,7 @@ export default async function Home() {
           from Indonesia.
         </h2>
         <p className="text-gray-400 text-center md:text-right leading-7">
-          I'm an experienced Frontend Developer, especially in UI design. During
+          I'm an experienced Frontend Developer, especially in UI <span className="line-through">design</span>. During
           my experience, I learn and practice how to build beautiful and
           functional products.
         </p>
