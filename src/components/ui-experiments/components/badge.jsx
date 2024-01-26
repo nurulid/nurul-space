@@ -13,7 +13,7 @@ export const Badge = ({Icon, title, color, border, rounded, animated, className}
   }
 
   return (
-    <span className={`badge dark:bg-gray-800 dark:border-gray-700 whitespace-nowrap inline-block text-sm ${colorVariants[color]} py-1 px-3 rounded-${rounded} ${border} transition-all ${className ? className : ""}`}>
+    <span className={`badge dark:bg-gray-800 dark:hover:bg-gray-800/50 dark:border-gray-700 whitespace-nowrap inline-block text-sm ${colorVariants[color]} py-1 px-3 rounded-${rounded} ${border} transition-all ${className ? className : ""}`}>
       { Icon && <Icon className={`inline translate-y-[-1px] ${animated}`} size={15}/>} {title}
     </span>
   )
