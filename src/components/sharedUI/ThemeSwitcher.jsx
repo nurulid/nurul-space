@@ -19,17 +19,15 @@ export const ThemeSwitcher = () => {
     }
   }
   return (
-    <>
-      <Switch
-        defaultSelected={false}
-        size="sm"
-        color="default"
-        startContent={<Sun />}
-        endContent={<Moon />}
-        onChange={(e) => setThemeMode(e.target.checked)}
-      >
-        <span className="text-sm">{mounted && theme}</span>
-      </Switch>
-    </>
+    <Switch
+      defaultSelected={false}
+      size="sm"
+      color="default"
+      startContent={<Sun />}
+      endContent={<Moon />}
+      onChange={(e) => setThemeMode(e.target.checked)}
+    >
+      <span className="text-sm">{mounted && theme}</span>
+    </Switch>
   );
 };
