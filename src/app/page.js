@@ -25,7 +25,7 @@ export default async function Home() {
           <a href="https://id.linkedin.com/in/nurul-insani-dewi" target="_blank" title="My Linkedin" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all">
             <Linkedin />
           </a>
-          <a href="mailto:call.nurulid.com" title="Contact me" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all animate-bounce">
+          <a href="mailto:call.nurulid@gmail.com" title="Contact me" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all animate-bounce">
             <Mail />
           </a>
         </div>
