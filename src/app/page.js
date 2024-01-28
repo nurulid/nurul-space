@@ -1,5 +1,6 @@
 import { AllPortfolio } from "@/components/portfolio/AllPortfolio";
 import { promises as fs } from "fs";
+import { Linkedin, Mail } from "lucide-react";
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + "/public/data.json", "utf8");
@@ -20,6 +21,14 @@ export default async function Home() {
           my experience, I learn and practice how to build beautiful and
           functional products.
         </p>
+        <div className="flex justify-end gap-4 items-center mt-4">
+          <a href="https://id.linkedin.com/in/nurul-insani-dewi" target="_blank" title="My Linkedin" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all">
+            <Linkedin />
+          </a>
+          <a href="mailto:call.nurulid.com" title="Contact me" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all animate-bounce">
+            <Mail />
+          </a>
+        </div>
       </div>
       <AllPortfolio portfolio={portfolio} />
     </>

@@ -6,7 +6,7 @@ import { Layout } from "@/components/template/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Nurul space",
+  title: "Frontend Developer | Nurul Insani Dewi",
   description: "Nurul's portfolio, ui experiments, etc.",
 };
 
