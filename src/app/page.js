@@ -1,6 +1,6 @@
 import { AllPortfolio } from "@/components/portfolio/AllPortfolio";
 import { promises as fs } from "fs";
-import { Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + "/public/data.json", "utf8");
@@ -22,6 +22,9 @@ export default async function Home() {
           functional products.
         </p>
         <div className="flex justify-end gap-4 items-center mt-4">
+          <a href="https://github.com/nurulid" target="_blank" title="My GitHub" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all">
+            <Github />
+          </a>
           <a href="https://id.linkedin.com/in/nurul-insani-dewi" target="_blank" title="My Linkedin" className="hover:text-violet-600 hover:dark:via-violet-200 transition-all">
             <Linkedin />
           </a>
