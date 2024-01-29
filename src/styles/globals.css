@@ -34,4 +34,8 @@
     content: "Team Project";
     @apply absolute -top-4 right-0 text-xs leading-5 font-semibold bg-yellow-200 text-yellow-900 rounded-full py-1 px-3 flex items-center space-x-2;
   }
+
+  .chip.active {
+    @apply bg-black text-violet-200;
+  }
 }

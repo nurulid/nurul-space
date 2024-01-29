@@ -2,12 +2,12 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.css";
 import { Provider } from "@/components/provider";
-import { DefaultLayout } from "@/components/template/DefaultLayout";
+import { Layout } from "@/components/template/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Nurul space",
+  title: "Frontend Developer | Nurul Insani Dewi",
   description: "Nurul's portfolio, ui experiments, etc.",
 };
 

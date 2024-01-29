@@ -3,7 +3,6 @@
 import { Chip, Tooltip } from "@nextui-org/react";
 import { Github, MoveRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 export const AllPortfolio = ({ portfolio }) => {
@@ -27,20 +26,20 @@ export const AllPortfolio = ({ portfolio }) => {
     ? sortedData.filter((item) => item.category === selectedCategory)
     : sortedData;
 
-  const category = [null, "CSS", "frontend", "fullstack"];
+  const categories = [null, "CSS", "frontend", "fullstack"];
 
   return (
     <>
       <h1 className="text-3xl mb-5">My Projects</h1>
       <div>
-        {category.map((item, index) => {
+        {categories.map((item, index) => {
           return (
             <Chip
               key={index}
               onClick={() => handleFilter(item)}
               variant="flat"
               color="secondary"
-              className="mr-3 cursor-pointer capitalize"
+              className={`mr-3 cursor-pointer capitalize chip ${selectedCategory === item ? 'active' : ''}`}
             >
               {item === null ? "all" : item}
             </Chip>

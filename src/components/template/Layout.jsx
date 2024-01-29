@@ -2,7 +2,7 @@ import React from 'react'
 import { Header } from '../sharedUI/Header'
 import { Footer } from '../sharedUI/Footer'
 
-export const DefaultLayout = ({children}) => {
+export const Layout = ({children}) => {
   return (
     <div className='flex flex-col justify-between h-full'>
         <div className='relative'>
