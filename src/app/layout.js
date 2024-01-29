@@ -16,10 +16,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Provider>
-          <DefaultLayout>
+          <Layout>
             {children}
             <Analytics />
-          </DefaultLayout>
+          </Layout>
         </Provider>
       </body>
     </html>
