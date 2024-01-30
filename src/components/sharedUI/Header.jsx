@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { CircleDashed } from "lucide-react";
+import { Flower } from "lucide-react";
 
 export const Header = () => {
 
@@ -12,7 +12,7 @@ export const Header = () => {
         <Link href={"/"} className="text-xl font-semibold font-mono">Nurul Insani Dewi</Link>
         <div className="space-x-5 ml-auto">
           <Link href={"/ui-experiments"} className="text-violet-500 hover:text-violet-400 whitespace-nowrap group">
-            <CircleDashed size={16} className="animate-spin inline-block mr-1 mb-[3px] group-hover:animate-none"/>
+            <Flower size={16} className="animate-spin inline-block mr-1 mb-[3px] text-cyan-500 group-hover:animate-none transition-all"/>
             UI Experiments
           </Link>
           <ThemeSwitcher/>
