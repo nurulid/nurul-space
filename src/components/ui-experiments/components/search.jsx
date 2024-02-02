@@ -1,4 +1,4 @@
-import { SearchIcon } from "lucide-react";
+import { SearchIcon, ArrowRight } from "lucide-react";
 import React from "react";
 
 export const Search = () => {
@@ -56,13 +56,13 @@ export const Search = () => {
               Related Topic
             </h3>
             <div className="flex flex-wrap gap-3 px-5">
-              <span className="px-4 py-2 rounded-xl font-semibold bg-[#EFEFEF] whitespace-nowrap text-sm">
+              <span className="px-2 py-1 rounded-md font-semibold bg-[#EFEFEF] whitespace-nowrap text-sm">
                 Landscape architecture
               </span>
-              <span className="px-4 py-2 rounded-xl font-semibold bg-[#EFEFEF] whitespace-nowrap text-sm">
+              <span className="px-2 py-1 rounded-md font-semibold bg-[#EFEFEF] whitespace-nowrap text-sm">
                 Historical building
               </span>
-              <span className="px-4 py-2 rounded-xl font-semibold bg-[#EFEFEF] whitespace-nowrap text-sm">
+              <span className="px-2 py-1 rounded-md font-semibold bg-[#EFEFEF] whitespace-nowrap text-sm">
                 Urban design
               </span>
             </div>
@@ -72,36 +72,52 @@ export const Search = () => {
               Search Result
             </h3>
             <div>
-              <div className="py-3 border-b space-y-1 px-5 hover:bg-[#F0ECFF] transition-all">
-                <h4 className="text-xl font-[500] truncate">Heritage building</h4>
-                <p className="text-xs text-gray-400">
-                  See all project with tag: <a href="#" className="hover:text-purple-700">Heritage</a>
-                </p>
+              <div className="px-5 hover:bg-[#F0ECFF] transition-all">
+                <div className="py-3 border-b space-y-1">
+                  <h4 className="font-[500] truncate">Heritage building</h4>
+                  <p className="text-xs text-gray-400">
+                    See all project with tag:{" "}
+                    <a href="#" className="hover:text-purple-700">
+                      Heritage
+                    </a>
+                  </p>
+                </div>
               </div>
-              <div className="py-3 border-b space-y-1 px-5 hover:bg-[#F0ECFF] transition-all">
-                <h4 className="text-xl font-[500] truncate">The Hedberg Cultural Building</h4>
-                <p className="text-xs text-gray-400">
-                  Heritage building
-                </p>
+              <div className="px-5 hover:bg-[#F0ECFF] transition-all">
+                <div className="py-3 border-b space-y-1">
+                  <h4 className="font-[500] truncate">
+                    The Hedberg Cultural Building
+                  </h4>
+                  <p className="text-xs text-gray-400">Heritage building</p>
+                </div>
               </div>
-              <div className="py-3 border-b space-y-1 px-5 hover:bg-[#F0ECFF] transition-all">
-                <h4 className="text-xl font-[500] truncate">UNESCO Removes Liverpool's World Heritage Statue and bla ble blu</h4>
-                <p className="text-xs text-gray-400">
-                  Article news
-                </p>
+              <div className="px-5 hover:bg-[#F0ECFF] transition-all">
+                <div className="py-3 border-b space-y-1">
+                  <h4 className="font-[500] truncate">
+                    UNESCO Removes Liverpool's World Heritage Statue and bla ble
+                    blu
+                  </h4>
+                  <p className="text-xs text-gray-400">Article news</p>
+                </div>
               </div>
-              <div className="py-3 border-b space-y-1 px-5 hover:bg-[#F0ECFF] transition-all">
-                <h4 className="text-xl font-[500] truncate">The Heritage / CYS.ASDO</h4>
-                <p className="text-xs text-gray-400">
-                  Article
-                </p>
+              <div className="px-5 hover:bg-[#F0ECFF] transition-all">
+                <div className="py-3 border-b space-y-1">
+                  <h4 className="font-[500] truncate">
+                    The Heritage / CYS.ASDO
+                  </h4>
+                  <p className="text-xs text-gray-400">Article</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="action px-5 py-7 flex justify-between text-xl font-semibold text-purple-700">
-          <a href="#" className="hover:underline transition-all">See all result</a>
-          <a href="#" className="hover:underline transition-all">Search settings</a>
+        <div className="action px-5 py-6 flex justify-between font-semibold text-purple-700">
+          <a href="#" className="hover:underline transition-all">
+            See all result <ArrowRight className="inline-block mb-1" size={15} />
+          </a>
+          <a href="#" className="hover:underline transition-all">
+            Search settings
+          </a>
         </div>
       </div>
     </div>
