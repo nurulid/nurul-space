@@ -1,4 +1,4 @@
-import { PortfolioInfo } from "@/components/portfolio/portfolioInfo";
+import { UiDesignInfo } from "@/components/ui-experiments/components/uiDesignInfo";
 import { AllBadges } from "@/components/ui-experiments/allBadges";
 import { Search } from "@/components/ui-experiments/components/search";
 
@@ -31,11 +31,11 @@ export default function Page() {
     <div className="py-10 columns-2 gap-14">
       <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col break-inside-avoid">
         <AllBadges />
-        <PortfolioInfo data={uiExperiments[0]}/>
+        <UiDesignInfo data={uiExperiments[0]}/>
       </div>
       <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col break-inside-avoid">
         <Search />
-        <PortfolioInfo data={uiExperiments[1]}/>
+        <UiDesignInfo data={uiExperiments[1]}/>
       </div>
     </div>
   );
