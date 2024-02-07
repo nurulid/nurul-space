@@ -8,6 +8,28 @@ import {
 import React from "react";
 
 export const Search = () => {
+  const searchResult = [
+    {
+      title: "Heritage building",
+      topic: "",
+      tag: "Heritage",
+    },
+    {
+      title: "The Hedberg Cultural Building",
+      topic: "Heritage building",
+      tag: "",
+    },
+    {
+      title: "UNESCO Removes Liverpool's World Heritage Statue and bla ble blu",
+      topic: "Article news",
+      tag: "",
+    },
+    {
+      title: "The Heritage / CYS.ASDO",
+      topic: "Article",
+      tag: "",
+    },
+  ];
   return (
     <div className="shadow rounded-xl dark:bg-gray-800/50 dark:border-gray-700 max-w-[600px]">
       {/* search input */}
@@ -78,106 +100,42 @@ export const Search = () => {
             Search Result
           </h3>
           <div>
-            <div className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
-              <div className="py-3 border-b dark:border-gray-700 flex justify-between items-center gap-4">
-                <div className="overflow-hidden space-y-1">
-                  <h4 className="font-[500] truncate">Heritage building</h4>
-                  <p className="text-xs text-gray-400">
-                    See all project with tag:{" "}
-                    <a href="#" className="hover:text-purple-700">
-                      Heritage
-                    </a>
-                  </p>
+            {searchResult.map((item) => {
+              return (
+                <div className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
+                  <div className="py-3 border-b dark:border-gray-700 flex justify-between items-center gap-4">
+                    <div className="overflow-hidden space-y-1">
+                      <h4 className="font-[500] truncate">{item.title}</h4>
+                      <p className="text-xs text-gray-400">
+                        {item.tag && (
+                          <>
+                            See all project with tag:{" "}
+                            <a href="#" className="hover:text-purple-700">
+                              Heritage
+                            </a>
+                          </>
+                        )}
+                        {item.topic && item.topic}
+                      </p>
+                    </div>
+                    <div className="hidden gap-2 group-hover:flex">
+                      <ArrowUpRight
+                        size={27}
+                        className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
+                      />
+                      <Heart
+                        size={27}
+                        className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
+                      />
+                      <Bookmark
+                        size={27}
+                        className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div className="hidden gap-2 group-hover:flex">
-                  <ArrowUpRight
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Heart
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Bookmark
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
-              <div className="py-3 border-b dark:border-gray-700 flex justify-between items-center gap-4">
-                <div className="overflow-hidden space-y-1">
-                  <h4 className="font-[500] truncate">
-                    The Hedberg Cultural Building
-                  </h4>
-                  <p className="text-xs text-gray-400">Heritage building</p>
-                </div>
-                <div className="hidden gap-2 group-hover:flex">
-                  <ArrowUpRight
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Heart
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Bookmark
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
-              <div className="py-3 border-b dark:border-gray-700 flex justify-between items-center gap-4">
-                <div className="overflow-hidden space-y-1">
-                  <h4 className="font-[500] truncate">
-                    UNESCO Removes Liverpool's World Heritage Statue and bla ble
-                    blu
-                  </h4>
-                  <p className="text-xs text-gray-400">Article news</p>
-                </div>
-                <div className="hidden gap-2 group-hover:flex">
-                  <ArrowUpRight
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Heart
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Bookmark
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
-              <div className="py-3 border-b dark:border-gray-700 flex justify-between items-center gap-4">
-                <div className="overflow-hidden space-y-1">
-                  <h4 className="font-[500] truncate">
-                    The Heritage / CYS.ASDO
-                  </h4>
-                  <p className="text-xs text-gray-400">Article</p>
-                </div>
-                <div className="hidden gap-2 group-hover:flex">
-                  <ArrowUpRight
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Heart
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                  <Bookmark
-                    size={27}
-                    className="p-[5px] hover:bg-[#E1DAFC] dark:hover:bg-[#27272e] rounded-full transition-all"
-                  />
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
