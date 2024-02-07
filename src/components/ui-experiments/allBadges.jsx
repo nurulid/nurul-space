@@ -20,10 +20,6 @@ import {
 
 export const AllBadges = () => {
   return (
-    <>
-      <div className="mb-2 pb-4 border-b dark:border-gray-700 text-left">
-        <h2 className="text-xl">Badges</h2>
-      </div>
       <div className="text-center">
         <div className="space-x-4 space-y-4">
           <Badge Icon={Check} title={"Paid"} color={"green"} rounded={"full"} />
@@ -205,6 +201,5 @@ export const AllBadges = () => {
           />
         </div>
       </div>
-    </>
   );
 };
