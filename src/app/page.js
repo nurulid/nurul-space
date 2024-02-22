@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="my-10 max-w-3xl ml-auto pb-10 border-b border-dashed leading-6">
+      <div className="my-10 max-w-3xl ml-auto pb-10 border-b border-dashed text-right leading-6">
         <h2 className="mb-2 text-4xl lg:text-5xl text-center md:text-right font-mono">
           Hello 🙂 <br />
           I'm <span className="text-purple-500">Nurul</span> a Frontend Developer
@@ -32,6 +32,7 @@ export default async function Home() {
             <Mail />
           </a>
         </div>
+        <a href="mailto:call.nurulid@gmail.com" title="Contact me" className="text-green-400 hover:text-green-600 transition-all text-right inline-block underline underline-offset-4 decoration-wavy mt-5">Available for New Opportunities</a>
       </div>
       <AllPortfolio portfolio={portfolio} />
     </>

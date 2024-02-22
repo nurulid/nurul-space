@@ -30,56 +30,56 @@ export const ShareDialog = () => {
       </div>
       <div className="social grid grid-cols-4 gap-6 mt-8 mb-12">
         <div className="text-center">
-          <div className="bg-[#E7F6FE] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#E7F6FE] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Twitter color="#1EA1F1" size={35} />
           </div>
           <p>Twitter</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#FFECE6] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#FFECE6] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Mail color="#FF4500" size={35} />
           </div>
           <p>Email</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#fdeaf6] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#fdeaf6] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Instagram color="#FD33B6" size={35} />
           </div>
           <p>Instagram</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#e3f1ff] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#e3f1ff] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Linkedin color="#0B66C2" size={35} />
           </div>
           <p>Linkedin</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#ECDFEC] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#ECDFEC] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Slack color="#4A154B" size={35} />
           </div>
           <p>Slack</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#e0e0e0] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#e0e0e0] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Send color="#333333" size={35} />
           </div>
           <p>Telegram</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#E7F6FE] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#E7F6FE] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Facebook color="#1A77F2" size={35} />
           </div>
           <p>Facebook</p>
         </div>
         <div className="text-center">
-          <div className="bg-[#F2F7EA] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3">
+          <div className="bg-[#F2F7EA] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <MessageCircle color="#7BB42E" size={35} />
           </div>
           <p>Messenger</p>
         </div>
       </div>
       <div className="link-input">
-        <h3 className="text-xl mb-3">Page link</h3>
+        <h3 className="mb-3">Page link</h3>
         <Input
           value="https://www.thelink.com"
           className="text-gray-400"
