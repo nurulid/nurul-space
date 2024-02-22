@@ -100,9 +100,9 @@ export const Search = () => {
             Search Result
           </h3>
           <div>
-            {searchResult.map((item) => {
+            {searchResult.map((item, i) => {
               return (
-                <div className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
+                <div key={i} className="px-5 hover:bg-[#F0ECFF] dark:hover:bg-gray-900/50 transition-all cursor-pointer group">
                   <div className="py-3 border-b dark:border-gray-700 flex justify-between items-center gap-4">
                     <div className="overflow-hidden space-y-1">
                       <h4 className="font-[500] truncate">{item.title}</h4>

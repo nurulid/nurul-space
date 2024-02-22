@@ -2,7 +2,7 @@ import { Codepen, Github } from "lucide-react";
 import Link from "next/link";
 import { websiteShortName } from "@/lib/utils";
 
-export const PortfolioInfo = ({ data }) => {
+export const UiDesignInfo = ({ data }) => {
   return (
     <div className="mt-auto">
       <div className="mt-8 text-left">
