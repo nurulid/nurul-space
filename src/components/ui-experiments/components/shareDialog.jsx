@@ -21,14 +21,14 @@ export const ShareDialog = () => {
 
   const toggleVisibility = () => setIsVisible(!isVisible);
   return (
-    <div className="p-10 shadow rounded-xl">
+    <div className="p-5 lg:p-10 shadow rounded-xl">
       <div className="flex justify-between items-start">
         <h2 className="text-2xl font-semibold">Share</h2>
         <button className="focus:outline-none" type="button">
           <X className="bg-gray-100 rounded-full p-2" size={30} />
         </button>
       </div>
-      <div className="social grid grid-cols-4 gap-6 mt-8 mb-12">
+      <div className="social grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mt-8 mb-12">
         <div className="text-center">
           <div className="bg-[#E7F6FE] rounded-full w-[80px] h-[80px] p-4 flex justify-center items-center mx-auto mb-3 cursor-pointer hover:opacity-75 transition-all">
             <Twitter color="#1EA1F1" size={35} />
