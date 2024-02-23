@@ -49,26 +49,26 @@ export const Search = () => {
         <nav className="px-5">
           <ul className="flex gap-5 text-[16px] text-gray-400 font-semibold">
             <li className="py-2 cursor-pointer active text-purple-700 border-b-3 border-purple-700">
-              All{" "}
-              <span className="text-xs font-normal px-2 py-[2px] bg-[#E3DCFF] dark:bg-[#a9a0cd] rounded-md inline-block ml-2">
+              <span className="inline-block mr-2">All</span>
+              <span className="text-xs font-normal px-2 py-[2px] bg-[#E3DCFF] dark:bg-[#a9a0cd] rounded-md">
                 99+
               </span>
             </li>
             <li className="py-2 cursor-pointer">
-              Project{" "}
-              <span className="text-xs font-normal px-2 py-[2px] bg-[#F1F1F1] dark:bg-[#434343] rounded-md inline-block ml-2">
+              <span className="inline-block mr-2">Project</span>
+              <span className="text-xs font-normal px-2 py-[2px] bg-[#F1F1F1] dark:bg-[#434343] rounded-md">
                 42
               </span>
             </li>
             <li className="py-2 cursor-pointer">
-              Article{" "}
-              <span className="text-xs font-normal px-2 py-[2px] bg-[#F1F1F1] dark:bg-[#434343] rounded-md inline-block ml-2">
+              <span className="inline-block mr-2">Article</span>
+              <span className="text-xs font-normal px-2 py-[2px] bg-[#F1F1F1] dark:bg-[#434343] rounded-md">
                 17
               </span>
             </li>
             <li className="py-2 cursor-pointer">
-              Event{" "}
-              <span className="text-xs font-normal px-2 py-[2px] bg-[#F1F1F1] dark:bg-[#434343] rounded-md inline-block ml-2">
+              <sp className="inline-block mr-2"an>Event</sp>
+              <span className="text-xs font-normal px-2 py-[2px] bg-[#F1F1F1] dark:bg-[#434343] rounded-md">
                 8
               </span>
             </li>
