@@ -24,7 +24,7 @@ export const HeroHome = () => {
             </a>
             <a
               href="#"
-              className="py-5 px-16 bg-[#FF3333] text-white rounded-md shadow-md hover:shadow-xl text-sm font-bold "
+              className="py-5 px-14 bg-[#FF3333] text-white rounded-[10px] shadow-md hover:shadow-xl font-bold hover:scale-105 transition-all"
             >
               Download Arc
             </a>

@@ -6,7 +6,7 @@ export const Header = () => {
       <nav className="p-5 flex justify-between items-center max-w-7xl w-full mx-auto h-[100px]">
         {/* TODO: hover effect */}
         <ul className="flex items-center gap-6 text-sm font-semibold">
-          <li className="hover:scale-110">
+          <li className="hover:scale-105 transition-all">
             <a href="#">
               <svg
                 width="32"
@@ -141,7 +141,7 @@ export const Header = () => {
         </ul>
         <a
           href="#"
-          className="py-3 px-5 bg-white text-[#4148FB] rounded-md shadow-md hover:shadow-xl text-xs font-bold "
+          className="py-3 px-5 bg-white text-[#4148FB] rounded-[10px] shadow-md hover:shadow-xl text-xs font-bold hover:scale-105 transition-all"
         >
           Download Arc
         </a>
