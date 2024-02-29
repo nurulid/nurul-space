@@ -2,12 +2,11 @@ import React from "react";
 
 export const Header = () => {
   return (
-    <header className="bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat">
+    <header className="arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat">
       <nav className="p-5 flex justify-between items-center max-w-7xl w-full mx-auto h-[100px]">
-        {/* TODO: hover effect */}
-        <ul className="flex items-center gap-6 text-sm font-semibold">
-          <li className="hover:scale-105 transition-all">
-            <a href="#">
+        <ul className="flex items-center gap-3 text-sm font-semibold">
+          <li>
+            <a href="#" className="arc-logo inline-block hover:scale-105 transition-all">
               <svg
                 width="32"
                 height="32"

@@ -58,7 +58,7 @@ export const HeroHome = () => {
       <marquee
         behavior=""
         direction=""
-        className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-4 border-b-4 border-dashed border-[#3239FB] py-6 px-5 mb-0"
+        className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-4 border-b-4 border-dashed border-[#3239FB] py-6 px-5 -mb-[10px]"
       >
         <a href="#" className="px-8">
           “Rethinking the fundamentals of how we use the web.”
