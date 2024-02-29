@@ -140,7 +140,7 @@ export const Header = () => {
         </ul>
         <a
           href="#"
-          className="py-3 px-5 bg-white text-[#4148FB] rounded-[10px] shadow-md hover:shadow-xl text-xs font-bold hover:scale-105 transition-all"
+          className="py-3 px-5 bg-white text-[#4148FB] rounded-[10px] shadow-md hover:shadow-xl text-xs font-bold hover:scale-105 transition-all inline-block"
         >
           Download Arc
         </a>

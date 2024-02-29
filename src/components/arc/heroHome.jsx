@@ -10,7 +10,7 @@ export const HeroHome = () => {
           <span>Download it in the App Store →</span>
         </a>
       </div>
-      <div className="bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[78vh] overflow-hidden">
+      <div className="bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
         <div className="inner max-w-7xl w-full mx-auto">
           <div className="text-center">
             <h1 className="text-[56px] font-bold leading-[.9] text-center w-[50%] mx-auto">
@@ -24,7 +24,7 @@ export const HeroHome = () => {
             </a>
             <a
               href="#"
-              className="py-5 px-14 bg-[#FF3333] text-white rounded-[10px] shadow-md hover:shadow-xl font-bold hover:scale-105 transition-all"
+              className="py-4 px-12 bg-[#FF3333] text-white rounded-[10px] shadow-md hover:shadow-xl font-bold hover:scale-105 transition-all inline-block"
             >
               Download Arc
             </a>

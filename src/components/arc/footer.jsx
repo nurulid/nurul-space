@@ -3,13 +3,13 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer className="arc-footer bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat ">
-      <div className="text-center py-20 px-5 border-b-4 border-dashed border-white">
+      <div className="text-center py-16 px-5 border-b-4 border-dashed border-white">
         <h2 className="text-center text-3xl font-bold mb-10">
           Enter <span className="italic">your</span> new home on the internet
         </h2>
         <a
           href="#"
-          className="py-5 px-14 bg-[#FF3333] text-white rounded-[10px] shadow-md hover:shadow-xl font-bold hover:scale-105 transition-all"
+          className="py-4 px-12 bg-[#FF3333] text-white rounded-[10px] shadow-md hover:shadow-xl font-bold hover:scale-105 transition-all inline-block"
         >
           Download Arc
         </a>
