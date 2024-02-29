@@ -4,8 +4,8 @@ export const Footer = () => {
   return (
     <footer className="arc-footer bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat ">
       <div className="text-center py-20 px-5 border-b-4 border-dashed border-white">
-        <h2 className="text-center text-2xl font-bold mb-10">
-          Enter your new home on the internet
+        <h2 className="text-center text-3xl font-bold mb-10">
+          Enter <span className="italic">your</span> new home on the internet
         </h2>
         <a
           href="#"
