@@ -38,6 +38,15 @@
   .chip.active {
     @apply bg-black text-violet-200;
   }
+
+  /* Arc Landing Page */
+  .arc-header li > a:not(.arc-logo){
+    @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
+  }
+
+  .arc-footer li > a{
+    @apply hover:underline;
+  }
 }
 
 .arc-intro__image {
