@@ -1,3 +1,4 @@
+import { Twitter, Youtube } from "lucide-react";
 import React from "react";
 
 export const Footer = () => {
@@ -138,7 +139,7 @@ export const Footer = () => {
           </div>
           <div className="text-sm">
             <h3 className="uppercase mb-4">Product</h3>
-            <nav>
+            <nav className="font-[300]">
               <ul>
                 <li>
                   <a href="#">Privacy Policy</a>
@@ -179,6 +180,14 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a href="#">Careers @ BCNY</a>
+                </li>
+                <li>
+                  <ul className="flex items-center gap-4 mt-4">
+                    <li>
+                      <a href="#"><Youtube/></a>
+                    </li>
+                    <li><a href="#"><Twitter/></a></li>
+                  </ul>
                 </li>
               </ul>
             </nav>
