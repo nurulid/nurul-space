@@ -108,7 +108,7 @@ export const TestiHome = () => {
           ></path>
         </svg>
       </div>
-      <div className="grid grid-cols-4 max-w-7xl w-full mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[90rem] w-full mx-auto">
         <div className="arc-testi__box">
           <p className="arc-testi__desc">Way more powerful than Chrome. Arc looks like the future of browsers.</p>
           <span className="arc-testi__user">@BEEBOMCO</span>
