@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="arc-footer bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat ">
       <div className="text-center py-16 px-5 border-b-4 border-dashed border-white">
-        <h2 className="text-center text-3xl font-bold mb-10">
+        <h2 className="text-center text-3xl font-bold mb-4">
           Enter <span className="italic">your</span> new home on the internet
         </h2>
         <a
@@ -184,9 +184,9 @@ export const Footer = () => {
                 <li>
                   <ul className="flex items-center gap-4 mt-4">
                     <li>
-                      <a href="#"><Youtube/></a>
+                      <a href="#" className="hover:opacity-55 transition-all"><Youtube/></a>
                     </li>
-                    <li><a href="#"><Twitter/></a></li>
+                    <li><a href="#" className="hover:opacity-55 transition-all"><Twitter/></a></li>
                   </ul>
                 </li>
               </ul>

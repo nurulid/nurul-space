@@ -53,7 +53,7 @@
   }
 
   .arc-link {
-    @apply text-[#3239FB];
+    @apply text-[#3239FB] font-bold;
   }
   .arc-header li > a:not(.arc-logo){
     @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
