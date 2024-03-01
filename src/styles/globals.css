@@ -21,6 +21,10 @@
       @apply h-full; 
   }
 
+  .container {
+    @apply max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10;
+  }
+
   div.card-label:nth-child(-n + 2) {
     @apply bg-slate-300/70 text-slate-700;
   }
@@ -40,6 +44,17 @@
   }
 
   /* Arc Landing Page */
+  .arc-title {
+    @apply text-[40px] text-[#3239FB] w-full lg:w-[60%] mx-auto leading-[1.1];
+  }
+
+  .arc-desc {
+    @apply text-[20px] text-[#696969] font-[300];
+  }
+
+  .arc-link {
+    @apply text-[#3239FB];
+  }
   .arc-header li > a:not(.arc-logo){
     @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
   }
@@ -51,13 +66,17 @@
   .arc-testi__box {
     @apply text-center p-5;
   }
-  
+
   .arc-testi__desc {
     @apply text-3xl text-[#4148FB] mb-5 font-bold;
   }
 
   .arc-testi__user {
     @apply py-[6px] px-4 text-xs text-[#4148FB] bg-white border-2 border-[#4148FB] rounded-[10px] uppercase;
+  }
+
+  .arc-content video {
+    @apply -mt-[5%] relative z-[-1] w-full;
   }
 }
 

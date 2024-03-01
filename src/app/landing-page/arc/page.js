@@ -1,3 +1,4 @@
+import { ContentHome } from "@/components/arc/contentHome";
 import { Footer } from "@/components/arc/footer";
 import { Header } from "@/components/arc/header";
 import { HeroHome } from "@/components/arc/heroHome";
@@ -9,7 +10,7 @@ export default function Page() {
     <>
       <Header />
       <HeroHome />
-      {/* <main className="max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10"></main> */}
+      <ContentHome />
       <TestiHome />
       <Footer />
     </>
