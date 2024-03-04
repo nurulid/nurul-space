@@ -18,7 +18,7 @@ export const HeroHome = () => {
       <div className="bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
         <div className="inner max-w-7xl w-full mx-auto">
           <div className="text-center">
-            <h1 className="text-[56px] font-bold leading-[.9] text-center w-[50%] mx-auto">
+            <h1 className="text-[44px] md:text-[56px] font-bold leading-[.9] text-center w-11/12 lg:w-[50%] mx-auto">
               "Arc is the Chrome replacement I’ve been waiting for."
             </h1>
             <a
