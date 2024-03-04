@@ -126,3 +126,38 @@
   top: -115px;
   left: -140px;
 }
+
+.arc-header {
+  transition: all .5s ease;
+  animation: slideUp .5s ease forwards;
+}
+
+.arc-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #3239FB;
+  background-image: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideDown .5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

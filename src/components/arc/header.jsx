@@ -1,8 +1,28 @@
-import React from "react";
+"use client"
+
+import { useState, useEffect } from "react";
 
 export const Header = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return() => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <header className="arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat">
+    <header className={`${isSticky ? "sticky" : ""} arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat`}>
       <nav className="p-5 flex justify-between items-center max-w-7xl w-full mx-auto h-[100px] flex-wrap">
         <ul className="flex items-center gap-3 text-sm font-semibold">
           <li>
