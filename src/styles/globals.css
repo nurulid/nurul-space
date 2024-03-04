@@ -78,6 +78,18 @@
   .arc-content video {
     @apply -mt-[5%] relative z-[-1] w-full;
   }
+
+  .arc-link-search img {
+    /* width: auto; */
+    /* left: 100%;
+    z-index: -1; */
+    /* height: 250px; */
+    /* translate: -105px -155px; */
+    /* @apply translate-y-[-115px] lg:translate-y[-105px] translate-x-[-115px] lg:translate-x-[-155px];  */
+    top: 50%;
+    transform: translateY(-54%);
+    @apply left-[90%] md:left-[84%] lg:h-[250px] h-auto w-auto z-[-1];
+  }
 }
 
 .arc-intro__image {

@@ -3,11 +3,16 @@ import React from "react";
 
 export const HeroHome = () => {
   return (
-    <section>
-      <div className="text-center text-2xl font-bold bg-[#FFFCED] text-[#3239FB] border-t-4 border-b-4 border-double border-[#3239FB] py-8 px-5">
-        <a href="#">
+    <section className="arc-hero">
+      {/* TODO: change border to the wave mask */}
+      <div className="text-left md:text-center bg-[#FFFCED] border-t-4 border-b-4 border-double border-[#3239FB] py-8 px-5 overflow-hidden">
+        <a
+          href="#"
+          className="arc-link-search inline-flex flex-col lg:inline-block relative z-[1] text-sm md:text-2xl text-[#3239FB] font-bold"
+        >
           <span>Arc Search for iOS is out now!</span>{" "}
           <span>Download it in the App Store →</span>
+          <img src="/arc/download-arc-search.png" className="absolute" />
         </a>
       </div>
       <div className="bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
@@ -51,10 +56,17 @@ export const HeroHome = () => {
               ></path>
             </svg>
           </div>
-          <Image src="/arc/browser-mmmhome-2.png" width={700} height={500} quality={100}/>
+          <Image
+            src="/arc/browser-mmmhome-2.png"
+            width={700}
+            height={500}
+            quality={100}
+          />
         </div>
       </div>
-      {/* Temporary using HTML marquee. TODO: change using Marquee Magic UI */}
+      {/* Temporary using HTML marquee. 
+      TODO: change using Marquee Magic UI
+      TODO: change border to the wave mask */}
       <marquee
         behavior=""
         direction=""

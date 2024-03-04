@@ -9,9 +9,11 @@ export default function Page() {
   return (
     <>
       <Header />
-      <HeroHome />
-      <ContentHome />
-      <TestiHome />
+      <main>
+        <HeroHome />
+        <ContentHome />
+        <TestiHome />
+      </main>
       <Footer />
     </>
   );

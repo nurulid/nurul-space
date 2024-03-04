@@ -3,7 +3,7 @@ import React from "react";
 export const Header = () => {
   return (
     <header className="arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat">
-      <nav className="p-5 flex justify-between items-center max-w-7xl w-full mx-auto h-[100px]">
+      <nav className="p-5 flex justify-between items-center max-w-7xl w-full mx-auto h-[100px] flex-wrap">
         <ul className="flex items-center gap-3 text-sm font-semibold">
           <li>
             <a href="#" className="arc-logo inline-block hover:scale-105 transition-all">
