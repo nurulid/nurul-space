@@ -55,7 +55,7 @@
   .arc-link {
     @apply text-[#3239FB] font-bold;
   }
-  .arc-header li > a:not(.arc-logo){
+  .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo){
     @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
   }
 
@@ -80,16 +80,14 @@
   }
 
   .arc-link-search img {
-    /* width: auto; */
-    /* left: 100%;
-    z-index: -1; */
-    /* height: 250px; */
-    /* translate: -105px -155px; */
-    /* @apply translate-y-[-115px] lg:translate-y[-105px] translate-x-[-115px] lg:translate-x-[-155px];  */
     top: 50%;
     transform: translateY(-54%);
     @apply left-[90%] md:left-[84%] lg:h-[250px] h-auto w-auto z-[-1];
   }
+}
+
+.arc-mobile-menu {
+  animation: slideDown .5s ease-in-out;
 }
 
 .arc-intro__image {
