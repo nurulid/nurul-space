@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Marquee from "react-fast-marquee";
 
 export const HeroHome = () => {
   return (
@@ -47,12 +48,9 @@ export const HeroHome = () => {
           />
         </div>
       </div>
-      {/* Temporary using HTML marquee. 
-      TODO: change using Marquee Magic UI
-      TODO: change border to the wave mask */}
-      <marquee
-        behavior=""
-        direction=""
+      {/* TODO: change border to the wave mask */}
+      <Marquee
+        pauseOnHover={true}
         className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-4 border-b-4 border-dashed border-[#3239FB] py-6 px-5 -mb-[10px]"
       >
         <a href="#" className="px-8">
@@ -67,7 +65,7 @@ export const HeroHome = () => {
         <a href="#" className="px-8">
           “Arc is a great name.”
         </a>
-      </marquee>
+      </Marquee>
     </section>
   );
 };
