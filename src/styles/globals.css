@@ -119,9 +119,9 @@
   display: block;
 }
 
-.arc-intro__image-stamp svg {
+.arc-intro__image-stamp img {
   position: absolute;
-  top: -115px;
+  top: -145px;
   left: -140px;
 }
 
