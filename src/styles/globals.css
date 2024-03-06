@@ -7,6 +7,14 @@
     --background: 234 17% 98%;
   }
 
+  body {
+    font-family: var(--font-inter);
+  }
+
+  .font-sunflower {
+    font-family: var(--font-sunflower);
+  }
+
   html.dark, [data-theme="dark"] {
     --nextui-background: 234 17% 10%;
   }

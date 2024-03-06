@@ -7,7 +7,7 @@ import React from "react";
 
 export default function Page() {
   return (
-    <>
+    <div className="font-sunflower">
       <Header />
       <main>
         <HeroHome />
@@ -15,6 +15,6 @@ export default function Page() {
         <TestiHome />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }
