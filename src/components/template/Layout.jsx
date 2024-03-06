@@ -1,8 +1,19 @@
+"use client"
+
 import React from 'react'
+import { usePathname } from 'next/navigation'
 import { Header } from '../sharedUI/Header'
 import { Footer } from '../sharedUI/Footer'
 
 export const Layout = ({children}) => {
+  const currentPath = usePathname();
+
+  if (currentPath.startsWith("/landing-page")) {
+    return (
+      <>{children}</>
+    )
+  }
+
   return (
     <div className='flex flex-col justify-between h-full'>
         <div className='relative'>

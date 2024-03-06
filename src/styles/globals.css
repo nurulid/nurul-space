@@ -7,6 +7,14 @@
     --background: 234 17% 98%;
   }
 
+  body {
+    font-family: var(--font-inter);
+  }
+
+  .font-sunflower {
+    font-family: var(--font-sunflower);
+  }
+
   html.dark, [data-theme="dark"] {
     --nextui-background: 234 17% 10%;
   }
@@ -19,6 +27,10 @@
   /* Not sure from where these div come */
   body > div[data-overlay-container="true"]:first-child {
       @apply h-full; 
+  }
+
+  .container {
+    @apply max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10;
   }
 
   div.card-label:nth-child(-n + 2) {
@@ -37,5 +49,121 @@
 
   .chip.active {
     @apply bg-black text-violet-200;
+  }
+
+  /* Arc Landing Page */
+  .arc-title {
+    @apply text-[40px] text-[#3239FB] w-full lg:w-[60%] mx-auto leading-[1.1];
+  }
+
+  .arc-desc {
+    @apply text-[20px] text-[#696969] font-[300];
+  }
+
+  .arc-link {
+    @apply text-[#3239FB] font-bold;
+  }
+  .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo){
+    @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
+  }
+
+  .arc-footer li > a{
+    @apply hover:underline;
+  }
+
+  .arc-testi__box {
+    @apply text-center p-5;
+  }
+
+  .arc-testi__desc {
+    @apply text-3xl text-[#4148FB] mb-5 font-bold;
+  }
+
+  .arc-testi__user {
+    @apply py-[6px] px-4 text-xs text-[#4148FB] bg-white border-2 border-[#4148FB] rounded-[10px] uppercase;
+  }
+
+  .arc-content video {
+    @apply -mt-[5%] relative z-[-1] w-full;
+  }
+
+  .arc-link-search img {
+    top: 50%;
+    transform: translateY(-54%);
+    @apply left-[90%] md:left-[84%] lg:h-[250px] h-auto w-auto z-[-1];
+  }
+}
+
+.arc-mobile-menu {
+  animation: slideDown .5s ease-in-out;
+}
+
+.arc-intro__image {
+  position: relative;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.arc-intro__image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: scale(1.05);
+  margin-top: 3%;
+}
+
+.arc-intro__image-stamp {
+  position: absolute;
+  width: 83%;
+  top: 2%;
+  left: calc(8.5%);
+  aspect-ratio: 1.666 / 1;
+  z-index: 0;
+  max-width: 1400px;
+  opacity: 1;
+  display: block;
+}
+
+.arc-intro__image-stamp img {
+  position: absolute;
+  top: -145px;
+  left: -140px;
+}
+
+.arc-header {
+  transition: all .5s ease;
+  animation: slideUp .5s ease forwards;
+}
+
+.arc-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #3239FB;
+  background-image: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideDown .5s ease forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(0);
   }
 }
