@@ -4,7 +4,11 @@ import "@/styles/globals.css";
 import { Provider } from "@/components/provider";
 import { Layout } from "@/components/template/Layout";
 
-const sunflower = Sunflower({ weight: ["300","500"], subsets: ["latin"] });
+const sunflower = Sunflower({
+  weight: ["300", "500"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Frontend Developer | Nurul Insani Dewi",
