@@ -131,6 +131,8 @@
   position: absolute;
   top: -145px;
   left: -140px;
+  width: auto;
+  height: auto;
 }
 
 .arc-header {

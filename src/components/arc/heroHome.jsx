@@ -38,7 +38,7 @@ export const HeroHome = () => {
         </div>
         <div className="arc-intro__image">
           <div className="arc-intro__image-stamp">
-            <img src="/arc/arc-stamp.svg" className="w-[293px] h-[221px]" alt="" />
+            <img src="/arc/arc-stamp.svg" alt="" />
           </div>
           <Image
             src="/arc/browser-mmmhome-2.png"
