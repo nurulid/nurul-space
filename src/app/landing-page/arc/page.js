@@ -5,6 +5,11 @@ import { HeroHome } from "@/components/arc/heroHome";
 import { TestiHome } from "@/components/arc/testiHome";
 import React from "react";
 
+export const metadata = {
+  title: "Arc Browser homepage",
+  description: "Imitate homepage of Arc from The Browser Company (arc.net).",
+};
+
 export default function Page() {
   return (
     <div className="font-sunflower">

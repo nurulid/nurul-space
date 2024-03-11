@@ -98,14 +98,14 @@
         },
         {
             "id": 9,
-            "title": "Focus Board",
-            "description": "Board to focus on today tasks.",
-            "previewURL": "https://todayfocus.vercel.app/",
-            "codeURL": "https://github.com/nurulid/focus-board",
-            "thumbnail": "/portfolio/focus-board-2.png",
-            "labels": ["Next.js", "Prisma", "Tailwind CSS", "NextUI", "fullstack"],
-            "category": "fullstack",
-            "isDone": false,
+            "title": "Arc Browser homepage",
+            "description": "Imitate homepage of Arc from The Browser Company (arc.net).",
+            "previewURL": "/landing-page/arc",
+            "codeURL": "https://github.com/nurulid/nurul-space/tree/main/src/components/arc",
+            "thumbnail": "/portfolio/arc-homepage.jpeg",
+            "labels": ["Tailwind CSS", "CSS", "landing page"],
+            "category": "CSS",
+            "isDone": true,
             "isTeam": false
         }
     ]
