@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <div className="font-sunflower">
       <Header />
-      <main>
+      <main className="bg-white">
         <HeroHome />
         <ContentHome />
         <TestiHome />

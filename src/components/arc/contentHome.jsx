@@ -10,9 +10,11 @@ export const ContentHome = () => {
         <p className="arc-desc">
           Clean and calm, Arc shapes itself to how you use the internet.
         </p>
-        <video loop autoPlay muted>
-          <source src="/arc/zero-chrome.mp4" type="video/mp4" />
-        </video>
+        <div className="overflow-hidden">
+          <video loop autoPlay muted>
+            <source src="/arc/zero-chrome.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div className="text-center mb-10">
         <h2 className="arc-title">Space for the different sides of you.</h2>
@@ -20,18 +22,22 @@ export const ContentHome = () => {
           Effortlessly organize everything you do online — work, study, hobbies
           — all in one window with Spaces and Profiles.
         </p>
-        <video loop autoPlay muted>
-          <source src="/arc/space-swiping.mp4" type="video/mp4" />
-        </video>
+        <div className="overflow-hidden">
+          <video loop autoPlay muted>
+            <source src="/arc/space-swiping.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div className="text-center mb-10">
         <h2 className="arc-title">Your browser, your way.</h2>
         <p className="arc-desc">
           Find your perfect setup with Split View, Themes, and more.
         </p>
-        <video loop autoPlay muted>
-          <source src="/arc/theme-picker.mp4" type="video/mp4" />
-        </video>
+        <div className="overflow-hidden">
+          <video loop autoPlay muted>
+            <source src="/arc/theme-picker.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div className="arc-cta text-center w-full lg:w-[50%] mx-auto mb-14">
         <h2 className="arc-title w-full">The comfort of privacy.</h2>

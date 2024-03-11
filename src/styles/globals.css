@@ -84,7 +84,7 @@
   }
 
   .arc-content video {
-    @apply -mt-[5%] relative z-[-1] w-full;
+    @apply -mt-[5%] w-full;
   }
 
   .arc-link-search img {
