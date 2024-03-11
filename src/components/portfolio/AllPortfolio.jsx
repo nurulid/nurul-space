@@ -30,7 +30,7 @@ export const AllPortfolio = ({ portfolio }) => {
 
   return (
     <>
-      <h1 className="text-3xl mb-5">My Projects</h1>
+      <h1 className="text-3xl mb-5">My Portfolio</h1>
       <div>
         {categories.map((item, index) => {
           return (
