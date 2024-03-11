@@ -152,6 +152,20 @@
   animation: slideDown .5s ease forwards;
 }
 
+/* .arc-hero-cta {
+  @apply relative;
+}
+.arc-hero-cta::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("/arc/wave.svg");
+  background-size: contain;
+  position: absolute;
+  top: 0;
+} */
+
 @keyframes slideDown {
   from {
     transform: translateY(-20%);
