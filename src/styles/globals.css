@@ -84,13 +84,17 @@
   }
 
   .arc-content video {
-    @apply -mt-[5%] relative z-[-1] w-full;
+    @apply -mt-[5%] w-full;
   }
 
   .arc-link-search img {
     top: 50%;
     transform: translateY(-54%);
     @apply left-[90%] md:left-[84%] lg:h-[250px] h-auto w-auto z-[-1];
+  }
+
+  .arc-content__video-wrapper {
+    @apply w-screen overflow-hidden;
   }
 }
 
@@ -150,6 +154,7 @@
   background-image: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: slideDown .5s ease forwards;
+  border-bottom: 2px dashed #fff;
 }
 
 /* .arc-hero-cta {
