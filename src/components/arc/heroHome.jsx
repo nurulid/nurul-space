@@ -6,7 +6,7 @@ export const HeroHome = () => {
   return (
     <section className="arc-hero">
       {/* TODO: change border to the wave mask */}
-      <div className="text-left md:text-center bg-[#FFFCED] border-t-4 border-b-4 border-double border-[#3239FB] py-8 px-5 overflow-hidden">
+      <div className="text-left md:text-center bg-[#FFFCED] border-t-2 border-b-2 border-dashed border-[#3239FB] py-8 px-5 overflow-hidden">
         <a
           href="#"
           className="arc-link-search inline-flex flex-col lg:inline-block relative z-[1] text-sm md:text-2xl text-[#3239FB] font-bold"
@@ -51,7 +51,7 @@ export const HeroHome = () => {
       {/* TODO: change border to the wave mask */}
       <Marquee
         pauseOnHover={true}
-        className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-4 border-b-4 border-dashed border-[#3239FB] py-6 px-5 -mb-[10px]"
+        className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-2 border-b-2 border-dashed border-[#3239FB] py-6 px-5 -mb-[10px]"
       >
         <a href="#" className="px-8">
           “Rethinking the fundamentals of how we use the web.”

@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="arc-footer bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat ">
       {/* TODO: change border to the wave mask */}
-      <div className="text-center py-16 px-5 border-b-4 border-dashed border-white">
+      <div className="text-center py-16 px-5 border-b-2 border-dashed border-white">
         <h2 className="text-center text-3xl font-bold mb-4">
           Enter <span className="italic">your</span> new home on the internet
         </h2>
