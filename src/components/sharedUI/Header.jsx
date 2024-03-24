@@ -24,12 +24,8 @@ export const Header = () => {
           Nurul ID
         </Link>
         <div className="nav-menu">
-          <Link href="/" className={currentPath === '/' ? 'active whitespace-nowrap group' : 'whitespace-nowrap group'}>Portfolio</Link>
-          <Link href="/ui-experiments" className={currentPath === '/ui-experiments' ? 'active whitespace-nowrap group' : 'whitespace-nowrap group'}>
-            {/* <Flower
-              size={16}
-              className="animate-spin inline-block mr-1 mb-[3px] text-cyan-500 group-hover:animate-none transition-all"
-            /> */}
+          <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
+          <Link href="/ui-experiments" className={`${currentPath === '/ui-experiments' ? 'active' : ''} whitespace-nowrap group`}>
             UI Experiments
           </Link>
           <Link href="https://nurulid.gumroad.com/" target="_blank" className="relative group flex items-center gap-1">
