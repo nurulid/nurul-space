@@ -33,6 +33,17 @@
     @apply max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10;
   }
 
+  a.active {
+    @apply text-violet-600 underline;
+  }
+  .nav-menu {
+    @apply flex items-center gap-10
+  }
+
+  .nav-menu > a {
+    @apply hover:underline underline-offset-4 transition-all;
+  }
+
   div.card-label:nth-child(-n + 2) {
     @apply bg-slate-300/70 text-slate-700;
   }
@@ -94,7 +105,7 @@
   }
 
   .arc-content__video-wrapper {
-    @apply w-screen overflow-hidden;
+    @apply w-screen overflow-hidden max-w-[90rem] mx-auto;
   }
 }
 
