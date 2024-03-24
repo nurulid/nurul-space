@@ -94,7 +94,7 @@
   }
 
   .arc-content__video-wrapper {
-    @apply w-screen overflow-hidden;
+    @apply w-screen overflow-hidden max-w-[90rem] mx-auto;
   }
 }
 

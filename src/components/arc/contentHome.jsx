@@ -2,7 +2,7 @@ import React from "react";
 
 export const ContentHome = () => {
   return (
-    <section className="arc-content mt-10 py-16">
+    <section className="arc-content mt-10 py-16 px-5 md:px-0">
       <div className="text-center">
         <h2 className="arc-title">
           A browser that doesn’t just meet your needs — it anticipates them.
