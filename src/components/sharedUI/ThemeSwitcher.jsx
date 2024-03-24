@@ -27,7 +27,7 @@ export const ThemeSwitcher = () => {
       endContent={<Moon />}
       onChange={(e) => setThemeMode(e.target.checked)}
     >
-      <span className="text-sm">{mounted && theme}</span>
+      {/* <span className="text-sm">{mounted && theme}</span> */}
     </Switch>
   );
 };
