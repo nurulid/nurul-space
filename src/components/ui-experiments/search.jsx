@@ -33,16 +33,16 @@ export const Search = () => {
   return (
     <div className="shadow rounded-xl dark:bg-gray-800/50 dark:border-gray-700 w-full max-w-[500px] mx-auto">
       {/* search input */}
-      <div className="flex justify-between items-center p-5">
-        <div>
-          <SearchIcon className="inline-block mr-3" />
+      <div className="flex justify-between items-center gap-4 p-5">
+        <div className="flex gap-2">
+          <SearchIcon />
           <input
             type="text"
             placeholder="Herita"
             className="caret-purple-700 outline-none bg-transparent"
           />
         </div>
-        <button className="font-semibold hover:underline">Clear</button>
+        <button className="font-semibold hover:underline text-xs xs:text-base">Clear</button>
       </div>
       {/* navigation menu */}
       <div className="menu border-b dark:border-gray-700 mb-5">
