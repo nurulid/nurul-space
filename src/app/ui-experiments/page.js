@@ -1,7 +1,7 @@
 import { UiDesignInfo } from "@/components/ui-experiments/components/uiDesignInfo";
 import { AllBadges } from "@/components/ui-experiments/allBadges";
-import { Search } from "@/components/ui-experiments/components/search";
-import { ShareDialog } from "@/components/ui-experiments/components/shareDialog";
+import { Search } from "@/components/ui-experiments/search";
+import { ShareDialog } from "@/components/ui-experiments/shareDialog";
 
 export default function Page() {
   const uiExperiments = [
@@ -43,16 +43,16 @@ export default function Page() {
     },
   ];
   return (
-    <div className="py-0 md:py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14">
-      <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col break-inside-avoid">
+    <div className="py-0 md:py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+      <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col">
         <ShareDialog />
         <UiDesignInfo data={uiExperiments[2]} />
       </div>
-      <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col break-inside-avoid">
+      <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col">
         <Search />
         <UiDesignInfo data={uiExperiments[1]} />
       </div>
-      <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col break-inside-avoid">
+      <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col">
         <AllBadges />
         <UiDesignInfo data={uiExperiments[0]} />
       </div>
