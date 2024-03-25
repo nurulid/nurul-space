@@ -69,7 +69,7 @@ export const AllPortfolio = ({ portfolio }) => {
                     key={id}
                     className={`p-4 border-[.5px] border-purple-300 dark:border-purple-800/20 rounded-md relative group transition-all bg-purple-100/20 dark:bg-slate-400/10 flex flex-col ${!isDone && "on-progress"} ${isTeam && "team-project"}`}>
                     <div className="h-[250px] w-full overflow-hidden rounded-md">
-                      <Tooltip showArrow={true} content="Preview">
+                      <Tooltip showArrow={true} content="Visit preview">
                         <a href={previewURL} target="_blank">
                           <Image
                             alt={title}
