@@ -8,7 +8,7 @@ import { Footer } from '../sharedUI/Footer'
 export const Layout = ({children}) => {
   const currentPath = usePathname();
 
-  if (currentPath.startsWith("/landing-page")) {
+  if (currentPath.startsWith("/landing-page") || currentPath.startsWith("/ui/mail")) {
     return (
       <>{children}</>
     )
