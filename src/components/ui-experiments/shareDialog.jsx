@@ -74,7 +74,7 @@ export const ShareDialog = () => {
   ]
 
   return (
-    <div className="p-5 lg:p-10 dark:bg-gray-800/50 dark:border-gray-700 max-w-[600px] mx-auto shadow rounded-xl">
+    <div className="p-5 lg:p-10 dark:bg-gray-800/50 dark:border-gray-700 w-full max-w-[600px] mx-auto shadow rounded-xl">
       <div className="flex justify-between items-start">
         <h2 className="text-2xl font-semibold">Share</h2>
         <button className="focus:outline-none" type="button">
