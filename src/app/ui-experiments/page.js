@@ -27,7 +27,7 @@ export default function Page() {
       sourceCode: {
         codepen: "",
         github:
-          "https://github.com/nurulid/nurul-space/blob/main/src/components/ui-experiments/components/search.jsx",
+          "https://github.com/nurulid/nurul-space/blob/main/src/components/ui-experiments/search.jsx",
       },
     },
     {
@@ -38,7 +38,7 @@ export default function Page() {
       },
       sourceCode: {
         codepen: "",
-        github: "https://github.com/nurulid/nurul-space/blob/main/src/components/ui-experiments/components/shareDialog.jsx",
+        github: "https://github.com/nurulid/nurul-space/blob/main/src/components/ui-experiments/shareDialog.jsx",
       },
     },
   ];
