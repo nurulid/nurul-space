@@ -109,10 +109,6 @@
   }
 }
 
-.arc-mobile-menu {
-  animation: slideDown .5s ease-in-out;
-}
-
 .arc-intro__image {
   position: relative;
   max-width: 1400px;
@@ -191,9 +187,9 @@
   }
 }
 
-@keyframes slideUp {
+@keyframes slideRight {
   from {
-    transform: translateY(-10%);
+    transform: translateX(50%);
   }
   to {
     transform: translateY(0);
