@@ -31,7 +31,7 @@ export const Search = () => {
     },
   ];
   return (
-    <div className="shadow rounded-xl dark:bg-gray-800/50 dark:border-gray-700 max-w-[600px]">
+    <div className="shadow rounded-xl dark:bg-gray-800/50 dark:border-gray-700 max-w-[500px] mx-auto">
       {/* search input */}
       <div className="flex justify-between items-center p-5">
         <div>
