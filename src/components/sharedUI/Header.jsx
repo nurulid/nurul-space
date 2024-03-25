@@ -31,7 +31,7 @@ export const Header = () => {
         </Link>
         <div className="nav-menu">
           <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
-          <Link href="/ui-experiments" className={`${currentPath === '/ui-experiments' ? 'active' : ''} whitespace-nowrap group`}>
+          <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
             UI
           </Link>
           <Link href="https://nurulid.gumroad.com/" target="_blank" className="relative group flex items-center gap-1">
@@ -72,7 +72,7 @@ export const Header = () => {
                 <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="/ui-experiments" className={`${currentPath === '/ui-experiments' ? 'active' : ''} whitespace-nowrap group`}>
+                <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
                   UI Experiments
                 </Link>
               </li>
