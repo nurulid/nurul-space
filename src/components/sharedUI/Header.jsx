@@ -15,7 +15,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="sticky top-2 lg:top-4 z-[99] m-2 lg:mx-auto max-w-5xl shadow-sm py-3 px-6 rounded-full bg-gray-100/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-[.5px] border-purple-300">
+    <header className="sticky top-2 lg:top-4 z-[99] m-2 lg:mx-auto max-w-3xl shadow-sm py-3 px-6 rounded-full bg-gray-100/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-[.5px] border-purple-300">
       <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
         <Link
           href="/"
@@ -32,7 +32,7 @@ export const Header = () => {
         <div className="nav-menu">
           <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
           <Link href="/ui-experiments" className={`${currentPath === '/ui-experiments' ? 'active' : ''} whitespace-nowrap group`}>
-            UI Experiments
+            UI
           </Link>
           <Link href="https://nurulid.gumroad.com/" target="_blank" className="relative group flex items-center gap-1">
             Templates
