@@ -26,12 +26,22 @@ module.exports = {
         wavyLine: {
           '0%': { 'top': '-0px' },
           '100%': { 'top': '-30px'}
-        }
+        },
+        // slideDown: {
+        //   'fromm': {'transform': 'translateY(-20%)'},
+        //   'to': {'transform': 'translateY(0)'},
+        // },
+        // slideRight: {
+        //   '0': {'transform': 'translateX(50%)'},
+        //   '100%': {'transform': 'translateY(0)'},
+        // }
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',
         bgWaves: 'bgWaves 5s ease-in-out infinite',
-        wavyLine: 'wavyLine .9s linear infinite'
+        wavyLine: 'wavyLine .9s linear infinite',
+        slideDown: 'slideDown .5s ease-in-out',
+        slideRight: 'slideRight .5s ease-in-out',
       }
     },
   },

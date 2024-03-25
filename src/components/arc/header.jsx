@@ -80,7 +80,7 @@ export const Header = () => {
 
         {/* mobile menu list */}
         {isOpen && (
-          <div className="arc-mobile-menu absolute left-0 right-0 bottom-0 top-0 bg-[#210784] text-white h-[100vh] py-20 px-10 flex flex-col">
+          <div className="animate-slideDown absolute left-0 right-0 bottom-0 top-0 bg-[#210784] text-white h-[100vh] py-20 px-10 flex flex-col">
             <ul className="text-[48px] font-bold">
               <li>
                 <a href="#" className="inline-block py-1 px-5 rounded-[20px] hover:bg-[#14044F] w-full transition-all">Max</a>
