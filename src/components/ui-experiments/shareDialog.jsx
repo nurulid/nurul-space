@@ -81,7 +81,7 @@ export const ShareDialog = () => {
           <X className="bg-gray-100 hover:bg-gray-50 dark:bg-gray-800 hover:dark:bg-gray-800/70 transition-all rounded-full p-2" size={30} />
         </button>
       </div>
-      <div className="social grid grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-6 mt-8 mb-12">
+      <div className="social grid grid-cols-3 xs:grid-cols-4 lg:grid-cols-4 gap-3 md:gap-6 mt-8 mb-12">
         {socialVariants.map((item, i) => {
           return (
             <SocialShareItem key={i}

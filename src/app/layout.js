@@ -19,6 +19,9 @@ const sunflower = Sunflower({
 export const metadata = {
   title: "Frontend Developer | Nurul Insani Dewi",
   description: "Nurul's portfolio, ui experiments, etc.",
+  icons: {
+    icon: "/images/nid.jpeg",
+  },
 };
 
 export default function RootLayout({ children }) {
