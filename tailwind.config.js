@@ -13,6 +13,12 @@ module.exports = {
       ...defaultTheme.screens,
     },
     extend: {
+      colors: {
+        mailBlack: '#090A1A',
+        mailPurple: '#535AFF',
+        mailOrange: '#EF655F',
+        mailGray: '#B0B3B9'
+      },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },

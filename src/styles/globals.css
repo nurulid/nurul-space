@@ -29,6 +29,10 @@
       @apply h-full; 
   }
 
+  a {
+    @apply inline-block;
+  }
+
   .container {
     @apply max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10;
   }
@@ -106,6 +110,23 @@
 
   .arc-content__video-wrapper {
     @apply w-screen overflow-hidden max-w-[90rem] mx-auto;
+  }
+  
+  /* Mail */
+  .mail-sidebar nav a {
+    @apply text-mailGray hover:text-white py-[10px] px-3 rounded-md hover:bg-gray-800 inline-block relative;
+  }
+
+  .mail-sidebar nav a.active {
+    @apply text-white bg-gray-800;
+  }
+
+  .mail-sidebar nav a.active::after {
+    @apply content-[""] absolute top-0 -right-[27px] block w-[4px] h-full bg-mailPurple rounded-md;
+  }
+
+  .mail-sidebar .nav-bottom a.logout{
+    @apply text-mailOrange;
   }
 }
 
