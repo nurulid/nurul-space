@@ -107,6 +107,18 @@
             "category": "CSS",
             "isDone": true,
             "isTeam": false
+        },
+        {
+            "id": 10,
+            "title": "Radwah Padang",
+            "description": "Promotional Web built with Vue.js and Tailwind CSS",
+            "previewURL": "https://radwah-padang.vercel.app/",
+            "codeURL": "https://github.com/nurulid/radwahpadang",
+            "thumbnail": "/portfolio/radwah-padang.jpeg",
+            "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
+            "category": "CSS",
+            "isDone": true,
+            "isTeam": false
         }
     ]
 }
