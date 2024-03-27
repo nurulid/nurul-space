@@ -21,8 +21,8 @@ module.exports = {
       },
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%, 100%': { transform: 'rotate(-5deg)' },
+          '50%': { transform: 'rotate(5deg)' },
         },
         bgWaves: {
           '0%': { 'position': '0% 50%' },
@@ -43,7 +43,7 @@ module.exports = {
         // }
       },
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        wiggle: 'wiggle .3s ease-in-out infinite',
         bgWaves: 'bgWaves 5s ease-in-out infinite',
         wavyLine: 'wavyLine .9s linear infinite',
         slideDown: 'slideDown .5s ease-in-out',
