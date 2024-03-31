@@ -31,7 +31,7 @@ export const Header = () => {
     <header
       className={`${
         isSticky ? "sticky" : ""
-      } ${isOpen ? "open" : ""} arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat relative z-[9]`}
+      } ${isOpen ? "open" : ""} arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat relative z-[99]`}
     >
       <nav className="p-5 hidden lg:flex justify-between items-center max-w-7xl w-full mx-auto h-[100px] flex-wrap">
         <ul className="flex items-center gap-3 text-sm font-semibold">

@@ -20,7 +20,7 @@
   }
 
   html, body {
-      @apply h-full;
+      /* @apply h-full; */
   }
 
   /* To make the footer stay at the bottom despite there's not enough content */
@@ -83,8 +83,11 @@
     background-color: #FFFCED;
   }
 
-  .arc-header.open {
+  header.arc-header.open {
     mask: unset;
+    bottom: 0;
+    position: fixed;
+    inset: 0;
   }
 
   .arc-header, .wavy-bottom {
