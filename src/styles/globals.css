@@ -79,6 +79,14 @@
     @apply text-[#3239FB] font-bold;
   }
 
+  .arc-header {
+    background-color: #FFFCED;
+  }
+
+  .arc-header.open {
+    mask: unset;
+  }
+
   .arc-header, .wavy-bottom {
     --mask:
     radial-gradient(4.66px at 50% calc(100% - 6.4px),#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
@@ -125,6 +133,36 @@
           left: 0;
           right: 0;
           background-color: #fff;
+  }
+
+  .arc-footer__nav::before {
+    content: "";
+    --mask: radial-gradient(5.07px at 50% calc(100% + 2.2px), #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px) / 16px 5px repeat-x, radial-gradient(5.07px at 50% -2.2px, #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) 50% calc(50% + 2.5px) / 16px 5px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+          display: block;
+          width: 100%;
+          height: 10px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background-color: #fff;
+  }
+
+  .arc-testi::before {
+    content: "";
+    --mask: radial-gradient(5.07px at 50% calc(100% + 2.2px), #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px) / 16px 5px repeat-x, radial-gradient(5.07px at 50% -2.2px, #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) 50% calc(50% + 2.5px) / 16px 5px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    background: #3239FB;
   }
 
   .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo){

@@ -4,8 +4,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <footer className="arc-footer bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat ">
-      {/* TODO: change border to the wave mask */}
-      <div className="text-center py-16 px-5 border-b-2 border-dashed border-white">
+      <div className="text-center py-16 px-5 ">
         <h2 className="text-center text-3xl font-bold mb-4">
           Enter <span className="italic">your</span> new home on the internet
         </h2>
@@ -16,7 +15,7 @@ export const Footer = () => {
           Download Arc
         </a>
       </div>
-      <div className="max-[650px]:flex-col flex justify-between flex-wrap p-10">
+      <div className="arc-footer__nav relative max-[650px]:flex-col flex justify-between flex-wrap p-10">
         <div className="max-[650px]:flex-col flex flex-wrap gap-8">
           <div className="logo">
             <a href="#" className="inline-block hover:scale-105 transition-all">

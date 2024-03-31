@@ -31,7 +31,7 @@ export const Header = () => {
     <header
       className={`${
         isSticky ? "sticky" : ""
-      } arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat relative z-[99]`}
+      } ${isOpen ? "open" : ""} arc-header bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat relative z-[9]`}
     >
       <nav className="p-5 hidden lg:flex justify-between items-center max-w-7xl w-full mx-auto h-[100px] flex-wrap">
         <ul className="flex items-center gap-3 text-sm font-semibold">
@@ -65,7 +65,7 @@ export const Header = () => {
       </nav>
 
       {/* Mobile Nav */}
-      <nav className={`p-5 block lg:hidden ${isOpen ? "open" : ""}`}>
+      <nav className={`p-5 block lg:hidden ${isOpen ? "nav-open" : ""}`}>
         <div className="flex justify-between items-center">
           <div className="text-right w-1/2 ml-4">
             <a
@@ -80,7 +80,7 @@ export const Header = () => {
 
         {/* mobile menu list */}
         {isOpen && (
-          <div className="animate-slideDown absolute left-0 right-0 bottom-0 top-0 bg-[#210784] text-white h-[100vh] py-20 px-10 flex flex-col">
+          <div className="animate-slideDown absolute left-0 right-0 bottom-0 top-0 bg-[#210784] text-white h-[100vh] py-20 px-10 flex flex-col z-[99]">
             <ul className="text-[48px] font-bold">
               <li>
                 <a href="#" className="inline-block py-1 px-5 rounded-[20px] hover:bg-[#14044F] w-full transition-all">Max</a>
