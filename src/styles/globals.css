@@ -199,7 +199,7 @@
   }
 
   .arc-content__video-wrapper {
-    @apply w-screen overflow-hidden max-w-[90rem] mx-auto;
+    @apply overflow-hidden w-full max-w-[320px] sm:max-w-[90rem] mx-auto;
   }
   
   /* Mail */
