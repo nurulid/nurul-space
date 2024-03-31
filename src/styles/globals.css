@@ -78,6 +78,15 @@
   .arc-link {
     @apply text-[#3239FB] font-bold;
   }
+
+  .arc-header {
+    --mask:
+    radial-gradient(4.66px at 50% calc(100% - 6.4px),#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
+    radial-gradient(4.66px at 50% calc(100% + 2.4px),#0000 99%,#000 101%) 50% calc(100% - 4px)/16px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  }
+
   .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo){
     @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
   }
@@ -185,19 +194,13 @@
   border-bottom: 2px dashed #fff;
 }
 
-/* .arc-hero-cta {
-  @apply relative;
+.arc-hero__content {
+  --mask:
+  radial-gradient(4.66px at 50% 6.4px,#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
+  radial-gradient(4.66px at 50% -2.4px,#0000 99%,#000 101%) 50% 4px/16px 100% repeat-x;
+-webkit-mask: var(--mask);
+        mask: var(--mask);
 }
-.arc-hero-cta::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("/arc/wave.svg");
-  background-size: contain;
-  position: absolute;
-  top: 0;
-} */
 
 @keyframes slideDown {
   from {
