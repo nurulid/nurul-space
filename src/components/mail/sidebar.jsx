@@ -5,7 +5,7 @@ export const Sidebar = () => {
   return (
     <sidebar className="mail-sidebar bg-mailBlack w-[102px] h-screen m-0 p-4 flex flex-col justify-between">
       <div className="flex flex-col gap-10 items-center">
-        <img src="/main/icons/mail-logo.svg" width={44} />
+        <img src="/mail/icons/mail-logo.svg" width={44} />
         <nav className="space-y-5">
           <ul className="space-y-2 pb-3 border-b-2 border-gray-600">
             <li>
