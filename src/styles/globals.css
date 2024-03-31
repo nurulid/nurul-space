@@ -79,12 +79,52 @@
     @apply text-[#3239FB] font-bold;
   }
 
-  .arc-header {
+  .arc-header, .wavy-bottom {
     --mask:
     radial-gradient(4.66px at 50% calc(100% - 6.4px),#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
     radial-gradient(4.66px at 50% calc(100% + 2.4px),#0000 99%,#000 101%) 50% calc(100% - 4px)/16px 100% repeat-x;
   -webkit-mask: var(--mask);
           mask: var(--mask);
+  }
+
+  .arc-hero__content, .wavy-top {
+    --mask:
+    radial-gradient(4.66px at 50% 6.4px,#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
+    radial-gradient(4.66px at 50% -2.4px,#0000 99%,#000 101%) 50% 4px/16px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+  }
+
+  .arc-hero__marquee::after {
+    content: "";
+    --mask: radial-gradient(5.07px at 50% calc(100% + 2.2px), #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px) / 16px 5px repeat-x, radial-gradient(5.07px at 50% -2.2px, #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) 50% calc(50% + 2.5px) / 16px 5px repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    background: #3239FB;
+  }
+
+  .arc-hero__marquee::before {
+    content: "";
+    --mask:
+    radial-gradient(4.66px at 50% 6.4px,#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
+    radial-gradient(4.66px at 50% -2.4px,#0000 99%,#000 101%) 50% 4px/16px 100% repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+          display: block;
+          width: 100%;
+          height: 10px;
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          right: 0;
+          background-color: #fff;
   }
 
   .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo){
@@ -192,14 +232,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: slideDown .5s ease forwards;
   border-bottom: 2px dashed #fff;
-}
-
-.arc-hero__content {
-  --mask:
-  radial-gradient(4.66px at 50% 6.4px,#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
-  radial-gradient(4.66px at 50% -2.4px,#0000 99%,#000 101%) 50% 4px/16px 100% repeat-x;
--webkit-mask: var(--mask);
-        mask: var(--mask);
 }
 
 @keyframes slideDown {

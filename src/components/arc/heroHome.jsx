@@ -16,7 +16,7 @@ export const HeroHome = () => {
           <img src="/arc/download-arc-search.png" className="absolute" />
         </a>
       </div>
-      <div className="arc-hero__content bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
+      <div className="wavy-top bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
         <div className="inner max-w-7xl w-full mx-auto">
           <div className="text-center">
             <h1 className="text-[44px] md:text-[56px] font-bold leading-[.9] text-center w-11/12 lg:w-[50%] mx-auto">
@@ -51,7 +51,7 @@ export const HeroHome = () => {
       {/* TODO: change border to the wave mask */}
       <Marquee
         pauseOnHover={true}
-        className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-2 border-b-2 border-dashed border-[#3239FB] py-6 px-5 -mb-[10px]"
+        className="arc-hero__marquee wavy-top -mt-[10px] font-bold bg-[#FFFCED] text-[#3239FB] py-6 px-5 -mb-[10px] relative"
       >
         <a href="#" className="px-8">
           “Rethinking the fundamentals of how we use the web.”
