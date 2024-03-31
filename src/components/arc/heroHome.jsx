@@ -5,8 +5,7 @@ import Marquee from "react-fast-marquee";
 export const HeroHome = () => {
   return (
     <section className="arc-hero">
-      {/* TODO: change border to the wave mask */}
-      <div className="text-left md:text-center bg-[#FFFCED] border-t-2 border-b-2 border-dashed border-[#3239FB] py-8 px-5 overflow-hidden">
+      <div className="arc-hero__cta text-left md:text-center bg-[#FFFCED] pt-10 pb-[37px] -mt-[10px] px-5 overflow-hidden">
         <a
           href="#"
           className="arc-link-search inline-flex flex-col lg:inline-block relative z-[1] text-sm md:text-2xl text-[#3239FB] font-bold"
@@ -16,7 +15,7 @@ export const HeroHome = () => {
           <img src="/arc/download-arc-search.png" className="absolute" />
         </a>
       </div>
-      <div className="bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
+      <div className="wavy-top -mt-[7px] relative z-[2] bg-[#4148FB] text-white bg-[url('/arc/noise-light.png')] bg-repeat pt-14 pb-20 px-5 h-[80vh] overflow-hidden">
         <div className="inner max-w-7xl w-full mx-auto">
           <div className="text-center">
             <h1 className="text-[44px] md:text-[56px] font-bold leading-[.9] text-center w-11/12 lg:w-[50%] mx-auto">
@@ -48,10 +47,9 @@ export const HeroHome = () => {
           />
         </div>
       </div>
-      {/* TODO: change border to the wave mask */}
       <Marquee
         pauseOnHover={true}
-        className="font-bold bg-[#FFFCED] text-[#3239FB] border-t-2 border-b-2 border-dashed border-[#3239FB] py-6 px-5 -mb-[10px]"
+        className="arc-hero__marquee wavy-top font-bold bg-[#FFFCED] text-[#3239FB] py-8 px-5 -mt-[10px] -mb-[10px] relative z-[9]"
       >
         <a href="#" className="px-8">
           “Rethinking the fundamentals of how we use the web.”
