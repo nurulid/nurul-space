@@ -1,4 +1,4 @@
-import { Inter, Sunflower } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "@/styles/globals.css";
 import { Provider } from "@/components/provider";
@@ -7,13 +7,6 @@ import { Layout } from "@/components/template/Layout";
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter"
-});
-
-export const sunflower = Sunflower({
-  weight: ["300", "500"],
-  subsets: ["latin"],
-  variable: "--font-sunflower",
-  display: "swap",
 });
 
 export const metadata = {
@@ -27,7 +20,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${sunflower.variable}`}>
+      <body className={inter.className}>
         <Provider>
           <Layout>
             {children}
