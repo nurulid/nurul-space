@@ -3,6 +3,11 @@ export function capitalizeFirstLetter(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+// name alias
+export function nameAlias(str) {
+  return str.slice(0,2).toUpperCase();
+}
+
 // current year
 export function currentYear() {
   return new Date().getFullYear();
