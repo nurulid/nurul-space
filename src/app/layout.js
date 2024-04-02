@@ -9,7 +9,7 @@ export const inter = Inter({
   variable: "--font-inter"
 });
 
-const sunflower = Sunflower({
+export const sunflower = Sunflower({
   weight: ["300", "500"],
   subsets: ["latin"],
   variable: "--font-sunflower",
