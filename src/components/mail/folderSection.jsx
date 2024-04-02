@@ -41,6 +41,7 @@ export const FolderSection = () => {
       active: false
     },
   ];
+
   return (
     <aside className="w-[354px] h-full py-5 px-6">
       <Search bg="bg-gray-100" addStyles="mb-5" placeholder="Search..." />
@@ -50,18 +51,22 @@ export const FolderSection = () => {
           (1541)
         </span>
       </h2>
-      {folderMenus.map(({ icon, title, count, unread, active }, i) => {
-        return (
-          <FolderMenu
-            key={i}
-            Icon={icon}
-            title={title}
-            count={count}
-            unread={unread}
-            active={active}
-          />
-        );
-      })}
+      <nav>
+        <ul className="space-y-2">
+          {folderMenus.map(({ icon, title, count, unread, active }, i) => {
+            return (
+              <FolderMenu
+                key={i}
+                Icon={icon}
+                title={title}
+                count={count}
+                unread={unread}
+                active={active}
+              />
+            );
+          })}
+        </ul>
+      </nav>
     </aside>
   );
 };
