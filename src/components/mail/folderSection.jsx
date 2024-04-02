@@ -43,8 +43,8 @@ export const FolderSection = () => {
   ];
 
   return (
-    <aside className="w-[354px] h-screen flex flex-col border-r-2 border-gray-200">
-      <Search bg="bg-gray-100" addStyles="my-5 mx-6" placeholder="Search..." />
+    <aside className="w-[354px] h-screen flex flex-col border-r-1 border-gray-200">
+      <Search bg="bg-gray-100" className="my-5 mx-6" placeholder="Search..." label={true}/>
       <div className="px-6">
         <h2 className="py-6 mb-5 border-b-2 border-gray-200 text-3xl font-semibold">
           Mail{" "}
