@@ -1,6 +1,6 @@
 import React from "react";
 import { Star } from "lucide-react";
-import { nameAlias } from "@/lib/utils";
+import { nameAlias, formatMonthDay, formatTime } from "@/lib/utils";
 import { Label } from "./label";
 
 export const MailItem = ({
@@ -38,8 +38,8 @@ export const MailItem = ({
             </div>
             <div className="ml-auto relative">
               <p className="text-xs mr-5">
-                Today,
-                <span className="text-gray-500"> 12 min ago</span>
+                <span>{formatMonthDay(time)},</span>
+                <span className="text-gray-500"> {formatTime(time)}</span>
               </p>
               {read ? null : (
                 <span className="w-[9px] h-[9px] rounded-full bg-mailOrange inline-block absolute right-0 top-1/2 -translate-y-1/2"></span>

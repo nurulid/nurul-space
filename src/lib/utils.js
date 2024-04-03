@@ -27,3 +27,22 @@ export function websiteShortName(url) {
   }
   return null; // Return null if "://" is not found in the URL
 }
+
+// Month day format
+export function formatMonthDay(dateString) { 
+	const date = new Date(dateString); 
+	const month = date.toLocaleString('default', { month: 'long' }); 
+	const day = date.getDate(); 
+	return `${month} ${day}`; 
+}
+
+// Time format
+export function formatTime(timeString) {
+  const time = new Date(timeString);
+  const hours = time.getUTCHours();
+  const minutes = time.getUTCMinutes();
+  const ampm = hours >= 12 ? 'pm' : 'am';
+  const formattedHours = hours % 12 || 12; // Handle midnight (0 hours) as 12
+  const formattedTime = `${formattedHours}:${minutes < 10 ? '0' + minutes : minutes} ${ampm}`;
+  return formattedTime;
+}
