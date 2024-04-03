@@ -1,6 +1,7 @@
 import React from "react";
-import { Paperclip, Star } from "lucide-react";
-import { nameAlias, capitalizeFirstLetter } from "@/lib/utils";
+import { Star } from "lucide-react";
+import { nameAlias } from "@/lib/utils";
+import { Label } from "./label";
 
 export const MailItem = ({
   user,
@@ -29,9 +30,7 @@ export const MailItem = ({
                   alt=""
                   className="rounded-full object-cover w-full h-full"
                 />
-              ) : (
-                nameAlias(user)
-              )}
+              ) : nameAlias(user)}
             </figure>
             <div>
               <h4 className="text-sm font-semibold">{user}</h4>
@@ -58,22 +57,13 @@ export const MailItem = ({
                   <Star color="#F9BC15" size={16} className="fill-[#F9BC15]" />
                 ) : null}
                 {attachment.length > 0 && (
-                  <span className="inline-flex items-center gap-1 bg-gray-100 py-1 px-3 rounded-full text-gray-500 text-sm">
-                    <Paperclip className="inline-block" size={18} />+
-                    {attachment.length}
-                  </span>
+                  <Label attachment={attachment}/>
                 )}
               </div>
               <div className="space-x-2">
                 {label?.map((item, i) => {
                   return (
-                    <span
-                      key={i}
-                      className="inline-flex items-center gap-2 bg-gray-100 py-1 px-3 rounded-full text-gray-500 text-sm"
-                    >
-                      <span className="w-[8px] h-[8px] rounded-full bg-gray-800"></span>
-                      {capitalizeFirstLetter(item)}
-                    </span>
+                    <Label key={i} label={item}/>
                   );
                 })}
               </div>

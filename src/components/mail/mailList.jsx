@@ -61,7 +61,7 @@ export const MailList = () => {
       time: "Today, 12 min ago",
       title: "Completed tasks",
       desc: "Ulla sit amet rhoncus neque, non sodales libero. In mattis elementum erat, at molestie orci eleifend eu. Sed dignissim pulvinar du",
-      read: false,
+      read: true,
       starred: true,
       attachment: [],
       label: [],
