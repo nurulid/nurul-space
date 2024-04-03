@@ -7,7 +7,7 @@ export const Search = ({ bg, placeholder, className, label }) => {
       <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2" />
       <input
         type="text"
-        className={`${bg} rounded-md py-4 pl-[50px] pr-[60px] w-full`}
+        className={`${bg} rounded-md py-3 pl-[50px] pr-[60px] w-full`}
         placeholder={placeholder ? placeholder : "Search..."}
       />
       { label ? (
