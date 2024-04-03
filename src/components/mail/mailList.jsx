@@ -2,6 +2,7 @@ import React from 'react'
 import { Filter, Star, Trash2 } from 'lucide-react'
 import { Search } from './search'
 import { MailItem } from './mailItem'
+import { Tooltip } from '@nextui-org/react'
 
 export const MailList = () => {
   const mails = [
@@ -79,9 +80,33 @@ export const MailList = () => {
       <div className='flex justify-between py-9 mx-6 mb-4 border-b-2 border-gray-200'>
         <h2 className='text-xl font-semibold'>Inbox <span className='text-gray-500 font-normal inline-block ml-2'>(1293)</span></h2>
         <ul className='flex gap-[10px] text-[#B0B3B9]'>
-          <li className='cursor-pointer hover:opacity-80'><Trash2 /></li>
-          <li className='cursor-pointer hover:opacity-80'><Star /></li>
-          <li className='cursor-pointer hover:opacity-80'><Filter /></li>
+          <li className='cursor-pointer hover:opacity-80'>
+            <Tooltip 
+              content="Delete"
+              delay={0}
+              closeDelay={0}
+            >
+              <Trash2 />
+            </Tooltip>
+          </li>
+          <li className='cursor-pointer hover:opacity-80'>
+            <Tooltip 
+              content="Favorite"
+              delay={0}
+              closeDelay={0}
+            >
+              <Star />
+            </Tooltip>
+          </li>
+          <li className='cursor-pointer hover:opacity-80'>
+            <Tooltip 
+              content="Filter"
+              delay={0}
+              closeDelay={0}
+            >
+              <Filter />
+            </Tooltip>
+          </li>
         </ul>
       </div>
       <Search className="mx-6" placeholder="Search messages..."/>
