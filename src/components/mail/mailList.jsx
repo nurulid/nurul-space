@@ -1,5 +1,5 @@
-import { Filter, Star, Trash2 } from 'lucide-react'
 import React from 'react'
+import { Filter, Star, Trash2 } from 'lucide-react'
 import { Search } from './search'
 import { MailItem } from './mailItem'
 
@@ -85,7 +85,7 @@ export const MailList = () => {
         </ul>
       </div>
       <Search className="mx-6" placeholder="Search messages..."/>
-      <div className='h-[80vh] overflow-scroll'>
+      <div className='h-[calc(100vh-178px)] overflow-scroll'>
         {mails.map(({user, email, avatar, time, title, desc, read, starred, attachment, label}, i) => {
           return (
             <MailItem key={i} user={user} email={email} avatar={avatar} time={time} title={title} desc={desc} read={read} starred={starred} attachment={attachment} label={label}/>
