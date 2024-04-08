@@ -66,14 +66,14 @@ export const Header = () => {
 
         {/* mobile menu list */}
         {isOpen && (
-          <div className="animate-slideRight absolute -inset-2 bg-white h-screen py-20 px-10 flex flex-col justify-between items-center z-[99]">
+          <div className="animate-slideRight absolute -top-4 inset-0 bg-white h-screen py-20 px-10 flex flex-col justify-between items-center z-[99]">
             <ul className="text-[28px] font-bold text-center space-y-8">
               <li onClick={toggleMenu}>
                 <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
               </li>
               <li onClick={toggleMenu}>
                 <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
-                  UI Experiments
+                  UI
                 </Link>
               </li>
               <li onClick={toggleMenu}>
