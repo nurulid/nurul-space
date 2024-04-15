@@ -1,7 +1,8 @@
+import React from 'react'
 import { FolderSection } from '@/components/mail/folderSection'
+import { MailDetails } from '@/components/mail/mailDetails'
 import { MailList } from '@/components/mail/mailList'
 import { Sidebar } from '@/components/mail/sidebar'
-import React from 'react'
 
 export default function Page() {
   return (
@@ -9,9 +10,7 @@ export default function Page() {
       <Sidebar />
       <FolderSection />
       <MailList />
-      <section>
-        mail details
-      </section>
+      <MailDetails />
     </div>
   )
 }
