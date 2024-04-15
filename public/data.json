@@ -1,36 +1,12 @@
 {
     "portfolio": [
         {
-            "id": 1,
-            "title": "Fylo App",
-            "description": "",
-            "previewURL": "https://nid-fylo.netlify.app/",
-            "codeURL": "https://github.com/nurulid/sc-fylo-dark-landing-page",
-            "thumbnail": "/portfolio/fylo-app.jpeg",
-            "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
-            "category": "CSS",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
             "id": 2,
             "title": "School",
             "description": "",
             "previewURL": "https://nurulid.github.io/school-landing-page",
             "codeURL": "https://github.com/nurulid/school-landing-page",
             "thumbnail": "/portfolio/sekolah-lp.jpeg",
-            "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
-            "category": "CSS",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
-            "id": 3,
-            "title": "Tajam",
-            "description": "",
-            "previewURL": "https://nurulid.github.io/tajam",
-            "codeURL": "https://github.com/nurulid/tajam",
-            "thumbnail": "/portfolio/tajam-lp.jpeg",
             "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
             "category": "CSS",
             "isDone": true,
@@ -116,6 +92,18 @@
             "codeURL": "https://github.com/nurulid/radwahpadang",
             "thumbnail": "/portfolio/radwah-padang.jpeg",
             "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
+            "category": "CSS",
+            "isDone": true,
+            "isTeam": false
+        },
+        {
+            "id": 11,
+            "title": "Mail Dashboard",
+            "description": "",
+            "previewURL": "/ui/mail",
+            "codeURL": "https://github.com/nurulid/nurul-space/tree/main/src/components/mail",
+            "thumbnail": "/portfolio/mail-dashboard-ui.jpeg",
+            "labels": ["Dashboard", "Tailwind CSS", "landing page"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false
