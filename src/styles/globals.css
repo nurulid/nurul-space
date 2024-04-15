@@ -91,6 +91,10 @@
     @apply bg-gradient-to-b from-white/20 to-gray-50 block w-full h-[80px] absolute bottom-0;
   }
 
+  .mail-icon {
+    @apply text-mailGray;
+  }
+
   /* Arc Landing Page */
   .arc-title {
     @apply text-[40px] text-[#3239FB] w-full lg:w-[60%] mx-auto leading-[1.1];

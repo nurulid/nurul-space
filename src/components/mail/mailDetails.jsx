@@ -1,6 +1,6 @@
-import { nameAlias } from '@/lib/utils'
-import { Bell, ChevronDown } from 'lucide-react'
 import React from 'react'
+import { nameAlias } from '@/lib/utils'
+import { Archive, Bell, ChevronDown, ChevronLeft, ChevronRight, Printer, Star, Trash2 } from 'lucide-react'
 
 const user = {
   id: "1234",
@@ -12,7 +12,7 @@ const MailHeader = () => {
   return (
     <header className='flex justify-end items-center p-[30px] border-b'>
       <div className="notif">
-        <Bell className='text-mailGray'/>
+        <Bell className='mail-icon'/>
         <span className="notif__label"></span>
       </div>
       <div className="user flex items-center gap-3 px-4 ml-4 border-l-2 border-gray-200">
@@ -28,10 +28,31 @@ const MailHeader = () => {
   )
 }
 
+const MailMenu = () => {
+  return (
+    <div className='flex justify-between px-[30px] py-5 border-b'>
+      <Archive className='mail-icon'/>
+      <div className="pagination flex gap-2">
+        <ChevronLeft className='mr-2'/>
+        <span>3</span>
+        <span>of</span>
+        <span>1293</span>
+        <ChevronRight className='ml-2'/>
+      </div>
+      <div className='flex items-center gap-[18px]'>
+        <Star className='mail-icon'/>
+        <Printer className='mail-icon'/>
+        <Trash2 className='mail-icon'/>
+      </div>
+    </div>
+  )
+}
+
 export const MailDetails = () => {
   return (
     <section className='flex-grow'>
       <MailHeader />
+      <MailMenu />
     </section>
   )
 }
