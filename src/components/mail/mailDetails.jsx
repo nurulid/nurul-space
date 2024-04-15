@@ -150,7 +150,7 @@ const MailContent = () => {
       </div>
       <div className="w-[85%]">
         <h2 className="text-2xl font-semibold mb-4">{mail.title}</h2>
-        <div className="text-gray-400 leading-[1.8] text-sm">
+        <div className="text-gray-400 leading-[1.8] text-sm mb-4">
           <InnerHTML text={mail.desc} />
         </div>
       </div>

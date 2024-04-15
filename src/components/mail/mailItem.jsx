@@ -16,7 +16,7 @@ export const MailItem = ({
   label,
 }) => {
   return (
-    <div className="hover:bg-gray-100/50 transition-all">
+    <div className="mail-item hover:bg-gray-100/50 transition-all">
       <div className="flex py-6 mx-6 border-b-2 border-gray-200">
         <div className="w-[30px]">
           <input type="checkbox" />

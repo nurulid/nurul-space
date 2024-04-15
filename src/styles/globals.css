@@ -95,6 +95,10 @@
     @apply text-mailGray;
   }
 
+  .mail-item:nth-child(3) {
+    @apply bg-gray-100/50;
+  }
+
   /* Arc Landing Page */
   .arc-title {
     @apply text-[40px] text-[#3239FB] w-full lg:w-[60%] mx-auto leading-[1.1];
