@@ -54,15 +54,11 @@ export const FolderSection = () => {
         </h2>
         <nav>
           <ul className="space-y-2">
-            {folderMenus.map(({ icon, title, count, unread, active }, i) => {
+            {folderMenus.map(({ icon: Icon, title, count, unread, active }, i) => {
               return (
                 <FolderMenu
                   key={i}
-                  Icon={icon}
-                  title={title}
-                  count={count}
-                  unread={unread}
-                  active={active}
+                  {...{Icon, title, count, unread, active}}
                 />
               );
             })}
