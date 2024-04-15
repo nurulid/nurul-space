@@ -83,21 +83,14 @@ export const MailList = () => {
     },
   ];
   return (
-    <section className="w-[430px] border-r-1 border-gray-200">
-      <div className="flex justify-between py-9 mx-6 mb-3 border-b-2 border-gray-200">
-        <h2 className="text-xl font-semibold">
-          Inbox{" "}
-          <span className="text-gray-500 font-normal inline-block ml-2">
-            (1293)
-          </span>
-        </h2>
-        <nav>
-          <ul className="flex gap-[10px] text-[#B0B3B9]">
-            {mailHeaderButtons.map(({ icon: Icon, title }, i) => {
-              return <BtnIcon key={i} {...{Icon, title}} />;
-            })}
-          </ul>
-        </nav>
+    <section className='mail-list w-[430px] border-r-1 border-gray-200 relative'>
+      <div className='flex justify-between py-9 mx-6 mb-4 border-b-2 border-gray-200'>
+        <h2 className='text-xl font-semibold'>Inbox <span className='text-gray-500 font-normal inline-block ml-2'>(1293)</span></h2>
+        <ul className='flex gap-[10px] text-[#B0B3B9]'>
+          <li className='cursor-pointer hover:opacity-80'><Trash2 /></li>
+          <li className='cursor-pointer hover:opacity-80'><Star /></li>
+          <li className='cursor-pointer hover:opacity-80'><Filter /></li>
+        </ul>
       </div>
       <Search className="mx-6" placeholder="Search messages..." />
       <div className="h-[calc(100vh-178px)] overflow-scroll">

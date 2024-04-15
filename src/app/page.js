@@ -10,7 +10,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="my-10 max-w-3xl ml-auto pb-10 border-b border-dashed text-right leading-6">
+      <div className="my-10 max-w-3xl ml-auto pb-10 border-b border-dashed text-center md:text-right leading-6">
         <h2 className="mb-2 text-4xl lg:text-5xl text-center md:text-right font-mono">
           Hello 🙂 <br />
           I'm <span className="text-purple-500">Nurul</span> a Frontend Developer
@@ -21,7 +21,7 @@ export default async function Home() {
           my experience, I learn and practice how to build beautiful and
           functional products.
         </p>
-        <div className="flex justify-end gap-4 items-center mt-4">
+        <div className="flex justify-center md:justify-end gap-4 items-center mt-4">
           <a href="http://dribbble.com/nurulid" target="_blank" title="My Dribbble" className="text-[#EA5693] hover:scale-125 transition-all">
             <Dribbble />
           </a>
