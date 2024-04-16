@@ -4,7 +4,7 @@ import { Search } from "./search";
 import { FolderMenu } from "./folderMenu";
 
 export const FolderSection = () => {
-  const folderMenus = [
+  const mainMenu = [
     {
       icon: Mail,
       title: "Inbox",
@@ -33,6 +33,9 @@ export const FolderSection = () => {
       unread: "",
       active: false
     },
+  ];
+
+  const secondMenu = [
     {
       icon: Archive,
       title: "Archive",
@@ -40,7 +43,7 @@ export const FolderSection = () => {
       unread: "",
       active: false
     },
-  ];
+  ]
 
   return (
     <aside className="w-[354px] h-screen flex flex-col border-r-1 border-gray-200">
@@ -53,8 +56,18 @@ export const FolderSection = () => {
           </span>
         </h2>
         <nav>
-          <ul className="space-y-2">
-            {folderMenus.map(({ icon: Icon, title, count, unread, active }, i) => {
+          <ul className="space-y-2 pb-2 mb-4">
+            {mainMenu.map(({ icon: Icon, title, count, unread, active }, i) => {
+              return (
+                <FolderMenu
+                  key={i}
+                  {...{Icon, title, count, unread, active}}
+                />
+              );
+            })}
+          </ul>
+          <ul className="space-y-2 pt-6 border-t-2 borger-gray-200 ">
+            {secondMenu.map(({ icon: Icon, title, count, unread, active }, i) => {
               return (
                 <FolderMenu
                   key={i}
