@@ -1,6 +1,6 @@
 import React from "react";
 import { Star } from "lucide-react";
-import { nameAlias, formatMonthDay, formatTime } from "@/lib/utils";
+import { getFirstCharacter, formatMonthDay, formatTime } from "@/lib/utils";
 import { Label } from "./label";
 
 export const MailItem = ({
@@ -30,7 +30,7 @@ export const MailItem = ({
                   alt=""
                   className="rounded-full object-cover w-full h-full"
                 />
-              ) : nameAlias(user)}
+              ) : getFirstCharacter(user)}
             </figure>
             <div>
               <h4 className="text-sm font-semibold">{user}</h4>

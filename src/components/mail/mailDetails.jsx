@@ -1,5 +1,5 @@
 import React from "react";
-import { nameAlias, formatMonthDay, formatTime } from "@/lib/utils";
+import { getFirstCharacter, formatMonthDay, formatTime } from "@/lib/utils";
 import {
   Archive,
   Bell,
@@ -58,7 +58,7 @@ const MailHeader = () => {
       </div>
       <div className="user flex items-center gap-3 px-4 ml-4 border-l-2 border-gray-200">
         <figure className="ava size-8 rounded-full bg-rose-500 text-[10px] text-white text-center leading-8">
-          {nameAlias(user.name)}
+          {getFirstCharacter(user.name)}
         </figure>
         <div>
           <h3 className="text-sm text-gray-600 mr-1 inline-block">
@@ -103,7 +103,7 @@ const MailSender = () => {
               className="rounded-full object-cover w-full h-full"
             />
           ) : (
-            nameAlias(mail.user)
+            getFirstCharacter(mail.user)
           )}
         </figure>
         <div>
@@ -164,7 +164,7 @@ const MailAttachments = () => {
       <h3 className="mb-3">Attachments</h3>
       <div className="grid grid-cols-2 gap-[10px]">
       {mail.attachment.map((item, i) => (
-        <div key={item.i} className="p-[10px] border border-gray-100 rounded-[8px]">
+        <div key={i} className="p-[10px] border border-gray-100 rounded-[8px]">
           <div className="text-sm flex items-center gap-2 mb-3">
             <Image src="/mail/icons/icon-file.svg" width={24} height={24} alt="icon file"/>
             <p>{item.name}</p>

@@ -46,3 +46,11 @@ export function formatTime(timeString) {
   const formattedTime = `${formattedHours}:${minutes < 10 ? '0' + minutes : minutes} ${ampm}`;
   return formattedTime;
 }
+
+// Get first character
+export function getFirstCharacter(names) {
+  return names
+      .split(' ')
+      .map(word => word.charAt(0))
+      .join('');
+}
