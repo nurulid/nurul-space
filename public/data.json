@@ -103,7 +103,7 @@
             "previewURL": "/ui/mail",
             "codeURL": "https://github.com/nurulid/nurul-space/tree/main/src/components/mail",
             "thumbnail": "/portfolio/mail-dashboard-ui.jpeg",
-            "labels": ["Dashboard", "Tailwind CSS", "landing page"],
+            "labels": ["React", "Tailwind CSS", "Dashboard"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false

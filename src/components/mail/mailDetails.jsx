@@ -124,7 +124,7 @@ const MailSender = () => {
         </div>
         <div>
           <span className="text-gray-500 mr-2">To:</span>
-          <span>{mail.to}</span>
+          <span>{mail.to.join(", ")}</span>
         </div>
       </div>
     </div>

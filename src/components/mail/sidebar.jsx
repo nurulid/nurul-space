@@ -1,5 +1,5 @@
 import React from "react";
-import { Settings, MessageCircleMore, AreaChart,Calendar, Mail, FileText, LogOut, CircleHelp, BadgeHelp } from 'lucide-react'
+import { Settings, MessageCircleMore, AreaChart,Calendar, Mail, FileText, LogOut, BadgeHelp } from 'lucide-react'
 
 export const Sidebar = () => {
   return (
