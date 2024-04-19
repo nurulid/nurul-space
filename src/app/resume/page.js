@@ -19,8 +19,9 @@ export default function Page() {
         <Education data={resume} />
         <Skills data={resume} />
         <Portfolio data={resume} />
+        <div className='max-w-[500px] w-full mx-auto border-b-[0.5px] border-gray-200 decoration-wavy pt-10'></div>
       </div>
-      <div className="mt-24 px-5 text-gray-600 text-xs text-center">
+      <div className="mt-14 px-5 text-gray-600 text-xs text-center">
         Design of this resume credit to{' '}
         <a href="https://cv.jarocki.me/" target='_blank' className="underline hover:opacity-80">
           Bartosz Jarocki

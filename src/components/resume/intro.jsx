@@ -6,9 +6,9 @@ import { Globe, Mail } from 'lucide-react';
 export const Intro = ({ data }) => {
   return (
     <section className="flex gap-4 justify-between items-center">
-      <div>
+      <div className='pr-0 sm:pr-10 md:pr-20'>
         <h1 className="title">{data.name}</h1>
-        <p className="font-mono">{data.role}</p>
+        <p className="font-mono">{data.about}</p>
         <p>
           <Link
             href={data.location.link}
@@ -43,8 +43,8 @@ export const Intro = ({ data }) => {
       <div className="rounded-md">
         <Image
           src="/images/nid.jpeg"
-          width={100}
-          height={100}
+          width={170}
+          height={170}
           alt="Avatar"
           className="rounded-md"
         />

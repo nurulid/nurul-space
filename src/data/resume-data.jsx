@@ -3,7 +3,7 @@ import { XIcon } from '../components/resume/icons/xIcon';
 
 export const RESUME_DATA = {
   name: 'Nurul Insani Dewi',
-  role: 'Frontend Developer, UI crafter, CSS and Tailwind CSS lover',
+  about: 'Enthusiastic Frontend Developer and UI crafter, with a strong affinity for CSS and Tailwind CSS.',
   location: {
     state: 'Indonesia',
     link: 'https://www.google.com/maps/place/Indonesia/',
@@ -33,7 +33,7 @@ export const RESUME_DATA = {
       },
     ],
   },
-  about:
+  summary:
     "I'm an experienced Frontend Developer, especially in crafting User Interface (UI). During my experience, I learn and practice how to build beautiful and functional products.",
   work: [
     {
