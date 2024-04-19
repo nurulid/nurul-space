@@ -1,5 +1,6 @@
 export const XIcon = () => {
   return (
+    // https://fontawesome.com/icons/x-twitter?f=brands&s=solid
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18"

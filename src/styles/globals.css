@@ -41,22 +41,7 @@
     @apply text-violet-600 underline;
   }
   .nav-menu {
-    @apply flex items-center gap-10
-  }
-
-  .resume section {
-    @apply mb-10;
-  }
-
-  .resume .title {
-    @apply mb-2 text-2xl font-semibold;
-  }
-  .resume p {
-    @apply font-mono text-resumeGray text-xs leading-[1.6] mb-1;
-  }
-
-  .resume a {
-    @apply hover:underline;
+    @apply flex items-center gap-6;
   }
 
   .nav-menu > a {
@@ -79,6 +64,18 @@
 
   .chip.active {
     @apply bg-black text-violet-200;
+  }
+
+  .resume .title {
+    @apply mb-2 text-2xl font-semibold;
+  }
+  .resume p {
+    color: #111827cc;
+    @apply font-mono text-resumeGray text-xs leading-[1.5] mb-1;
+  }
+
+  .resume a {
+    @apply hover:underline;
   }
 
   /* mail */
