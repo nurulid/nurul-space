@@ -21,7 +21,7 @@ export default function Page() {
         <Portfolio data={resume} />
       </div>
       <div className="mt-24 px-5 text-gray-600 text-xs text-center">
-        Design and idea credit to{' '}
+        Design of this resume credit to{' '}
         <a href="https://cv.jarocki.me/" target='_blank' className="underline hover:opacity-80">
           Bartosz Jarocki
         </a>
