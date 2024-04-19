@@ -44,6 +44,21 @@
     @apply flex items-center gap-10
   }
 
+  .resume section {
+    @apply mb-10;
+  }
+
+  .resume .title {
+    @apply mb-2 text-2xl font-semibold;
+  }
+  .resume p {
+    @apply font-mono text-resumeGray text-xs leading-[1.6] mb-1;
+  }
+
+  .resume a {
+    @apply hover:underline;
+  }
+
   .nav-menu > a {
     @apply hover:underline underline-offset-4 transition-all;
   }
