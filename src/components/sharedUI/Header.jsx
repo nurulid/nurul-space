@@ -31,11 +31,11 @@ export const Header = () => {
         </Link>
         <div className="nav-menu">
           <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
-          <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
-            UI
-          </Link>
           <Link href="/resume" className={`${currentPath === '/resume' ? 'active' : ''} whitespace-nowrap group`}>
             Resume
+          </Link>
+          <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
+            UI
           </Link>
           <Link href="https://nurulid.gumroad.com/" target="_blank" className="relative group flex items-center gap-1">
             Templates
@@ -75,13 +75,13 @@ export const Header = () => {
                 <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
-                  UI
+                <Link href="/resume" className={`${currentPath === '/resume' ? 'active' : ''} whitespace-nowrap group`}>
+                  Resume
                 </Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="/resume" className={`${currentPath === '/resume' ? 'active' : ''} whitespace-nowrap group`}>
-                  Resume
+                <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
+                  UI
                 </Link>
               </li>
               <li onClick={toggleMenu}>
