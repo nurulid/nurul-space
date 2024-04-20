@@ -63,7 +63,7 @@ export const RESUME_DATA = {
       start: '2018',
       end: '2018',
       location: 'Jakarta, Indonesia',
-      status: 'Full Time',
+      status: '',
       description: "Debugging and resolving issues, converting new page designs into HTML for both web and mobile views using the Bulma CSS framework, and collaborating closely with the product team.",
     },
   ],

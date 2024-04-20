@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { Card } from './ui/card';
 
 export const Work = ({ data }) => {
   return (
@@ -7,27 +8,11 @@ export const Work = ({ data }) => {
       <h2 className="title">Work Experiences</h2>
       <div className="space-y-3">
         {data.work.map(
-          (
-            { role, company, link, start, end, location, description },
-            i
-          ) => (
-            <div key={i}>
-              <div className="flex justify-between items-start gap-4">
-                <h3 className="text-base font-semibold mb-1">
-                  <Link href={link} target='_blank'>{company}</Link>{' '}
-                  <span className="text-xs py-[2px] px-2 bg-gray-100 text-black rounded-md inline-block">
-                    {location}
-                  </span>
-                </h3>
-                <p className="!text-sm whitespace-nowrap">
-                  <span>{start}</span>
-                  {'-'}
-                  <span>{end}</span>
-                </p>
-              </div>
-              <p className="!text-sm">{role}</p>
-              <p>{description}</p>
-            </div>
+          ({ role, company, link, start, end, location, status, description }, i) => (
+            <Card
+              key={i}
+              {...{ role, company, link, start, end, location, status, description }}
+            />
           )
         )}
       </div>
