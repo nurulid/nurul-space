@@ -9,6 +9,11 @@ import { Education } from '@/components/resume/education';
 
 const resume = RESUME_DATA;
 
+export const metadata = {
+  title: `${resume.name} | ${resume.about}`,
+  description: resume.summary,
+};
+
 export default function Page() {
   return (
     <>
@@ -25,7 +30,7 @@ export default function Page() {
         Design of this resume credit to{' '}
         <a href="https://cv.jarocki.me/" target='_blank' className="underline hover:opacity-80">
           Bartosz Jarocki
-        </a>
+        </a>{' '}🙌
       </div>
     </>
   );
