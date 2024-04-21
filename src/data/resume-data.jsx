@@ -88,7 +88,7 @@ export const RESUME_DATA = {
       title: 'Tailwind CSS UI',
       techStack: ['Next.js', 'Typescript', 'Tailwind CSS', 'Radix UI'],
       description: 'UI and components with Tailwind CSS',
-      link: 'https://tailwind-ui-delta.vercel.app/',
+      link: 'https://nid-tailwindcss-ui.vercel.app',
       isDone: false,
     },
     {
