@@ -95,7 +95,7 @@ export const RESUME_DATA = {
       title: 'Aplikasi Qur\'\an',
       techStack: ['Next.js', 'Prisma', 'Tailwind CSS', 'daisyUI'],
       description: 'Quran web app built with Next.js and Tailwind CSS',
-      link: 'https://aplikasi-quran.vercel.app/',
+      link: 'https://aplikasi-quran.vercel.app/my-quran',
       isDone: false,
     },
     {

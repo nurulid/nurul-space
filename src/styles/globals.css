@@ -41,7 +41,7 @@
     @apply text-violet-600 underline;
   }
   .nav-menu {
-    @apply flex items-center gap-6;
+    @apply flex items-center gap-4;
   }
 
   .nav-menu > a {
