@@ -49,18 +49,6 @@
             "isTeam": false
         },
         {
-            "id": 7,
-            "title": "Eventmakers",
-            "description": "",
-            "previewURL": "https://eventmakers-nid.vercel.app/",
-            "codeURL": "https://github.com/nurulid/eventmakers-nid",
-            "thumbnail": "/portfolio/Eventmakers NID.jpeg",
-            "labels": ["Next.js", "Tailwind CSS", "NextUI", "frontend"],
-            "category": "frontend",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
             "id": 8,
             "title": "Adopt Hunt",
             "description": "Where pet lovers meet! A platform designed to make pet adoption easy and joyful.",
