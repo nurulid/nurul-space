@@ -15,7 +15,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="sticky top-4 md:top-6 z-[99] m-2 md:mx-auto max-w-3xl shadow-sm py-3 px-6 rounded-full bg-gray-100/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-[.5px] border-purple-300">
+    <header className="sticky top-4 md:top-6 z-[20] m-2 md:mx-auto max-w-3xl shadow-sm py-3 px-6 rounded-full bg-gray-100/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-[.5px] border-purple-300">
       <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
         <Link
           href="/"

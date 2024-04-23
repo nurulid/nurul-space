@@ -6,7 +6,7 @@ import { Sidebar } from '@/components/mail/sidebar'
 
 export default function Page() {
   return (
-    <div className='h-full flex'>
+    <div className='h-full flex min-w-[1440px] overflow-x-auto'>
       <Sidebar />
       <FolderSection />
       <MailList />

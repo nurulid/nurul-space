@@ -22,16 +22,16 @@ export default async function Home() {
           functional products.
         </p>
         <div className="flex justify-center md:justify-end gap-4 items-center mt-4">
-          <a href="http://dribbble.com/nurulid" target="_blank" title="My Dribbble" className="text-[#EA5693] hover:scale-125 transition-all">
+          <a href="http://dribbble.com/nurulid" target="_blank" title="My Dribbble" className="hover:scale-125 transition-all">
             <Dribbble />
           </a>
-          <a href="https://github.com/nurulid" target="_blank" title="My GitHub" className="text-[#8957E5] hover:scale-125 transition-all">
+          <a href="https://github.com/nurulid" target="_blank" title="My GitHub" className="hover:scale-125 transition-all">
             <Github />
           </a>
-          <a href="https://id.linkedin.com/in/nurul-insani-dewi" target="_blank" title="My Linkedin" className="text-[#0B66C2] hover:scale-125 transition-all">
+          <a href="https://id.linkedin.com/in/nurul-insani-dewi" target="_blank" title="My Linkedin" className=" hover:scale-125 transition-all">
             <Linkedin />
           </a>
-          <a href="mailto:call.nurulid@gmail.com" title="Contact me" className="text-[#FBAC15] transition-all animate-wiggle hover:animate-none">
+          <a href="mailto:call.nurulid@gmail.com" title="Contact me" className="transition-all animate-wiggle hover:animate-none hover:text-gray-400">
             <Mail />
           </a>
         </div>
