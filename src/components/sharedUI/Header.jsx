@@ -1,18 +1,24 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from 'next/navigation';
-import { useState } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
-import { ThemeSwitcher } from "./ThemeSwitcher";
+import Link from 'next/link';
+import { useState } from 'react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { ThemeSwitcher } from './ThemeSwitcher';
+import { LinkMenu } from '../ui/linkMenu';
+
+const menu = [
+  { title: 'Portfolio', link: '/', external: false },
+  { title: 'Resume', link: '/resume', external: false },
+  { title: 'UI', link: '/ui', external: false },
+  { title: 'Templates', link: 'https://nurulid.gumroad.com/', external: true },
+];
 
 export const Header = () => {
-  const currentPath = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  }
+  };
 
   return (
     <header className="sticky top-4 md:top-6 z-[20] m-2 md:mx-auto max-w-3xl shadow-sm py-3 px-6 rounded-full bg-gray-100/10 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-25 border-[.5px] border-purple-300">
@@ -26,28 +32,19 @@ export const Header = () => {
             alt=""
             width="30"
             className="rounded-full"
-          />{" "}
+          />{' '}
           Nurul ID
         </Link>
         <div className="nav-menu">
-          <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
-          <Link href="/resume" className={`${currentPath === '/resume' ? 'active' : ''} whitespace-nowrap group`}>
-            Resume
-          </Link>
-          <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
-            UI
-          </Link>
-          <Link href="https://nurulid.gumroad.com/" target="_blank" className="relative group flex items-center gap-1">
-            Templates
-            <span className="block w-2 h-2 rounded-full bg-red-400 absolute -top-1 right-4 group-hover:bg-black transition-all"></span>
-            <ArrowUpRight size={18} className="group-hover:rotate-45 transition-all"/>
-          </Link>
+          {menu.map(({ title, link, external }, i) => (
+            <LinkMenu key={i} {...{ title, link, external }} />
+          ))}
           <ThemeSwitcher />
         </div>
       </nav>
 
       {/* Mobile Nav */}
-      <nav className={`block lg:hidden ${isOpen ? "open" : ""}`}>
+      <nav className={`block lg:hidden ${isOpen ? 'open' : ''}`}>
         <div className="flex justify-between items-center">
           <Link
             href="/"
@@ -58,12 +55,12 @@ export const Header = () => {
               alt=""
               width="30"
               className="rounded-full"
-            />{" "}
+            />{' '}
             Nurul ID
           </Link>
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
-            <Menu onClick={toggleMenu} className="cursor-pointer"/>
+            <Menu onClick={toggleMenu} className="cursor-pointer" />
           </div>
         </div>
 
@@ -72,28 +69,58 @@ export const Header = () => {
           <div className="animate-slideRight absolute -top-4 inset-0 bg-white h-screen py-20 px-10 flex flex-col justify-between items-center z-[99]">
             <ul className="text-[28px] font-bold text-center space-y-8">
               <li onClick={toggleMenu}>
-                <Link href="/" className={`${currentPath === '/' ? 'active' : ''} whitespace-nowrap group`}>Portfolio</Link>
+                <Link
+                  href="/"
+                  className={`${
+                    currentPath === '/' ? 'active' : ''
+                  } whitespace-nowrap group`}
+                >
+                  Portfolio
+                </Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="/resume" className={`${currentPath === '/resume' ? 'active' : ''} whitespace-nowrap group`}>
+                <Link
+                  href="/resume"
+                  className={`${
+                    currentPath === '/resume' ? 'active' : ''
+                  } whitespace-nowrap group`}
+                >
                   Resume
                 </Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="/ui" className={`${currentPath === '/ui' ? 'active' : ''} whitespace-nowrap group`}>
+                <Link
+                  href="/ui"
+                  className={`${
+                    currentPath === '/ui' ? 'active' : ''
+                  } whitespace-nowrap group`}
+                >
                   UI
                 </Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="https://nurulid.gumroad.com/" target="_blank" className="relative group inline-flex items-center gap-1">
+                <Link
+                  href="https://nurulid.gumroad.com/"
+                  target="_blank"
+                  className="relative group inline-flex items-center gap-1"
+                >
                   Templates
                   <span className="block w-2 h-2 rounded-full bg-red-400 absolute -top-1 right-4 group-hover:bg-black transition-all"></span>
-                  <ArrowUpRight size={18} className="group-hover:rotate-45 transition-all"/>
+                  <ArrowUpRight
+                    size={18}
+                    className="group-hover:rotate-45 transition-all"
+                  />
                 </Link>
               </li>
             </ul>
-            <X onClick={toggleMenu} color="black" className="absolute top-[28px] right-[20px] cursor-pointer"/>
-            <p className="text-gray-500 text-sm">@ 2024 Made with 💜 by Nurul</p>
+            <X
+              onClick={toggleMenu}
+              color="black"
+              className="absolute top-[28px] right-[20px] cursor-pointer"
+            />
+            <p className="text-gray-500 text-sm">
+              @ 2024 Made with 💜 by Nurul
+            </p>
           </div>
         )}
       </nav>
