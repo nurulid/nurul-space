@@ -43,7 +43,7 @@ export default function Page() {
     },
   ];
   return (
-    <div className="py-0 md:py-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+    <div className="py-0 md:py-10 grid grid-cols-1 gap-6 lg:gap-10">
       <div className="p-6 border border-gray-200 dark:border-gray-700 rounded-xl flex flex-col">
         <ShareDialog />
         <UiDesignInfo data={uiExperiments[2]} />
