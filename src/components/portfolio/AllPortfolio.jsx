@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import { Chip, Tooltip } from "@nextui-org/react";
-import { Github, MoveRight } from "lucide-react";
-import Image from "next/image";
-import { useState } from "react";
+import { useState } from 'react';
+import { Chip, Tooltip } from '@nextui-org/react';
+import { Github, MoveRight } from 'lucide-react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export const AllPortfolio = ({ portfolio }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -26,30 +27,45 @@ export const AllPortfolio = ({ portfolio }) => {
     ? sortedData.filter((item) => item.category === selectedCategory)
     : sortedData;
 
-  const categories = [null, "CSS", "frontend", "fullstack"];
+  const categories = [null, 'CSS', 'frontend', 'fullstack'];
 
   return (
     <>
-      <h1 className="text-3xl mb-5">My Portfolio</h1>
-      <div>
+      <h1 id="portfolio" className="text-3xl mb-5 pt-[100px]">My Portfolio</h1>
+      <div className="space-x-3">
         {categories.map((item, index) => {
+          const selected = selectedCategory === item;
           return (
-            <Chip
+            <a
+              href="#portfolio"
               key={index}
               onClick={() => handleFilter(item)}
-              variant="flat"
-              color="secondary"
-              className={`mr-3 cursor-pointer capitalize chip ${selectedCategory === item ? 'active' : ''}`}
+              className="px-4 py-1 rounded-full capitalize relative bg-purple-200 text-purple-800 text-sm"
             >
-              {item === null ? "all" : item}
-            </Chip>
+              <span
+                className={[
+                  selected && 'text-purple-200',
+                  'relative z-[2]',
+                ].join(' ')}
+              >
+                {item === null ? 'all' : item}
+              </span>
+
+              {selected && (
+                <motion.span
+                  layoutId="tab"
+                  transition={{ type: 'spring', duration: 0.4 }}
+                  className="absolute inset-0 z-0 rounded-full bg-black"
+                ></motion.span>
+              )}
+            </a>
           );
         })}
       </div>
       {portfolio ? (
         <>
-          <h2 className="mt-5 mb-10 text-xl capitalize text-center pb-5 border-b border-dashed border-gray-100 dark:border-gray-800">
-            {selectedCategory === null ? "all" : selectedCategory}
+          <h2 className="mt-5 mb-10 text-2xl font-mono capitalize text-center pb-5 border-b border-dashed border-gray-100 dark:border-gray-800">
+            {selectedCategory === null ? 'all' : selectedCategory}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
             {filteredPortfolio.map(
@@ -67,7 +83,10 @@ export const AllPortfolio = ({ portfolio }) => {
                 return (
                   <div
                     key={id}
-                    className={`p-4 border-[.5px] border-purple-300 dark:border-purple-800/20 rounded-md relative group transition-all bg-purple-100/20 dark:bg-slate-400/10 flex flex-col ${!isDone && "on-progress"} ${isTeam && "team-project"}`}>
+                    className={`p-4 border-[.5px] border-purple-300 dark:border-purple-800/20 rounded-md relative group transition-all bg-purple-100/20 dark:bg-slate-400/10 flex flex-col ${
+                      !isDone && 'on-progress'
+                    } ${isTeam && 'team-project'}`}
+                  >
                     <div className="h-[250px] w-full overflow-hidden rounded-md">
                       <Tooltip showArrow={true} content="Visit preview">
                         <a href={previewURL} target="_blank">
@@ -90,7 +109,9 @@ export const AllPortfolio = ({ portfolio }) => {
                         />
                       </h2>
                     </a>
-                    <p className="mb-5 text-gray-500 dark:text-gray-400 text-sm">{description}</p>
+                    <p className="mb-5 text-gray-500 dark:text-gray-400 text-sm">
+                      {description}
+                    </p>
                     <Tooltip showArrow={true} content="Souce code">
                       <a
                         target="_blank"

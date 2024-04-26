@@ -19,12 +19,12 @@
     --nextui-background: 234 17% 10%;
   }
 
-  html, body {
-      /* @apply h-full; */
-  }
+  /* html, body {
+      @apply h-full;
+  } */
 
   /* To make the footer stay at the bottom despite there's not enough content */
-  /* Not sure from where these div come */
+  /* It seems the div come from NextUI*/
   body > div[data-overlay-container="true"]:first-child {
       @apply h-full; 
   }
@@ -60,10 +60,6 @@
   .team-project:after {
     content: "Team Project";
     @apply absolute -top-4 right-0 text-xs leading-5 font-semibold bg-yellow-200 text-yellow-900 rounded-full py-1 px-3 flex items-center space-x-2;
-  }
-
-  .chip.active {
-    @apply bg-black text-violet-200;
   }
 
   .resume .title {
