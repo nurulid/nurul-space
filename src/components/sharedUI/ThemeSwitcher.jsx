@@ -7,27 +7,24 @@ import { useTheme } from "next-themes";
 
 export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme: toggleTheme } = useTheme();
 
-  useEffect(() => setMounted(true));
+  useEffect(() => setMounted(true), []);
 
-  function setThemeMode(value) {
-    if (value) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  }
+  const isDarkMode = theme === "dark";
+
+  const toggleThemeMode = () => toggleTheme(isDarkMode ? "light" : "dark");
+
+  if (!mounted) return null;
+
   return (
     <Switch
-      defaultSelected={false}
+      defaultSelected={isDarkMode}
       size="sm"
       color="default"
       startContent={<Sun />}
       endContent={<Moon />}
-      onChange={(e) => setThemeMode(e.target.checked)}
-    >
-      {/* <span className="text-sm">{mounted && theme}</span> */}
-    </Switch>
+      onChange={toggleThemeMode}
+    />
   );
 };
