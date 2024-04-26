@@ -6,7 +6,7 @@ export const Portfolio = ({ data }) => {
     <section>
       <h2 className="title">Portfolio/Projects</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-        {data.portfolio.map(
+        {data.map(
           ({ title, techStack, description, link, isDone }, i) => (
             <div
               key={i}

@@ -20,10 +20,10 @@ export default function Page() {
       <div className="resume space-y-8">
         <Intro data={resume} />
         <About data={resume} />
-        <Work data={resume} />
-        <Education data={resume} />
-        <Skills data={resume} />
-        <Portfolio data={resume} />
+        <Work data={resume.work} />
+        <Education data={resume.education} />
+        <Skills data={resume.skills} />
+        <Portfolio data={resume.portfolio} />
         <div className='max-w-[500px] w-full mx-auto border-b-[0.5px] border-gray-200 decoration-wavy pt-10'></div>
       </div>
       <div className="mt-14 px-5 text-gray-600 text-xs text-center">

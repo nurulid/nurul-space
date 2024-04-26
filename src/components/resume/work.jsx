@@ -7,7 +7,7 @@ export const Work = ({ data }) => {
     <section>
       <h2 className="title">Work Experiences</h2>
       <div className="space-y-3">
-        {data.work.map(
+        {data.map(
           ({ role, company, link, start, end, location, status, description }, i) => (
             <Card
               key={i}
