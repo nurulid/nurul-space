@@ -50,7 +50,7 @@ export default async function Home() {
             className="text-right inline-block mt-2 mb-4 py-3 px-2 bg-violet-50 dark:bg-violet-800/40 border border-violet-100 dark:border-gray-800 rounded-xl"
           >
             <span className="rounded-md px-6 py-2 bg-white dark:bg-white/90 dark:hover:bg-white shadow-md group-hover:shadow-sm dark:text-black transition-all">
-              Available for New Opportunities
+              Hire Me
             </span>
           </a>
           <div className="absolute left-2 -top-3">
