@@ -6,6 +6,7 @@ module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
+    './mdx-components.js',
   ],
   theme: {
     screens: {
@@ -51,7 +52,19 @@ module.exports = {
         slideRight: 'slideRight .5s ease-in-out',
       },
     },
+    hljs: {
+      theme: 'atom-one-dark',
+    },
   },
   darkMode: 'class',
-  plugins: [nextui()],
+  plugins: [
+    nextui(),
+    require('@tailwindcss/typography'),
+    require('tailwind-highlightjs'),
+  ],
+  safelist: [
+    {
+      pattern: /hljs+/,
+    },
+  ],
 };
