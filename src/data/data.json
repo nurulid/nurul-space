@@ -1,18 +1,6 @@
 {
     "portfolio": [
         {
-            "id": 2,
-            "title": "School",
-            "description": "",
-            "previewURL": "https://nurulid.github.io/school-landing-page",
-            "codeURL": "https://github.com/nurulid/school-landing-page",
-            "thumbnail": "/portfolio/sekolah-lp.jpeg",
-            "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
-            "category": "CSS",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
             "id": 4,
             "title": "Shawn Cruz",
             "description": "",
@@ -49,6 +37,18 @@
             "isTeam": false
         },
         {
+            "id": 7,
+            "title": "Radwah Padang",
+            "description": "Promotional Web built with Vue.js and Tailwind CSS",
+            "previewURL": "https://radwah-padang.vercel.app/",
+            "codeURL": "https://github.com/nurulid/radwahpadang",
+            "thumbnail": "/portfolio/radwah-padang.jpeg",
+            "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
+            "category": "CSS",
+            "isDone": true,
+            "isTeam": false
+        },
+        {
             "id": 8,
             "title": "Adopt Hunt",
             "description": "Where pet lovers meet! A platform designed to make pet adoption easy and joyful.",
@@ -61,7 +61,7 @@
             "isTeam": true
         },
         {
-            "id": 9,
+            "id": 10,
             "title": "Arc Browser homepage",
             "description": "Imitate homepage of Arc from The Browser Company (arc.net).",
             "previewURL": "/landing-page/arc",
@@ -73,26 +73,26 @@
             "isTeam": false
         },
         {
-            "id": 10,
-            "title": "Radwah Padang",
-            "description": "Promotional Web built with Vue.js and Tailwind CSS",
-            "previewURL": "https://radwah-padang.vercel.app/",
-            "codeURL": "https://github.com/nurulid/radwahpadang",
-            "thumbnail": "/portfolio/radwah-padang.jpeg",
-            "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
+            "id": 11,
+            "title": "Mail Dashboard",
+            "description": "Mail Dashboard UI for AI app built with Tailwind CSS.",
+            "previewURL": "/ui/mail",
+            "codeURL": "https://github.com/nurulid/nurul-space/tree/main/src/components/mail",
+            "thumbnail": "/portfolio/mail-dashboard-ui.jpeg",
+            "labels": ["Next.js", "Tailwind CSS", "Dashboard"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false
         },
         {
-            "id": 11,
-            "title": "Mail Dashboard",
-            "description": "",
-            "previewURL": "/ui/mail",
-            "codeURL": "https://github.com/nurulid/nurul-space/tree/main/src/components/mail",
-            "thumbnail": "/portfolio/mail-dashboard-ui.jpeg",
-            "labels": ["React", "Tailwind CSS", "Dashboard"],
-            "category": "CSS",
+            "id": 12,
+            "title": "Aplikasi Qur'an",
+            "description": "Quran web app with translations in Bahasa Indonesian, also with tafseer and recitations audio. Built with Next.js.",
+            "previewURL": "https://aplikasi-quran.vercel.app/my-quran",
+            "codeURL": "https://github.com/nurulid/aplikasi-quran",
+            "thumbnail": "/portfolio/aplikasi-quran-albaqara.jpeg",
+            "labels": ["Next.js", "Tailwind CSS", "daisyUI", "frontend"],
+            "category": "frontend",
             "isDone": true,
             "isTeam": false
         }
