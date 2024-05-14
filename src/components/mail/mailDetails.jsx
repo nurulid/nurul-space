@@ -183,7 +183,7 @@ const MailAttachments = () => {
 
 const MailActions = () => {
   return (
-    <div className="mx-[30px] pt-[10px] pb-[30px] flex gap-5 border-t-2 border-gray-100 mt-auto sticky bottom-0 bg-white">
+    <div className="mx-[30px] pt-[10px] pb-[30px] flex gap-5 border-t-2 border-gray-100 mt-auto sticky bottom-0 bg-white dark:bg-inherit">
       <button className="flex gap-2 border border-gray-300 p-[10px] w-full justify-center items-center rounded-[8px]">
         <Reply size={18}/>
         Reply
