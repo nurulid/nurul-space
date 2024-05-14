@@ -1,7 +1,7 @@
 import React from "react";
 import { Star } from "lucide-react";
 import { getFirstCharacter, formatMonthDay, formatTime } from "@/lib/utils";
-import { Label } from "./label";
+import { Label } from "./ui/label";
 
 export const MailItem = ({
   user,

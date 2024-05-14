@@ -14,8 +14,8 @@ import {
   Star,
   Trash2,
 } from "lucide-react";
-import { Label } from "./label";
-import { InnerHTML } from "./innerHTML";
+import { Label } from "./ui/label";
+import { InnerHTML } from "./ui/innerHTML";
 import Image from "next/image";
 
 const user = {

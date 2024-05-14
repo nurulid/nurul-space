@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, Send, Star, File, Archive, Pencil } from "lucide-react";
-import { Search } from "./search";
+import { Search } from "./ui/search";
 import { FolderMenu } from "./folderMenu";
 
 export const FolderSection = () => {
