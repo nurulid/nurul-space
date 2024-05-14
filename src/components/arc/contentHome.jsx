@@ -10,10 +10,8 @@ export const ContentHome = () => {
         <p className="arc-desc">
           Clean and calm, Arc shapes itself to how you use the internet.
         </p>
-        <div className="arc-content__video-wrapper">
-          <video loop autoPlay muted>
-            <source src="/arc/zero-chrome.mp4" type="video/mp4"/>
-          </video>
+        <div className="w-[80%] lg:w-[78%] mx-auto mt-10 mb-10 md:mb-20">
+          <img src="/arc/arc-1.png" alt="Arc feature" className="rounded-[5px] md:rounded-[20px] shadow-md"/>
         </div>
       </div>
       <div className="text-center">
@@ -22,10 +20,8 @@ export const ContentHome = () => {
           Effortlessly organize everything you do online — work, study, hobbies
           — all in one window with Spaces and Profiles.
         </p>
-        <div className="arc-content__video-wrapper">
-          <video loop autoPlay muted>
-            <source src="/arc/space-swiping.mp4" type="video/mp4" />
-          </video>
+        <div className="w-[80%] lg:w-[78%] mx-auto mt-10 mb-10 md:mb-20">
+          <img src="/arc/arc-2.png" alt="Arc feature" className="rounded-[5px] md:rounded-[20px] shadow-md"/>
         </div>
       </div>
       <div className="text-center">
