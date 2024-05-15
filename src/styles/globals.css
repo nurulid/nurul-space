@@ -2,51 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 234 17% 98%;
-  }
+:root {
+  --background: 234 17% 98%;
+}
 
+html.dark,
+[data-theme='dark'] {
+  --nextui-background: 234 17% 10%;
+}
+
+@layer base {
   body {
     font-family: var(--font-inter);
   }
+}
 
+@layer components {
   .font-sunflower {
     font-family: var(--font-sunflower);
   }
 
-  html.dark,
-  [data-theme='dark'] {
-    --nextui-background: 234 17% 10%;
-  }
-
-  /* html, body {
-      @apply h-full;
-  } */
-
-  /* To make the footer stay at the bottom despite there's not enough content */
-  /* It seems the div come from NextUI*/
-  body > div[data-overlay-container='true']:first-child {
-    @apply h-full;
-  }
-
-  a {
-    @apply inline-block;
-  }
-
   .container {
     @apply max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10;
-  }
-
-  a.active {
-    @apply text-violet-600 underline;
-  }
-  .nav-menu {
-    @apply flex items-center gap-4;
-  }
-
-  .nav-menu > a {
-    @apply hover:underline underline-offset-4 transition-all;
   }
 
   div.card-label:nth-child(-n + 2) {
@@ -75,7 +52,7 @@
     @apply hover:underline;
   }
 
-  /* mail */
+  /* Mail */
   .mail-folder__menu:hover {
     @apply bg-gray-100;
   }
@@ -106,6 +83,22 @@
 
   .mail-wrapper * {
     @apply dark:border-gray-700;
+  }
+
+  .mail-sidebar nav a {
+    @apply text-mailGray hover:text-white py-[10px] px-3 rounded-md hover:bg-gray-800 inline-block relative;
+  }
+
+  .mail-sidebar nav a.active {
+    @apply text-white bg-gray-800;
+  }
+
+  .mail-sidebar nav a.active::after {
+    @apply content-[""] absolute top-0 -right-[27px] block w-[4px] h-full bg-mailPurple rounded-md;
+  }
+
+  .mail-sidebar .nav-bottom a.logout {
+    @apply text-mailOrange;
   }
 
   /* Arc Landing Page */
@@ -258,10 +251,6 @@
     @apply hover:underline;
   }
 
-  .arc-content video {
-    @apply -mt-[5%] w-full;
-  }
-
   .arc-link-search img {
     top: 50%;
     transform: translateY(-54%);
@@ -321,23 +310,6 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     animation: slideDown 0.5s ease forwards;
     border-bottom: 2px dashed #fff;
-  }
-
-  /* Mail */
-  .mail-sidebar nav a {
-    @apply text-mailGray hover:text-white py-[10px] px-3 rounded-md hover:bg-gray-800 inline-block relative;
-  }
-
-  .mail-sidebar nav a.active {
-    @apply text-white bg-gray-800;
-  }
-
-  .mail-sidebar nav a.active::after {
-    @apply content-[""] absolute top-0 -right-[27px] block w-[4px] h-full bg-mailPurple rounded-md;
-  }
-
-  .mail-sidebar .nav-bottom a.logout {
-    @apply text-mailOrange;
   }
 }
 

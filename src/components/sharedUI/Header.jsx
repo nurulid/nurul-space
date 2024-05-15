@@ -15,24 +15,23 @@ const menu = [
 
 const MobileHeader = ({ toggleMenu }) => {
   return (
-    <nav>
-      <div className="flex lg:hidden justify-between items-center">
-        <LogoHeader />
-        <div className="flex items-center gap-2">
-          <ThemeSwitcher />
-          <Menu onClick={toggleMenu} className="cursor-pointer" />
-        </div>
+    <div className="flex lg:hidden justify-between items-center">
+      <LogoHeader />
+      <div className="flex items-center gap-2">
+        <ThemeSwitcher />
+        <Menu onClick={toggleMenu} className="cursor-pointer" />
       </div>
-    </nav>
+    </div>
   );
 };
 
 const MobileMenu = ({ isOpen, toggleMenu }) => {
   return (
-    <div className={` ${isOpen ? 'open absolute -top-4 inset-0' : ''}`}>
+    <>
       {isOpen && (
-        <div
+        <nav
           className={[
+            isOpen ? 'open absolute -top-4 inset-0' : '',
             'py-20 px-10 h-screen z-[99]',
             'flex flex-col justify-between items-center',
             'bg-white dark:bg-black animate-slideRight',
@@ -56,9 +55,9 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
             ].join(' ')}
           />
           <p className="text-gray-500 text-sm">@ 2024 Made with 💜 by Nurul</p>
-        </div>
+        </nav>
       )}
-    </div>
+    </>
   );
 };
 
@@ -69,9 +68,9 @@ export const Header = () => {
     setIsOpen(!isOpen);
 
     if (!isOpen) {
-      document.body.classList.add("overflow-hidden");
+      document.body.classList.add('overflow-hidden');
     } else {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove('overflow-hidden');
     }
   };
 
@@ -86,12 +85,14 @@ export const Header = () => {
       >
         <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
           <LogoHeader />
-          <div className="nav-menu">
+          <ul className="flex items-center gap-4">
             {menu.map(({ title, link, external }, i) => (
-              <LinkMenu key={i} {...{ title, link, external }} />
+              <li key={i}>
+                <LinkMenu {...{ title, link, external }} />
+              </li>
             ))}
             <ThemeSwitcher />
-          </div>
+          </ul>
         </nav>
 
         {/* Mobile Header */}
