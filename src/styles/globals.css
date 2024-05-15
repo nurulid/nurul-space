@@ -15,7 +15,8 @@
     font-family: var(--font-sunflower);
   }
 
-  html.dark, [data-theme="dark"] {
+  html.dark,
+  [data-theme='dark'] {
     --nextui-background: 234 17% 10%;
   }
 
@@ -25,8 +26,8 @@
 
   /* To make the footer stay at the bottom despite there's not enough content */
   /* It seems the div come from NextUI*/
-  body > div[data-overlay-container="true"]:first-child {
-      @apply h-full; 
+  body > div[data-overlay-container='true']:first-child {
+    @apply h-full;
   }
 
   a {
@@ -53,12 +54,12 @@
   }
 
   .on-progress:before {
-    content: "In Progress";
+    content: 'In Progress';
     @apply animate-pulse absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-70%] text-xl inline-flex items-center px-4 py-2 font-semibold leading-6 shadow rounded-full text-purple-500 bg-white dark:bg-slate-800 transition ease-in-out duration-150;
   }
 
   .team-project:after {
-    content: "Team Project";
+    content: 'Team Project';
     @apply absolute -top-4 right-0 text-xs leading-5 font-semibold bg-yellow-200 text-yellow-900 rounded-full py-1 px-3 flex items-center space-x-2;
   }
 
@@ -91,7 +92,7 @@
   }
 
   .mail-list::after {
-    content: "";
+    content: '';
     @apply bg-gradient-to-b from-white/20 dark:from-gray-900/20 to-gray-50 dark:to-gray-800 block w-full h-[80px] absolute bottom-0;
   }
 
@@ -104,7 +105,7 @@
   }
 
   .mail-wrapper * {
-    @apply dark:border-gray-700
+    @apply dark:border-gray-700;
   }
 
   /* Arc Landing Page */
@@ -113,7 +114,7 @@
   }
 
   .arc-header {
-    background-color: #FFFCED;
+    background-color: #fffced;
   }
 
   header.arc-header.open {
@@ -123,25 +124,46 @@
     inset: 0;
   }
 
-  .arc-header, .wavy-bottom {
-    --mask:
-    radial-gradient(4.66px at 50% calc(100% - 6.4px),#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
-    radial-gradient(4.66px at 50% calc(100% + 2.4px),#0000 99%,#000 101%) 50% calc(100% - 4px)/16px 100% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+  .arc-header,
+  .wavy-bottom {
+    --mask: radial-gradient(
+          4.66px at 50% calc(100% - 6.4px),
+          #000 99%,
+          #0000 101%
+        )
+        calc(50% - 8px) 0/16px 100%,
+      radial-gradient(4.66px at 50% calc(100% + 2.4px), #0000 99%, #000 101%)
+        50% calc(100% - 4px) / 16px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
   }
 
-  .arc-hero__content, .wavy-top {
-    --mask:
-    radial-gradient(4.66px at 50% 6.4px,#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
-    radial-gradient(4.66px at 50% -2.4px,#0000 99%,#000 101%) 50% 4px/16px 100% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
+  .arc-hero__content,
+  .wavy-top {
+    --mask: radial-gradient(4.66px at 50% 6.4px, #000 99%, #0000 101%)
+        calc(50% - 8px) 0/16px 100%,
+      radial-gradient(4.66px at 50% -2.4px, #0000 99%, #000 101%) 50% 4px/16px
+        100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
   }
 
   .arc-hero__marquee::after {
-    content: "";
-    --mask: radial-gradient(5.07px at 50% calc(100% + 2.2px), #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px) / 16px 5px repeat-x, radial-gradient(5.07px at 50% -2.2px, #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) 50% calc(50% + 2.5px) / 16px 5px repeat-x;
+    content: '';
+    --mask: radial-gradient(
+          5.07px at 50% calc(100% + 2.2px),
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        calc(50% - 8px) calc(50% - 2.5px + 0.5px) / 16px 5px repeat-x,
+      radial-gradient(
+          5.07px at 50% -2.2px,
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        50% calc(50% + 2.5px) / 16px 5px repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
     display: block;
@@ -151,44 +173,71 @@
     bottom: -1px;
     left: 0;
     right: 0;
-    background: #3239FB;
+    background: #3239fb;
   }
 
   .arc-hero__marquee::before {
-    content: "";
-    --mask:
-    radial-gradient(4.66px at 50% 6.4px,#000 99%,#0000 101%) calc(50% - 8px) 0/16px 100%,
-    radial-gradient(4.66px at 50% -2.4px,#0000 99%,#000 101%) 50% 4px/16px 100% repeat-x;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-          display: block;
-          width: 100%;
-          height: 10px;
-          position: absolute;
-          bottom: -2px;
-          left: 0;
-          right: 0;
-          background-color: #fff;
+    content: '';
+    --mask: radial-gradient(4.66px at 50% 6.4px, #000 99%, #0000 101%)
+        calc(50% - 8px) 0/16px 100%,
+      radial-gradient(4.66px at 50% -2.4px, #0000 99%, #000 101%) 50% 4px/16px
+        100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
   }
 
   .arc-footer__nav::before {
-    content: "";
-    --mask: radial-gradient(5.07px at 50% calc(100% + 2.2px), #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px) / 16px 5px repeat-x, radial-gradient(5.07px at 50% -2.2px, #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) 50% calc(50% + 2.5px) / 16px 5px repeat-x;
+    content: '';
+    --mask: radial-gradient(
+          5.07px at 50% calc(100% + 2.2px),
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        calc(50% - 8px) calc(50% - 2.5px + 0.5px) / 16px 5px repeat-x,
+      radial-gradient(
+          5.07px at 50% -2.2px,
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        50% calc(50% + 2.5px) / 16px 5px repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
-          display: block;
-          width: 100%;
-          height: 10px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
   }
 
   .arc-testi::before {
-    content: "";
-    --mask: radial-gradient(5.07px at 50% calc(100% + 2.2px), #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) calc(50% - 8px) calc(50% - 2.5px + .5px) / 16px 5px repeat-x, radial-gradient(5.07px at 50% -2.2px, #0000 calc(99% - 1px), #000 calc(101% - 1px) 99%, #0000 101%) 50% calc(50% + 2.5px) / 16px 5px repeat-x;
+    content: '';
+    --mask: radial-gradient(
+          5.07px at 50% calc(100% + 2.2px),
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        calc(50% - 8px) calc(50% - 2.5px + 0.5px) / 16px 5px repeat-x,
+      radial-gradient(
+          5.07px at 50% -2.2px,
+          #0000 calc(99% - 1px),
+          #000 calc(101% - 1px) 99%,
+          #0000 101%
+        )
+        50% calc(50% + 2.5px) / 16px 5px repeat-x;
     -webkit-mask: var(--mask);
     mask: var(--mask);
     display: block;
@@ -198,27 +247,15 @@
     top: -2px;
     left: 0;
     right: 0;
-    background: #3239FB;
+    background: #3239fb;
   }
 
-  .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo){
+  .arc-header ul:not(.arc-mobile-menu) li > a:not(.arc-logo) {
     @apply py-2 px-3 hover:bg-black/40 rounded-[10px] transition-all inline-block hover:scale-105;
   }
 
-  .arc-footer li > a{
+  .arc-footer li > a {
     @apply hover:underline;
-  }
-
-  .arc-testi__box {
-    @apply text-center p-5;
-  }
-
-  .arc-testi__desc {
-    @apply text-3xl text-[#4148FB] mb-5 font-bold;
-  }
-
-  .arc-testi__user {
-    @apply py-[6px] px-4 text-xs text-[#4148FB] bg-white border-2 border-[#4148FB] rounded-[10px] uppercase;
   }
 
   .arc-content video {
@@ -230,7 +267,62 @@
     transform: translateY(-54%);
     @apply left-[90%] md:left-[84%] lg:h-[250px] h-auto w-auto z-[-1];
   }
-  
+
+  .arc-intro__image {
+    position: relative;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .arc-intro__image img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.05);
+    margin-top: 3%;
+  }
+
+  .arc-intro__image-stamp {
+    position: absolute;
+    width: 83%;
+    top: 2%;
+    left: calc(8.5%);
+    aspect-ratio: 1.666 / 1;
+    z-index: 0;
+    max-width: 1400px;
+    opacity: 1;
+    display: block;
+  }
+
+  .arc-intro__image-stamp img {
+    position: absolute;
+    top: -145px;
+    left: -140px;
+    width: auto;
+    height: auto;
+  }
+
+  .arc-header {
+    transition: all 0.5s ease;
+    animation: slideUp 0.5s ease forwards;
+  }
+
+  .arc-header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #3239fb;
+    background-image: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease forwards;
+    border-bottom: 2px dashed #fff;
+  }
+
   /* Mail */
   .mail-sidebar nav a {
     @apply text-mailGray hover:text-white py-[10px] px-3 rounded-md hover:bg-gray-800 inline-block relative;
@@ -244,64 +336,9 @@
     @apply content-[""] absolute top-0 -right-[27px] block w-[4px] h-full bg-mailPurple rounded-md;
   }
 
-  .mail-sidebar .nav-bottom a.logout{
+  .mail-sidebar .nav-bottom a.logout {
     @apply text-mailOrange;
   }
-}
-
-.arc-intro__image {
-  position: relative;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.arc-intro__image img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transform: scale(1.05);
-  margin-top: 3%;
-}
-
-.arc-intro__image-stamp {
-  position: absolute;
-  width: 83%;
-  top: 2%;
-  left: calc(8.5%);
-  aspect-ratio: 1.666 / 1;
-  z-index: 0;
-  max-width: 1400px;
-  opacity: 1;
-  display: block;
-}
-
-.arc-intro__image-stamp img {
-  position: absolute;
-  top: -145px;
-  left: -140px;
-  width: auto;
-  height: auto;
-}
-
-.arc-header {
-  transition: all .5s ease;
-  animation: slideUp .5s ease forwards;
-}
-
-.arc-header.sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: #3239FB;
-  background-image: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  animation: slideDown .5s ease forwards;
-  border-bottom: 2px dashed #fff;
 }
 
 @keyframes slideDown {
