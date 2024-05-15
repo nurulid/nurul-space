@@ -14,6 +14,18 @@
         },
         {
             "id": 5,
+            "title": "Radwah Padang",
+            "description": "Promotional Web built with Vue.js and Tailwind CSS",
+            "previewURL": "https://radwah-padang.vercel.app/",
+            "codeURL": "https://github.com/nurulid/radwahpadang",
+            "thumbnail": "/portfolio/radwah-padang.jpeg",
+            "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
+            "category": "CSS",
+            "isDone": true,
+            "isTeam": false
+        },
+        {
+            "id": 6,
             "title": "Personal Website",
             "description": "Bento layout, made with Tailwind CSS.",
             "previewURL": "https://nurul-personal-web.vercel.app/",
@@ -25,7 +37,7 @@
             "isTeam": false
         },
         {
-            "id": 6,
+            "id": 7,
             "title": "Todo Lister",
             "description": "CRUD Todo List, made with Next.js and Tailwind CSS",
             "previewURL": "https://todo-lister.vercel.app/",
@@ -33,18 +45,6 @@
             "thumbnail": "/portfolio/ToDo Lister.jpeg",
             "labels": ["Next.js", "Tailwind CSS", "frontend", "CRUD"],
             "category": "frontend",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
-            "id": 7,
-            "title": "Radwah Padang",
-            "description": "Promotional Web built with Vue.js and Tailwind CSS",
-            "previewURL": "https://radwah-padang.vercel.app/",
-            "codeURL": "https://github.com/nurulid/radwahpadang",
-            "thumbnail": "/portfolio/radwah-padang.jpeg",
-            "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
-            "category": "CSS",
             "isDone": true,
             "isTeam": false
         },

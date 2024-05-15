@@ -1,43 +1,36 @@
 import React from "react";
+import { ContentItem } from "./ui/contentItem";
+
+const contentData = [
+  {
+    title: "A browser that doesn’t just meet your needs — it anticipates them.",
+    desc: "Clean and calm, Arc shapes itself to how you use the internet.",
+    mediaUrl: "/arc/arc-1.png",
+    isVideo: false,
+  },
+  {
+    title: "Space for the different sides of you.",
+    desc: "Effortlessly organize everything you do online — work, study, hobbies — all in one window with Spaces and Profiles.",
+    mediaUrl: "/arc/arc-2.png",
+    isVideo: false,
+  },
+  {
+    title: "Your browser, your way.",
+    desc: "Find your perfect setup with Split View, Themes, and more.",
+    mediaUrl: "/arc/theme-picker.mp4",
+    isVideo: true,
+  }
+]
 
 export const ContentHome = () => {
   return (
     <section className="arc-content mt-10 py-16 px-5 md:px-0">
-      <div className="text-center">
-        <h2 className="arc-title">
-          A browser that doesn’t just meet your needs — it anticipates them.
-        </h2>
-        <p className="arc-desc">
-          Clean and calm, Arc shapes itself to how you use the internet.
-        </p>
-        <div className="w-[80%] lg:w-[78%] mx-auto mt-10 mb-10 md:mb-20">
-          <img src="/arc/arc-1.png" alt="Arc feature" className="rounded-[5px] md:rounded-[20px] shadow-md"/>
-        </div>
-      </div>
-      <div className="text-center">
-        <h2 className="arc-title">Space for the different sides of you.</h2>
-        <p className="arc-desc">
-          Effortlessly organize everything you do online — work, study, hobbies
-          — all in one window with Spaces and Profiles.
-        </p>
-        <div className="w-[80%] lg:w-[78%] mx-auto mt-10 mb-10 md:mb-20">
-          <img src="/arc/arc-2.png" alt="Arc feature" className="rounded-[5px] md:rounded-[20px] shadow-md"/>
-        </div>
-      </div>
-      <div className="text-center">
-        <h2 className="arc-title">Your browser, your way.</h2>
-        <p className="arc-desc">
-          Find your perfect setup with Split View, Themes, and more.
-        </p>
-        <div className="arc-content__video-wrapper">
-          <video loop autoPlay muted>
-            <source src="/arc/theme-picker.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-      <div className="arc-cta text-center w-full lg:w-[50%] mx-auto mb-14">
-        <h2 className="arc-title w-full">The comfort of privacy.</h2>
-        <p className="arc-desc mt-2 mb-4">
+      {contentData.map(({ title, desc, mediaUrl, isVideo }, i) => {
+        return <ContentItem key={i} {...{title, desc, mediaUrl, isVideo}}/>
+      })}
+      <div className="text-center w-full lg:w-[50%] mx-auto mb-14">
+        <h2 className="text-5xl text-[#3239FB] w-full lg:w-[60%] mx-auto leading-[1.1]">The comfort of privacy.</h2>
+        <p className="text-xl text-[#696969] font-[300]mt-2 mb-4">
           Arc is built from the ground up to be private and secure. We don’t
           know what sites you visit or what you search for.
         </p>

@@ -108,14 +108,6 @@
   }
 
   /* Arc Landing Page */
-  .arc-title {
-    @apply text-[40px] text-[#3239FB] w-full lg:w-[60%] mx-auto leading-[1.1];
-  }
-
-  .arc-desc {
-    @apply text-[20px] text-[#696969] font-[300];
-  }
-
   .arc-link {
     @apply text-[#3239FB] font-bold;
   }
@@ -237,10 +229,6 @@
     top: 50%;
     transform: translateY(-54%);
     @apply left-[90%] md:left-[84%] lg:h-[250px] h-auto w-auto z-[-1];
-  }
-
-  .arc-content__video-wrapper {
-    @apply overflow-hidden w-full max-w-[320px] sm:max-w-[90rem] mx-auto;
   }
   
   /* Mail */
