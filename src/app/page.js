@@ -38,7 +38,7 @@ export default async function Home() {
           I'm <span className="text-purple-500">Nurul</span> a Frontend
           Developer from Indonesia.
         </h2>
-        <p className="text-gray-400 text-center md:text-right leading-7">
+        <p className="text-gray-500 dark:text-gray-400 text-center md:text-right leading-7">
           I'm an experienced Frontend Developer, especially in crafting User
           Interface (UI). During my experience, I learn and practice how to
           build beautiful and functional products.
