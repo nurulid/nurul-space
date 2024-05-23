@@ -11,13 +11,25 @@ html.dark,
   --nextui-background: 234 17% 10%;
 }
 
-@layer base {
-  body {
-    font-family: var(--font-inter);
-  }
+body {
+  font-family: var(--font-inter);
 }
 
 @layer components {
+  .bg-custom::after {
+    content: '';
+    background: linear-gradient(177deg, var(--bg) 10%, transparent 80%);
+    @apply absolute h-[65vh] inset-0 w-full z-[-2] dark:opacity-40;
+  }
+
+  .bg-pattern::before {
+    content: '';
+    background-color: rgba(255,255,255,0);
+    background-image:  linear-gradient(#e8e8e8 1px, transparent 1px), linear-gradient(to right, #e8e8e8 1px, rgba(255,255,255,0) 1px);
+    background-size: 30px 30px;
+    @apply absolute h-[65vh] inset-0 w-full z-[-1] opacity-40 dark:opacity-10;
+  }
+
   .font-sunflower {
     font-family: var(--font-sunflower);
   }
