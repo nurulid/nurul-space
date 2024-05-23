@@ -8,9 +8,9 @@ export default function Page() {
   const uiExperiments = UI_EXPERIMENTS;
   return (
     <div className="py-0 md:py-10 space-y-6 lg:space-y-10">
-      <UiBox ui={<ShareDialog />} uiInfo={uiExperiments[2]}/>
-      <UiBox ui={<Search />} uiInfo={uiExperiments[1]}/>
-      <UiBox ui={<AllBadges />} uiInfo={uiExperiments[0]}/>
+      <UiBox ui={<ShareDialog />} uiInfo={uiExperiments[2]} title="share-dialog"/>
+      <UiBox ui={<Search />} uiInfo={uiExperiments[1]} title="search"/>
+      <UiBox ui={<AllBadges />} uiInfo={uiExperiments[0]} title="badge"/>
     </div>
   );
 }
