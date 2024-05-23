@@ -32,7 +32,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="my-10 max-w-3xl ml-auto pb-10 border-b border-dashed dark:border-gray-800 text-center md:text-right leading-6">
+      <div className="my-10 max-w-3xl ml-auto pb-10 text-center md:text-right leading-6">
         <h2 className="mb-2 text-4xl lg:text-5xl text-center md:text-right font-mono">
           Hello 🙂 <br />
           I'm <span className="text-purple-500">Nurul</span> a Frontend

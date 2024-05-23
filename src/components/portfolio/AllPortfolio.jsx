@@ -40,7 +40,7 @@ export const AllPortfolio = ({ portfolio }) => {
               href="#portfolio"
               key={index}
               onClick={() => handleFilter(item)}
-              className="px-4 py-1 rounded-full capitalize relative bg-purple-200 text-purple-800 text-sm"
+              className="px-4 py-1 rounded-full capitalize relative bg-purple-200 hover:bg-purple-300 text-purple-800 text-sm transition-all"
             >
               <span
                 className={[
