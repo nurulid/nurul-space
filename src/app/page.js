@@ -6,7 +6,6 @@ import {
   Linkedin,
   Mail,
   Dribbble,
-  ChevronDown,
   ArrowDown,
 } from 'lucide-react';
 import Link from 'next/link';
