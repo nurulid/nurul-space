@@ -1,7 +1,15 @@
 import { AllPortfolio } from '@/components/portfolio/AllPortfolio';
 import { LinkIcon } from '@/components/ui/linkIcon';
 import { promises as fs } from 'fs';
-import { Github, Linkedin, Mail, Dribbble } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Dribbble,
+  ChevronDown,
+  ArrowDown,
+} from 'lucide-react';
+import Link from 'next/link';
 
 export default async function Home() {
   const file = await fs.readFile(process.cwd() + '/src/data/data.json', 'utf8');
@@ -32,7 +40,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="my-10 max-w-3xl ml-auto pb-10 text-center md:text-right leading-6">
+      <div className="mt-10 mb-6 max-w-3xl ml-auto pb-10 text-center md:text-right leading-6">
         <h2 className="mb-2 text-4xl lg:text-5xl text-center md:text-right font-mono">
           Hello 🙂 <br />
           I'm <span className="text-purple-500">Nurul</span> a Frontend
@@ -47,9 +55,9 @@ export default async function Home() {
           <a
             href="mailto:call.nurulid@gmail.com"
             title="Get in touch"
-            className="text-right inline-block mt-2 mb-4 py-3 px-2 bg-violet-50 dark:bg-violet-800/40 border border-violet-100 dark:border-gray-800 rounded-xl"
+            className="text-right inline-block mt-2 mb-4 py-3 px-2 bg-violet-50 dark:bg-violet-800/40 border border-violet-100 dark:border-gray-800 rounded-xl w-[80%] sm:w-[30%]"
           >
-            <span className="rounded-md px-6 py-2 bg-white dark:bg-white/90 dark:hover:bg-white shadow-md group-hover:shadow-sm dark:text-black transition-all">
+            <span className="rounded-md px-6 py-2 bg-white dark:bg-white/90 dark:hover:bg-white shadow-md group-hover:shadow-sm dark:text-black transition-all block text-center">
               Hire Me
             </span>
           </a>
@@ -65,6 +73,11 @@ export default async function Home() {
             <LinkIcon key={i} {...{ title, url, Icon, email }} />
           ))}
         </div>
+      </div>
+      <div className="border border-gray-100 rounded-full size-10 mx-auto flex justify-center items-center animate-bounce shadow-lg bg-white text-violet-500">
+        <Link href="/#portfolio">
+          <ArrowDown size={24} />
+        </Link>
       </div>
       <AllPortfolio portfolio={portfolio} />
     </>
