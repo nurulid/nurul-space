@@ -26,10 +26,10 @@
         },
         {
             "id": 6,
-            "title": "Personal Website",
+            "title": "Bento Profile",
             "description": "Bento layout, made with Tailwind CSS.",
-            "previewURL": "https://nurul-personal-web.vercel.app/",
-            "codeURL": "https://github.com/nurulid/nurul-personal-web",
+            "previewURL": "https://nurul-bento-profile.vercel.app/",
+            "codeURL": "https://github.com/nurulid/nurul-bento-profile",
             "thumbnail": "/portfolio/Nurul_s Personal Website.jpeg",
             "labels": ["Tailwind CSS", "bento", "layout", "responsive"],
             "category": "CSS",

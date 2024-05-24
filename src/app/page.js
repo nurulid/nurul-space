@@ -1,4 +1,4 @@
-import { AllPortfolio } from '@/components/portfolio/AllPortfolio';
+import { PortfolioList } from '@/components/portfolio/PortfolioList';
 import { LinkIcon } from '@/components/ui/linkIcon';
 import { promises as fs } from 'fs';
 import {
@@ -75,11 +75,11 @@ export default async function Home() {
         </div>
       </div>
       <div className="border border-gray-100 rounded-full size-10 mx-auto flex justify-center items-center animate-bounce shadow-lg bg-white text-violet-500">
-        <Link href="/#portfolio">
+        <Link href="#portfolio">
           <ArrowDown size={24} />
         </Link>
       </div>
-      <AllPortfolio portfolio={portfolio} />
+      <PortfolioList portfolio={portfolio} />
     </>
   );
 }
