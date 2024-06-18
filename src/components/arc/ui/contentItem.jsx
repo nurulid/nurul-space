@@ -10,7 +10,7 @@ export const ContentItem = ({ title, desc, mediaUrl, isVideo }) => {
           <img
             src={mediaUrl}
             alt={title}
-            className="rounded-[5px] md:rounded-[15px] shadow-md"
+            className="rounded-[5px] md:rounded-[15px] shadow-md mx-auto w-[80%]"
           />
         </div>
       ) : (
