@@ -43,8 +43,7 @@ export const Intro = () => {
         transition={{type: 'spring', delay: 1}}
         className="mb-2 text-4xl lg:text-5xl text-center md:text-right font-mono">
         Hello 🙂 <br />
-        I'm <span className="text-purple-500">Nurul</span> a Frontend Developer
-        from Indonesia.
+        I'm <span className="text-purple-500">Nurul</span> a Frontend Developer from Indonesia.
       </motion.h2>
       <motion.p 
         initial={{ opacity: 0, y: -10}}
