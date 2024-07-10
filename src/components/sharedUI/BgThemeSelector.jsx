@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useBgTheme } from '../hooks/useBgTheme';
 
-const themeColors = ['#94A3B8', '#BEF264', '#A78BFA', '#F472B6', '#FDE68A', '#FFF'];
+const themeColors = ['#94A3B8', '#A78BFA', '#FDE68A', '#FFF'];
 
 export default function BgThemeSelector() {
   const { changeBgTheme } = useBgTheme();

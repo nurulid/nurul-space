@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { LinkMenu } from '../ui/linkMenu';
 import { LogoHeader } from '../ui/logoHeader';
+import { motion } from 'framer-motion';
 
 const menu = [
   { title: 'Portfolio', link: '/', external: false },
@@ -78,18 +79,30 @@ export const Header = () => {
     <header className="sticky top-4 md:top-6 z-[20]">
       <div
         className={[
-          'max-w-3xl m-2 md:mx-auto py-3 px-6 ',
+          'max-w-[600px] m-2 md:mx-auto py-3 px-6 ',
           'backdrop-filter backdrop-blur-lg bg-opacity-25 bg-gray-100/10 bg-clip-padding',
           'shadow-sm rounded-full border-[.5px] border-purple-300',
         ].join(' ')}
       >
         <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
           <LogoHeader />
-          <ul className="flex items-center gap-4">
+          <ul
+            className="flex items-center gap-4"
+          >
             {menu.map(({ title, link, external }, i) => (
-              <li key={i}>
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 1, scale: 1 }}
+                transition={{ type: 'spring', delay: 3 }}
+                key={i}
+              >
                 <LinkMenu {...{ title, link, external }} />
-              </li>
+              </motion.li>
             ))}
             <ThemeSwitcher />
           </ul>
