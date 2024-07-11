@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const menu = [
   { title: 'Portfolio', link: '/', external: false },
-  { title: 'Resume', link: '/resume', external: false },
+  { title: 'Resume/CV', link: '/resume', external: false },
   { title: 'UI', link: '/ui', external: false },
   { title: 'Templates', link: 'https://nurulid.gumroad.com/', external: true },
 ];
