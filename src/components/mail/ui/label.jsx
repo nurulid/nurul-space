@@ -5,7 +5,7 @@ import { capitalizeFirstLetter } from "@/lib/utils";
 export const Label = ({attachment, label}) => {
   return (
     <span
-      className="inline-flex items-center gap-1 bg-gray-100 py-1 px-3 rounded-full text-gray-500 text-sm"
+      className="inline-flex items-center gap-1 bg-gray-100 dark:bg-gray-700 py-1 px-3 rounded-full text-gray-500 dark:text-gray-300 text-sm"
     >
       {label ? (
         <>

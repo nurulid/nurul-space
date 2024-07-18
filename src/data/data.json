@@ -14,30 +14,6 @@
         },
         {
             "id": 5,
-            "title": "Personal Website",
-            "description": "Bento layout, made with Tailwind CSS.",
-            "previewURL": "https://nurul-personal-web.vercel.app/",
-            "codeURL": "https://github.com/nurulid/nurul-personal-web",
-            "thumbnail": "/portfolio/Nurul_s Personal Website.jpeg",
-            "labels": ["Tailwind CSS", "bento", "layout", "responsive"],
-            "category": "CSS",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
-            "id": 6,
-            "title": "Todo Lister",
-            "description": "CRUD Todo List, made with Next.js and Tailwind CSS",
-            "previewURL": "https://todo-lister.vercel.app/",
-            "codeURL": "https://github.com/nurulid/todo-lister",
-            "thumbnail": "/portfolio/ToDo Lister.jpeg",
-            "labels": ["Next.js", "Tailwind CSS", "frontend", "CRUD"],
-            "category": "frontend",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
-            "id": 7,
             "title": "Radwah Padang",
             "description": "Promotional Web built with Vue.js and Tailwind CSS",
             "previewURL": "https://radwah-padang.vercel.app/",
@@ -45,6 +21,30 @@
             "thumbnail": "/portfolio/radwah-padang.jpeg",
             "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
             "category": "CSS",
+            "isDone": true,
+            "isTeam": false
+        },
+        {
+            "id": 6,
+            "title": "Bento Profile",
+            "description": "Bento layout, made with Tailwind CSS.",
+            "previewURL": "https://nurul-bento-profile.vercel.app/",
+            "codeURL": "https://github.com/nurulid/nurul-bento-profile",
+            "thumbnail": "/portfolio/Nurul_s Personal Website.jpeg",
+            "labels": ["Tailwind CSS", "bento", "layout", "responsive"],
+            "category": "CSS",
+            "isDone": true,
+            "isTeam": false
+        },
+        {
+            "id": 7,
+            "title": "Todo Lister",
+            "description": "CRUD Todo List, made with Next.js and Tailwind CSS",
+            "previewURL": "https://todo-lister.vercel.app/",
+            "codeURL": "https://github.com/nurulid/todo-lister",
+            "thumbnail": "/portfolio/ToDo Lister.jpeg",
+            "labels": ["Next.js", "Tailwind CSS", "frontend", "CRUD"],
+            "category": "frontend",
             "isDone": true,
             "isTeam": false
         },

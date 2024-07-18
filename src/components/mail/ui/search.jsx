@@ -3,11 +3,11 @@ import React from "react";
 
 export const Search = ({ bg, placeholder, className, label }) => {
   return (
-    <div className={`relative text-gray-600 border-2 border-gray-100 rounded-md ${className}`}>
+    <div className={`relative text-gray-600 border-2 border-gray-100 dark:border-gray-700 rounded-md ${className}`}>
       <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2" />
       <input
         type="text"
-        className={`${bg} rounded-md py-3 pl-[50px] pr-[60px] w-full`}
+        className={`${bg} dark:bg-gray-700 rounded py-3 pl-[50px] pr-[60px] w-full`}
         placeholder={placeholder ? placeholder : "Search..."}
       />
       { label ? (

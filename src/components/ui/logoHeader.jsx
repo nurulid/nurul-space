@@ -4,7 +4,7 @@ export const LogoHeader = () => {
   return (
     <Link
       href="/"
-      className="text-xl font-semibold font-mono flex gap-2 items-center"
+      className=" font-semibold font-mono flex gap-2 items-center"
     >
       <img src="/images/nid.jpeg" alt="" width="30" className="rounded-full" />{' '}
       Nurul ID

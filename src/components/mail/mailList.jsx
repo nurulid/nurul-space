@@ -1,8 +1,8 @@
 import React from "react";
 import { Filter, Star, Trash2 } from "lucide-react";
-import { Search } from "./search";
+import { Search } from "./ui/search";
 import { MailItem } from "./mailItem";
-import { BtnIcon } from "./btnIcon";
+import { BtnIcon } from "./ui/btnIcon";
 
 export const MailList = () => {
   const mails = [
@@ -68,20 +68,6 @@ export const MailList = () => {
     },
   ];
 
-  const mailHeaderButtons = [
-    {
-      icon: Trash2,
-      title: "Delete",
-    },
-    {
-      icon: Star,
-      title: "Favorite",
-    },
-    {
-      icon: Filter,
-      title: "Filter",
-    },
-  ];
   return (
     <section className='mail-list w-[430px] border-r-1 border-gray-200 relative'>
       <div className='flex justify-between py-9 mx-6 mb-4 border-b-2 border-gray-200'>

@@ -5,9 +5,11 @@ import { Menu, X } from 'lucide-react';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { LinkMenu } from '../ui/linkMenu';
 import { LogoHeader } from '../ui/logoHeader';
+import { motion } from 'framer-motion';
 
 const menu = [
   { title: 'Portfolio', link: '/', external: false },
+  { title: 'Resume/CV', link: '/resume', external: false },
   { title: 'UI', link: '/ui', external: false },
   { title: 'Writing', link: '/writing', external: false },
   { title: 'CV', link: '/resume', external: false },
@@ -16,24 +18,23 @@ const menu = [
 
 const MobileHeader = ({ toggleMenu }) => {
   return (
-    <nav>
-      <div className="flex lg:hidden justify-between items-center">
-        <LogoHeader />
-        <div className="flex items-center gap-2">
-          <ThemeSwitcher />
-          <Menu onClick={toggleMenu} className="cursor-pointer" />
-        </div>
+    <div className="flex lg:hidden justify-between items-center">
+      <LogoHeader />
+      <div className="flex items-center gap-2">
+        <ThemeSwitcher />
+        <Menu onClick={toggleMenu} className="cursor-pointer" />
       </div>
-    </nav>
+    </div>
   );
 };
 
 const MobileMenu = ({ isOpen, toggleMenu }) => {
   return (
-    <div className={` ${isOpen ? 'open absolute -top-4 inset-0' : ''}`}>
+    <>
       {isOpen && (
-        <div
+        <nav
           className={[
+            isOpen ? 'open absolute -top-4 inset-0' : '',
             'py-20 px-10 h-screen z-[99]',
             'flex flex-col justify-between items-center',
             'bg-white dark:bg-black animate-slideRight',
@@ -57,9 +58,9 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
             ].join(' ')}
           />
           <p className="text-gray-500 text-sm">@ 2024 Made with 💜 by Nurul</p>
-        </div>
+        </nav>
       )}
-    </div>
+    </>
   );
 };
 
@@ -68,25 +69,45 @@ export const Header = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+
+    if (!isOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
   };
 
   return (
     <header className="sticky top-4 md:top-6 z-[20]">
       <div
         className={[
-          'max-w-3xl m-2 md:mx-auto py-3 px-6 ',
+          'max-w-[600px] m-2 md:mx-auto py-3 px-6 ',
           'backdrop-filter backdrop-blur-lg bg-opacity-25 bg-gray-100/10 bg-clip-padding',
           'shadow-sm rounded-full border-[.5px] border-purple-300',
         ].join(' ')}
       >
         <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
           <LogoHeader />
-          <div className="nav-menu">
+          <ul
+            className="flex items-center gap-4"
+          >
             {menu.map(({ title, link, external }, i) => (
-              <LinkMenu key={i} {...{ title, link, external }} />
+              <motion.li
+                variants={{
+                  hidden: { opacity: 0, scale: 0.5 },
+                  visible: { opacity: 1, scale: 1 },
+                }}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 1, scale: 1 }}
+                transition={{ type: 'spring', delay: 3 }}
+                key={i}
+              >
+                <LinkMenu {...{ title, link, external }} />
+              </motion.li>
             ))}
             <ThemeSwitcher />
-          </div>
+          </ul>
         </nav>
 
         {/* Mobile Header */}

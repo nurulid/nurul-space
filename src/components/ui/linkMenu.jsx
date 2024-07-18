@@ -10,10 +10,13 @@ export const LinkMenu = ({ title, link, external }) => {
     <Link
       href={link}
       target={external ? '_blank' : '_self'}
+      data-active={currentPath === link}
       className={[
         'group whitespace-nowrap',
-        currentPath === link ? 'active' : null,
-        external && 'relative group flex items-center gap-1',
+        external ? 'relative group flex items-center gap-1' : '',
+        'inline-block',
+        'data-[active=true]:text-violet-600 data-[active=true]:underline',
+        'hover:underline underline-offset-4 transition-all'
       ].join(' ')}
     >
       {title}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Badge } from './ui/badge';
 
 export const Skills = ({ data }) => {
   return (
@@ -6,12 +7,7 @@ export const Skills = ({ data }) => {
       <h2 className="title">Skills</h2>
       <div className="flex flex-wrap gap-1">
         {data.map((item, i) => (
-          <span
-            key={i}
-            className="py-1 px-2 bg-[#111827cc] text-white rounded-md text-xs font-mono hover:opacity-80"
-          >
-            {item}
-          </span>
+          <Badge title={item} key={i} />
         ))}
       </div>
     </section>
