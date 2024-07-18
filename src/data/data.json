@@ -95,6 +95,18 @@
             "category": "frontend",
             "isDone": true,
             "isTeam": false
+        },
+        {
+            "id": 13,
+            "title": "HR Management Dashboard",
+            "description": "HR Management dashboard UI build with Next.js, Tailwind CSS, Radix UI",
+            "previewURL": "https://x.com/nurulide/status/1813956842030354449",
+            "codeURL": "",
+            "thumbnail": "/portfolio/uia-hr-m.gif",
+            "labels": ["Next.js", "Typescript", "Radix UI", "Tailwind CSS", "frontend"],
+            "category": "frontend",
+            "isDone": true,
+            "isTeam": false
         }
     ]
 }

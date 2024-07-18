@@ -87,7 +87,7 @@ export const Header = () => {
         <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
           <LogoHeader />
           <ul
-            className="flex items-center gap-4"
+            className="flex items-center gap-4 text-sm"
           >
             {menu.map(({ title, link, external }, i) => (
               <motion.li

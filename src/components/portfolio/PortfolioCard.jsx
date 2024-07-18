@@ -34,15 +34,17 @@ export const PortfolioCard = ({id, title, description, labels, thumbnail, previe
       <p className="mb-5 text-gray-500 dark:text-gray-400 text-sm">
         {description}
       </p>
-      <Tooltip showArrow={true} content="Souce code">
-        <a
-          target="_blank"
-          href={codeURL}
-          className="p-2 bg-gray-900 inline-block rounded-md absolute top-2 left-2 hover:opacity-80"
-        >
-          <Github size={17} color="white" />
-        </a>
-      </Tooltip>
+      {codeURL && (
+        <Tooltip showArrow={true} content="Souce code">
+          <a
+            target="_blank"
+            href={codeURL}
+            className="p-2 bg-gray-900 inline-block rounded-md absolute top-2 left-2 hover:opacity-80"
+          >
+            <Github size={17} color="white" />
+          </a>
+        </Tooltip>
+      )}
       <div className="mt-auto">
         {labels.map((label, index) => (
           <Chip
