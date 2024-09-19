@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Intro } from '@/components/portfolio/Intro';
 
 export default async function Home() {
-  const file = await fs.readFile(process.cwd() + '/src/data/data.json', 'utf8');
+  const file = await fs.readFile(process.cwd() + '/src/data/portfolio.json', 'utf8');
   const data = JSON.parse(file);
   const portfolio = data.portfolio;
 
