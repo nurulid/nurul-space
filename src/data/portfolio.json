@@ -19,7 +19,7 @@
             "previewURL": "https://radwah-padang.vercel.app/",
             "codeURL": "https://github.com/nurulid/radwahpadang",
             "thumbnail": "/portfolio/radwah-padang.jpeg",
-            "labels": ["Vue","Vite","Tailwind CSS", "landing page"],
+            "labels": ["Vite","Tailwind CSS", "landing page"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false
