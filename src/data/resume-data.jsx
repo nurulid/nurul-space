@@ -74,10 +74,11 @@ export const RESUME_DATA = {
     end: '2017',
   },
   skills: [
-    'Next.js/React',
+    'Next.js',
+    'React',
+    'Typescript',
     'Javascript',
     'Tailwind CSS',
-    'Vue',
     'WordPress',
     'jQuery',
     'SASS',
@@ -115,7 +116,7 @@ export const RESUME_DATA = {
     },
     {
       title: 'Radwah Padang',
-      techStack: ['Vue', 'Tailwind CSS', 'Vite', 'Design'],
+      techStack: ['Tailwind CSS', 'Vite', 'Design'],
       description: 'Promotional Website built with Vue.js and Tailwind CSS',
       link: 'https://radwah-padang.vercel.app/',
       isDone: true,
