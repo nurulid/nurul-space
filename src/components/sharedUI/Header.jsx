@@ -7,11 +7,11 @@ import { LinkMenu } from '../ui/linkMenu';
 import { LogoHeader } from '../ui/logoHeader';
 
 const menu = [
-  { title: 'Portfolio', link: '/', external: false },
-  { title: 'UI', link: '/ui', external: false },
-  { title: 'Writing', link: '/writing', external: false },
-  { title: 'CV', link: '/resume', external: false },
-  { title: 'Templates', link: 'https://nurulid.gumroad.com/', external: true },
+  { title: 'Portfolio', link: '/', isExternal: false },
+  { title: 'UI', link: '/ui', isExternal: false },
+  { title: 'Writing', link: '/writing', isExternal: false },
+  { title: 'CV', link: '/resume', isExternal: false },
+  { title: 'Templates', link: 'https://nurulid.gumroad.com/', isExternal: true },
 ];
 
 const MobileHeader = ({ toggleMenu }) => {
@@ -42,9 +42,9 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
             onClick={toggleMenu}
             className="text-[28px] font-bold text-center space-y-5"
           >
-            {menu.map(({ title, link, external }, i) => (
+            {menu.map(({ title, link, isExternal }, i) => (
               <li key={i}>
-                <LinkMenu {...{ title, link, external }} />
+                <LinkMenu {...{ title, link, isExternal }} />
               </li>
             ))}
           </ul>
@@ -89,9 +89,9 @@ export const Header = () => {
           <ul
             className="flex items-center gap-4 text-sm"
           >
-            {menu.map(({ title, link, external }, i) => (
-              <li>
-                <LinkMenu {...{ title, link, external }} />
+            {menu.map(({ title, link, isExternal }, i) => (
+              <li key={i}>
+                <LinkMenu {...{ title, link, isExternal }} />
               </li>
             ))}
             <ThemeSwitcher />
