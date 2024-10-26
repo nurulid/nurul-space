@@ -20,7 +20,7 @@ export default function Page() {
             <div key={i} className="space-y-1">
               <span className="uppercase text-xs opacity-50">tailwind</span>
               <div className="space-y-1">
-                <Link href="/writing/active-class" className="text-lg font-medium">Title lorem ipsum</Link>
+                <Link href="/writing/tailwind-active-state" className="text-lg font-medium">Title lorem ipsum</Link>
                 <p className="opacity-75 text-sm line-clamp-2">
                   Description lorem ipsum dolor sit amet, consectetur adipiscing
                   elit, sed do eiusmod tempor incididunt ut labore et dolore
