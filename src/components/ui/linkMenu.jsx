@@ -6,17 +6,23 @@ import { usePathname } from 'next/navigation';
 
 export const LinkMenu = ({ title, link, isExternal }) => {
   const currentPath = usePathname();
+  // Check if the current path starts with the link
+  const isHomeLink = link === '/';
+  const isActive = isHomeLink
+    ? currentPath === link
+    : currentPath.startsWith(link) && currentPath !== '/';
+    
   return (
     <Link
       href={link}
       target={isExternal ? '_blank' : '_self'}
-      data-active={currentPath === link}
+      data-active={isActive}
       className={[
         'group whitespace-nowrap',
         isExternal ? 'relative group flex items-center gap-1' : '',
         'inline-block',
         'data-[active=true]:text-violet-600 data-[active=true]:underline',
-        'hover:underline underline-offset-4 transition-all'
+        'hover:underline underline-offset-4 transition-all',
       ].join(' ')}
     >
       {title}
