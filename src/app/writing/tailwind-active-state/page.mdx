@@ -1,0 +1,33 @@
+## Some ways to add an active state in Tailwind CSS
+
+### 1. using tailwindcss/plugin
+- import `tailwindcss/plugin`
+<CodeHeader text="tailwind.config.js" />
+```js
+js -> const plugin = require('tailwindcss/plugin')
+ts -> import plugin from 'tailwindcss/plugin';
+```
+
+- define `addVariant` active in `plugins:[]`
+```js
+plugins: [
+	plugin(function({ addVariant }) {
+		addVariant('current', '&.active');
+	})
+],
+```
+
+- then use it on HTML like this `[&.active]:`
+```html
+<li class="[&.active]:bg-red-200">menu</li>
+```
+
+### 2. using data-active="true"
+- Add a `data-active="true"` to the with your logic. 
+- Then you may apply classes without needing to modify your plugins in your `tailwind.config.js` like so: `<a data-active="true" href="#" class="data-[active=true]:bg-red-200">`
+- This is the active class name from above to modify the background color:
+- `data-[active=true]:bg-red-200`
+
+^ This is how the Next.js `<Link></Link>` adds active state to menu links.
+
+[source: stackoverflow.com](https://stackoverflow.com/questions/73527500/tailwind-css-active-class-only-works-while-continuing-to-click-the-button/73528462#73528462)

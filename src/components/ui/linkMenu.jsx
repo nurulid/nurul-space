@@ -4,23 +4,29 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
-export const LinkMenu = ({ title, link, external }) => {
+export const LinkMenu = ({ title, link, isExternal }) => {
   const currentPath = usePathname();
+  // Check if the current path starts with the link
+  const isHomeLink = link === '/';
+  const isActive = isHomeLink
+    ? currentPath === link
+    : currentPath.startsWith(link) && currentPath !== '/';
+    
   return (
     <Link
       href={link}
-      target={external ? '_blank' : '_self'}
-      data-active={currentPath === link}
+      target={isExternal ? '_blank' : '_self'}
+      data-active={isActive}
       className={[
         'group whitespace-nowrap',
-        external ? 'relative group flex items-center gap-1' : '',
+        isExternal ? 'relative group flex items-center gap-1' : '',
         'inline-block',
         'data-[active=true]:text-violet-600 data-[active=true]:underline',
-        'hover:underline underline-offset-4 transition-all'
+        'hover:underline underline-offset-4 transition-all',
       ].join(' ')}
     >
       {title}
-      {external && (
+      {isExternal && (
         <ArrowUpRight
           size={18}
           className="group-hover:rotate-45 transition-all"
