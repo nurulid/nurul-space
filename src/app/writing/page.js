@@ -35,7 +35,7 @@ export default function Page() {
             <div key={i} className="space-y-1">
               <span className="uppercase text-xs opacity-50">{post.tag}</span>
               <div className="space-y-1">
-                <Link href={post.url} className="text-lg font-medium">
+                <Link href={post.url} className="text-lg font-medium hover:text-violet-600 transition-all">
                   {post.title}
                 </Link>
                 <p className="opacity-75 text-sm line-clamp-2">
