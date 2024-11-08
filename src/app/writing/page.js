@@ -5,7 +5,7 @@ import React from 'react';
 const writingPosts = [
   {
     id: 1,
-    title: 'How to add an active state in Tailwind CSS',
+    title: 'Active state in Tailwind CSS',
     url: '/writing/tailwind-active-state',
     created: '25 october, 2024',
     tag: 'tailwind',
@@ -26,7 +26,7 @@ export default function Page() {
           </span>
         </h2>
         <p className="opacity-75">
-          Sharing some tips that related to frontend web.
+          Just write.
         </p>
       </div>
       <div className="space-y-8">
@@ -35,7 +35,7 @@ export default function Page() {
             <div key={i} className="space-y-1">
               <span className="uppercase text-xs opacity-50">{post.tag}</span>
               <div className="space-y-1">
-                <Link href={post.url} className="text-lg font-medium hover:text-violet-600 transition-all">
+                <Link href={post.url} className="text-lg font-medium hover:text-violet-600 hover:underline underline-offset-4 transition-all">
                   {post.title}
                 </Link>
                 <p className="opacity-75 text-sm line-clamp-2">
