@@ -29,7 +29,6 @@ export default function MdxLayout({ children }) {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "tween" }}
-            className="-mt-8 sm:-mt-12"
           >
             {children}
           </motion.article>

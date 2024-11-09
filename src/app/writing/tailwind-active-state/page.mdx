@@ -1,7 +1,7 @@
-## Active state in Tailwind CSS
+# Active state in Tailwind CSS
 Some ways how to add an active state in Tailwind
 
-### 1. using tailwindcss/plugin
+## 1. Using tailwindcss/plugin
 - import `tailwindcss/plugin`
 <CodeHeader text="tailwind.config.js" />
 ```js
@@ -23,7 +23,7 @@ plugins: [
 <li class="[&.active]:bg-red-200">menu</li>
 ```
 
-### 2. using data-active="true"
+## 2. Using data-active="true"
 - Add a `data-active="true"` to the with your logic. 
 - Then you may apply classes without needing to modify your plugins in your `tailwind.config.js` like so: `<a data-active="true" href="#" class="data-[active=true]:bg-red-200">`
 - This is the active class name from above to modify the background color:
