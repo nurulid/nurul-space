@@ -7,9 +7,17 @@ const writingPosts = [
     id: 1,
     title: 'Active state in Tailwind CSS',
     url: '/writing/tailwind-active-state',
-    created: '25 october, 2024',
+    created: '25 October, 2024',
     tag: 'tailwind',
     description: 'Some ways how to add an active state in Tailwind',
+  },
+  {
+    id: 2,
+    title: 'React Component',
+    url: '/writing/react-component',
+    created: '9 November, 2024',
+    tag: 'react',
+    description: 'Some ways to create a component in React',
   },
 ];
 
@@ -25,29 +33,32 @@ export default function Page() {
             {writingPosts.length} posts
           </span>
         </h2>
-        <p className="opacity-75">
-          Just write.
-        </p>
+        <p className="opacity-75">Just write.</p>
       </div>
       <div className="space-y-8">
-        {writingPosts.map((post, i) => {
-          return (
-            <div key={i} className="space-y-1">
-              <span className="uppercase text-xs opacity-50">{post.tag}</span>
-              <div className="space-y-1">
-                <Link href={post.url} className="text-lg font-medium hover:text-violet-600 hover:underline underline-offset-4 transition-all">
-                  {post.title}
-                </Link>
-                <p className="opacity-75 text-sm line-clamp-2">
-                  {post.description}
-                </p>
+        {writingPosts
+          .sort((a, b) => new Date(b.created) - new Date(a.created))
+          .map((post, i) => {
+            return (
+              <div key={i} className="space-y-1">
+                <span className="uppercase text-xs opacity-50">{post.tag}</span>
+                <div className="space-y-1">
+                  <Link
+                    href={post.url}
+                    className="text-lg font-medium hover:text-violet-600 hover:underline underline-offset-4 transition-all"
+                  >
+                    {post.title}
+                  </Link>
+                  <p className="opacity-75 text-sm line-clamp-2">
+                    {post.description}
+                  </p>
+                </div>
+                <span className="opacity-50 text-xs capitalize">
+                  {post.created}
+                </span>
               </div>
-              <span className="opacity-50 text-xs capitalize">
-                {post.created}
-              </span>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
   );
