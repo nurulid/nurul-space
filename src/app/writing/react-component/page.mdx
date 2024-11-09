@@ -1,0 +1,157 @@
+# React Component
+
+In this post I will create an example of Button component.
+
+Button will have 3 props:
+- **variant**: the color of button
+- **size**: the size of button
+- **isFull**: button with a full width size
+
+These 3 props is optional because we will set the default value for the button.
+
+## Here we go, the 3 versions of Button components:
+
+### 1. Without any utility library
+
+This version doesn't use any utility library; we can add `className` props for custom class needs.
+
+**BUT** to override the existing classes, we need to make the class **important** by adding a `!` character to the beginning:
+
+e.g.<br/>
+`<Buttonv1 size="sm" isFull className="!bg-orange-100 !text-orange-500">Submit</Buttonv1>`
+
+<CodeHeader text="button.ts" />
+```ts
+import React, { ComponentProps } from "react";
+
+const buttonClassesBase: string[] = [
+  "min-w-[100px] rounded-xl hover:shadow active:scale-[0.96] transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none",
+];
+
+const variants = {
+  primary: "bg-violet-100 text-violet-800",
+  secondary: "bg-blue-100 text-blue-800",
+  danger: "bg-red-100 text-red-800",
+};
+
+const sizes = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-4 py-3 text-base",
+  lg: "px-5 py-4 text-xl",
+};
+
+interface ButtonProps extends ComponentProps<"button"> {
+  variant?: keyof typeof variants;
+  size?: keyof typeof sizes;
+  isFull?: boolean;
+}
+
+export const Buttonv1 = (props: ButtonProps) => {
+  const { variant = "primary", size = "md", isFull = false, children, className = "", ...buttonProps } = props;
+  return (
+    <button
+      className={[buttonClassesBase, variants[variant], sizes[size], isFull ? "block w-full" : "", className].join(" ")}
+      {...buttonProps}
+    >
+      {children}
+    </button>
+  );
+};
+```
+
+### 2. With `tailwind-merge` utility library
+
+This version can be a solution for the version one above, we can use **tailwind-merge** utility library to make the custom class will override the existing classes without making the class `important`.
+
+e.g.<br/>
+`<Buttonv2 variant="danger" size="lg" className="min-w-[200px]">Submit</Buttonv2>`
+
+<CodeHeader text="button.ts" />
+```ts
+import React, { ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
+
+const buttonClassesBase: string[] = [
+  "min-w-[100px] rounded-xl hover:shadow active:scale-[0.96] transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none",
+];
+
+const variants = {
+  primary: "bg-violet-100 text-violet-800",
+  secondary: "bg-blue-100 text-blue-800",
+  danger: "bg-red-100 text-red-800",
+};
+
+const sizes = {
+  sm: "px-4 py-2 text-sm",
+  md: "px-4 py-3 text-base",
+  lg: "px-5 py-4 text-xl",
+};
+
+interface ButtonProps extends ComponentProps<"button"> {
+  variant?: keyof typeof variants;
+  size?: keyof typeof sizes;
+  isFull?: boolean;
+}
+
+export const Buttonv2 = (props: ButtonProps) => {
+  const { variant = "primary", size = "md", isFull = false, children, className = "", ...buttonProps } = props;
+  return (
+    <button
+      className={twMerge(buttonClassesBase, variants[variant], sizes[size], isFull ? "block w-full" : "", className)}
+      {...buttonProps}
+    >
+      {children}
+    </button>
+  );
+};
+```
+
+### 3. With `tailwind-merge` and `tailwind-variants` utility library
+
+This version works like version two, using `tailwind-merge` for custom class and `tailwind-variants` for button variants.
+
+I **prefer** using **version two** over this one because we can create the button variants without a utility library, and it has the same functionality.
+
+e.g.<br/>
+`<Buttonv3 variant="secondary" size="lg" isFull>Submit</Buttonv3>`
+
+<CodeHeader text="button.ts" />
+```ts
+import React, { ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
+import { tv, type VariantProps } from "tailwind-variants";
+
+const style = tv({
+  base: "min-w-[100px] rounded-xl transition-all hover:shadow active:scale-[0.96] disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none",
+  variants: {
+    variant: {
+      primary: "bg-violet-100 text-violet-800",
+      secondary: "bg-blue-100 text-blue-800",
+      danger: "bg-red-100 text-red-800",
+    },
+    size: {
+      sm: "px-4 py-2 text-sm",
+      md: "px-4 py-3 text-base",
+      lg: "px-5 py-4 text-xl",
+    },
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "md",
+  },
+});
+
+type TButton = VariantProps<typeof style>;
+interface ButtonProps extends TButton, ComponentProps<"button"> {
+  isFull?: boolean;
+}
+
+export const Buttonv3 = (props: ButtonProps) => {
+  const { isFull = false, children, className = "", ...buttonProps } = props;
+  return (
+    <button className={twMerge(style({ ...props }), isFull ? "block w-full" : "", className)} {...buttonProps}>
+      {children}
+    </button>
+  );
+};
+```
