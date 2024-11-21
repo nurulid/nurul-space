@@ -63,7 +63,7 @@ export const Intro = () => {
             className="text-right inline-block mt-2 mb-4 py-3 px-2 bg-violet-50 dark:bg-violet-800/40 border border-violet-100 dark:border-gray-800 rounded-xl w-[80%] sm:w-[30%]"
           >
             <span className="rounded-md px-6 py-2 bg-white dark:bg-white/90 dark:hover:bg-white shadow-md group-hover:shadow-sm dark:text-black transition-all block text-center">
-              Hire Me
+              Get In Touch
             </span>
           </a>
           <div className="absolute left-2 -top-3">
