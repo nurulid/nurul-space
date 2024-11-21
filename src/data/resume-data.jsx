@@ -87,10 +87,17 @@ export const RESUME_DATA = {
   ],
   portfolio: [
     {
-      title: 'Tailwind CSS UI',
+      title: 'HR Management Dashboard',
       techStack: ['Next.js', 'Typescript', 'Tailwind CSS', 'Radix UI'],
-      description: 'UI and components with Tailwind CSS',
-      link: 'https://nid-tailwindcss-ui.vercel.app',
+      description: 'HR Management dashboard UI build with Next.js, Tailwind CSS, Radix UI',
+      link: 'https://uia-templates-hr-managemnet.vercel.app',
+      isDone: true,
+    },
+    {
+      title: 'UI Component Collections',
+      techStack: ['Next.js', 'Typescript', 'Tailwind CSS', 'Radix UI'],
+      description: 'UI components made with Tailwind CSS',
+      link: 'https://nid-ui-component-collections.vercel.app',
       isDone: false,
     },
     {
@@ -99,6 +106,13 @@ export const RESUME_DATA = {
       description: 'Quran web app built with Next.js and Tailwind CSS',
       link: 'https://aplikasi-quran.vercel.app/my-quran',
       isDone: false,
+    },
+    {
+      title: 'Mail Dashboard',
+      techStack: ['Next.js', 'Typescript', 'Tailwind CSS'],
+      description: 'Mail Dashboard UI for AI app built with Tailwind CSS.',
+      link: 'https://mail-ai-dashboard-ui.vercel.app',
+      isDone: true,
     },
     {
       title: 'Adopt Hunt',
