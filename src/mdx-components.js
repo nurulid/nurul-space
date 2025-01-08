@@ -1,4 +1,5 @@
 import { CodeHeader } from "./components/mdx/codeHeader";
+import { ChartLine } from "./components/ui/chartLine";
 
 export function useMDXComponents(components) {
   return {
@@ -7,6 +8,7 @@ export function useMDXComponents(components) {
       <pre style={{ marginTop: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0 }}>{children}</pre>
     ),
     CodeHeader,
+    ChartLine,
     ...components,
   };
 }

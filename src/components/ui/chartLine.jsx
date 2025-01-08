@@ -4,8 +4,17 @@ import React from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip } from 'recharts';
 import useMeasure from 'react-use-measure';
 
+const chartData = [
+  { month: 'July', value: 95 },
+  { month: 'August', value: 80 },
+  { month: 'September', value: 75 },
+  { month: 'October', value: 65 },
+  { month: 'November', value: 5 },
+  { month: 'December', value: 40 },
+];
+
 export const ChartLine = (props) => {
-  const { chartData, unit } = props;
+  const { unit } = props;
   const [chartRef, chartDimensions] = useMeasure();
 
   return (
