@@ -6,7 +6,7 @@ const writingPosts = [
   {
     id: 1,
     title: 'Active state in Tailwind CSS',
-    url: '/writing/tailwind-active-state',
+    url: '/writings/tailwind-active-state',
     created: '25 October, 2024',
     tag: 'tailwind',
     description: 'Some ways how to add an active state in Tailwind',
@@ -14,10 +14,18 @@ const writingPosts = [
   {
     id: 2,
     title: 'React Component',
-    url: '/writing/react-component',
+    url: '/writings/react-component',
     created: '9 November, 2024',
     tag: 'react',
     description: 'Some ways to create a component in React',
+  },
+  {
+    id: 3,
+    title: 'Line Chart',
+    url: '/writings/line-chart',
+    created: '22 November, 2024',
+    tag: 'react',
+    description: 'Create a line chart using Recharts library',
   },
 ];
 

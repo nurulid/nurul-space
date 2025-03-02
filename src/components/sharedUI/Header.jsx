@@ -9,7 +9,7 @@ import { LogoHeader } from '../ui/logoHeader';
 const menu = [
   { title: 'Portfolio', link: '/', isExternal: false },
   { title: 'UI', link: '/ui', isExternal: false },
-  { title: 'Writing', link: '/writing', isExternal: false },
+  { title: 'Writings', link: '/writings', isExternal: false },
   { title: 'CV', link: '/resume', isExternal: false },
   { title: 'Templates', link: 'https://nurulid.gumroad.com/', isExternal: true },
 ];
