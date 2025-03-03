@@ -3,7 +3,7 @@ import { XIcon } from '../components/resume/icons/xIcon';
 
 export const RESUME_DATA = {
   name: 'Nurul Insani Dewi',
-  about: 'Enthusiastic Frontend Developer and UI crafter, with a strong affinity for CSS and Tailwind CSS.',
+  about: 'Enthusiastic about creating seamless user experiences and continuously improving UI design and development practices.',
   location: {
     state: 'Indonesia',
     link: 'https://www.google.com/maps/place/Indonesia/',
@@ -36,6 +36,16 @@ export const RESUME_DATA = {
   summary:
     "I'm an experienced Frontend Developer, especially in crafting User Interface (UI). During my experience, I learn and practice how to build beautiful and functional products.",
   work: [
+    {
+      role: 'Frontend Developer',
+      company: 'Freelance',
+      link: 'https://peepso.com',
+      start: '2024',
+      end: 'Present',
+      location: 'Remote',
+      status: '',
+      description: "Developed dashboard UI templates for theuiagents.com using Next.js, TypeScript, Radix UI, and Tailwind CSS in collaboration with designers. Additionally, designed and built a landing page for radwah-padang to enhance online shop visibility and revamped joyhood.com with a WordPress block theme and custom CSS for a modernized look and improved performance.",
+    },
     {
       role: 'Frontend Developer',
       company: 'PeepSo',
@@ -94,9 +104,9 @@ export const RESUME_DATA = {
       isDone: true,
     },
     {
-      title: 'UI Component Collections',
-      techStack: ['Next.js', 'Typescript', 'Tailwind CSS', 'Radix UI'],
-      description: 'UI components made with Tailwind CSS',
+      title: 'UI Collections',
+      techStack: ['Next.js', 'Typescript', 'Tailwind CSS', 'Radix UI', 'Motion'],
+      description: 'UI components made with Tailwind CSS, Motion, along with prototypes.',
       link: 'https://nid-ui-component-collections.vercel.app',
       isDone: false,
     },

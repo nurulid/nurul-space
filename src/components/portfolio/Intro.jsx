@@ -36,7 +36,12 @@ const contact = [
 
 export const Intro = () => {
   return (
-    <div className="mt-10 mb-6 max-w-3xl ml-auto pb-10 text-center md:text-right leading-6">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ type: 'tween' }}
+      className="mt-10 mb-6 max-w-3xl ml-auto pb-10 text-center md:text-right leading-6"
+    >
       <h2 className="mb-2 text-4xl lg:text-5xl text-center md:text-right font-mono">
         Hello 🙂 <br />
         I'm <span className="text-purple-500">Nurul</span> a Frontend Developer
@@ -48,9 +53,10 @@ export const Intro = () => {
         transition={{ type: 'spring', delay: 1.5, stiffness: 500 }}
         className="text-gray-500 dark:text-gray-400 text-center md:text-right leading-7"
       >
-        I’ve worked as a Frontend Developer for 4+ years, especially in UI (User
-        Interface). During my experience, I learn and practice how to build
-        beautiful and functional products.
+        Passionate Frontend Developer with 4+ years of experience specializing
+        in building intuitive and visually appealing user interfaces.
+        Enthusiastic about creating seamless user experiences and continuously
+        improving UI design and development practices.
       </p>
 
       <div className="relative inline group">
@@ -75,6 +81,6 @@ export const Intro = () => {
           <LinkIcon key={i} {...{ title, url, Icon, email }} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };

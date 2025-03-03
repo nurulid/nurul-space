@@ -19,14 +19,14 @@ const writingPosts = [
     tag: 'react',
     description: 'Some ways to create a component in React',
   },
-  {
-    id: 3,
-    title: 'Line Chart',
-    url: '/writings/line-chart',
-    created: '22 November, 2024',
-    tag: 'react',
-    description: 'Create a line chart using Recharts library',
-  },
+  // {
+  //   id: 3,
+  //   title: 'Line Chart',
+  //   url: '/writings/line-chart',
+  //   created: '22 November, 2024',
+  //   tag: 'react',
+  //   description: 'Create a line chart using Recharts library',
+  // },
 ];
 
 export default function Page() {

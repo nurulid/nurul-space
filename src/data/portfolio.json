@@ -107,6 +107,18 @@
             "category": "frontend",
             "isDone": true,
             "isTeam": false
+        },
+        {
+            "id": 14,
+            "title": "UI Component Collections",
+            "description": "UI components made with Tailwind CSS, CSS Animation, Motion/Framer motion, along with prototypes of web apps.",
+            "previewURL": "https://nid-ui-component-collections.vercel.app",
+            "codeURL": "https://github.com/nurulid/ui-component-collections",
+            "thumbnail": "/portfolio/ui-collections-2.jpeg",
+            "labels": ["Next.js", "Typescript", "Radix UI", "Tailwind CSS", "Motion"],
+            "category": "frontend",
+            "isDone": true,
+            "isTeam": false
         }
     ]
 }
