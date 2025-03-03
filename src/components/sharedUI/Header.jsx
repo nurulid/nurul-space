@@ -76,10 +76,10 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-4 md:top-6 z-[20]">
+    <header className="sticky top-4 md:top-6 z-[20] px-4 sm:px-0">
       <div
         className={[
-          'max-w-[600px] m-2 md:mx-auto py-3 px-6 ',
+          'max-w-[600px] m-2 mx-auto py-3 px-6 ',
           'backdrop-filter backdrop-blur-lg bg-opacity-25 bg-gray-100/10 bg-clip-padding',
           'shadow-sm rounded-full border-[.5px] border-purple-300',
         ].join(' ')}
