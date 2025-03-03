@@ -50,7 +50,7 @@ export const Intro = () => {
       <p
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ type: 'spring', delay: 1.5, stiffness: 500 }}
+        transition={{ type: 'spring', delay: 3, stiffness: 1500 }}
         className="text-gray-500 dark:text-gray-400 text-center md:text-right leading-7"
       >
         Passionate Frontend Developer with 4+ years of experience specializing

@@ -54,3 +54,8 @@ export function getFirstCharacter(names) {
       .map(word => word.charAt(0))
       .join('');
 }
+
+// Get current year
+export function getCurrentYear() {
+  return new Date().getFullYear();
+}

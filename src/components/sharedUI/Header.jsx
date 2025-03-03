@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+
+import { getCurrentYear } from '@/lib/utils';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { LinkMenu } from '../ui/linkMenu';
 import { LogoHeader } from '../ui/logoHeader';
@@ -27,6 +29,8 @@ const MobileHeader = ({ toggleMenu }) => {
 };
 
 const MobileMenu = ({ isOpen, toggleMenu }) => {
+  const currentYear = getCurrentYear();
+
   return (
     <>
       {isOpen && (
@@ -55,7 +59,7 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
               'absolute top-[28px] right-[20px]',
             ].join(' ')}
           />
-          <p className="text-gray-500 text-sm">@ 2024 Made with 💜 by Nurul</p>
+          <p className="text-gray-500 text-sm">ⓒ {currentYear} Made with 💜 by Nurul</p>
         </nav>
       )}
     </>
