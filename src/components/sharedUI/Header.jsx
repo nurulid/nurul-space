@@ -7,13 +7,18 @@ import { getCurrentYear } from '@/lib/utils';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { LinkMenu } from '../ui/linkMenu';
 import { LogoHeader } from '../ui/logoHeader';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const menu = [
   { title: 'Portfolio', link: '/', isExternal: false },
   { title: 'UI', link: '/ui', isExternal: false },
   { title: 'Writings', link: '/writings', isExternal: false },
   { title: 'CV', link: '/resume', isExternal: false },
-  { title: 'Templates', link: 'https://nurulid.gumroad.com/', isExternal: true },
+  {
+    title: 'Templates',
+    link: 'https://nurulid.gumroad.com/',
+    isExternal: true,
+  },
 ];
 
 const MobileHeader = ({ toggleMenu }) => {
@@ -59,7 +64,9 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
               'absolute top-[28px] right-[20px]',
             ].join(' ')}
           />
-          <p className="text-gray-500 text-sm">ⓒ {currentYear} Made with 💜 by Nurul</p>
+          <p className="text-gray-500 text-sm">
+            ⓒ {currentYear} Made with 💜 by Nurul
+          </p>
         </nav>
       )}
     </>
@@ -68,6 +75,12 @@ const MobileMenu = ({ isOpen, toggleMenu }) => {
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  // Use the useScroll hook to get the scroll progress
+  const { scrollY } = useScroll();
+
+  // Map the scroll progress to the maxWidth value
+  const maxWidth = useTransform(scrollY, [0, 200], ['1020px', '600px']);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -81,18 +94,24 @@ export const Header = () => {
 
   return (
     <header className="sticky top-4 md:top-6 z-[20] px-4 sm:px-0">
-      <div
+      <motion.div
+        style={{
+          maxWidth,
+        }}
+        transition={{
+          type: 'tween', // Use spring animation for smoothness
+          damping: 1000, // Controls the bounciness of the spring
+          stiffness: 1500, // Controls the speed of the animation
+        }}
         className={[
-          'max-w-[600px] m-2 mx-auto py-3 px-6 ',
+          'm-2 mx-auto py-3 px-6 ',
           'backdrop-filter backdrop-blur-lg bg-opacity-25 bg-gray-100/10 bg-clip-padding',
           'shadow-sm rounded-full border-[.5px] border-purple-300',
         ].join(' ')}
       >
         <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">
           <LogoHeader />
-          <ul
-            className="flex items-center gap-4 text-sm"
-          >
+          <ul className="flex items-center gap-4 text-sm">
             {menu.map(({ title, link, isExternal }, i) => (
               <li key={i}>
                 <LinkMenu {...{ title, link, isExternal }} />
@@ -104,7 +123,7 @@ export const Header = () => {
 
         {/* Mobile Header */}
         <MobileHeader toggleMenu={toggleMenu} />
-      </div>
+      </motion.div>
 
       {/* Mobile Menu */}
       <MobileMenu {...{ isOpen, toggleMenu, setIsOpen }} />

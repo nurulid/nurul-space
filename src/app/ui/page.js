@@ -1,12 +1,14 @@
+import Link from 'next/link';
+
 import { UI_EXPERIMENTS } from '@/data/ui-experiments';
 import { AllBadges } from '@/components/ui-experiments/allBadges';
 import { Search } from '@/components/ui-experiments/search';
 import { ShareDialog } from '@/components/ui-experiments/shareDialog';
 import { UiBox } from '@/components/ui-experiments/uiBox';
-import Link from 'next/link';
 
 export default function Page() {
   const uiExperiments = UI_EXPERIMENTS;
+
   return (
     <>
       <div className="space-y-2">

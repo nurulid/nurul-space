@@ -1,56 +1,7 @@
-'use client';
-
-import { ArrowLeft, ArrowUpRight } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import React from 'react';
+import WritingLayout from '@/components/template/WritingLayout';
 
 export default function MdxLayout({ children }) {
-  const pathname = usePathname();
-  const isWritingIndex = pathname == '/writings';
 
-  return (
-    <div className="max-w-3xl w-full mx-auto py-2 sm:py-9 prose relative">
-      {isWritingIndex ? (
-        <>{children}</>
-      ) : (
-        <>
-          <Link
-            href="/writing"
-            className="group p-1 size-[34px] sticky top-20 sm:top-7 md:top-9 inline-flex items-center justify-center bg-purple-50 rounded-md no-underline"
-          >
-            <ArrowLeft
-              size={20}
-              className="text-gray-400 group-hover:text-violet-600 transition-all"
-            />{' '}
-          </Link>
-          <motion.article
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ type: 'tween' }}
-            className="px-0 sm:px-10 md:px-16 mt-4 sm:-mt-10"
-          >
-            {children}
-          </motion.article>
-        </>
-      )}
-      <div className="text-right">
-        <Link
-          className="group mt-10 text-xs inline-block opacity-50 no-underline"
-          href="https://dribbble.com/shots/22080456-Blog-Experiment"
-          target="_blank"
-        >
-          Design credit:{' '}
-          <span className="underline">
-            @ Dribbble{' '}
-            <ArrowUpRight
-              size={14}
-              className="inline-block ml group-hover:rotate-45 transition-all"
-            />
-          </span>
-        </Link>
-      </div>
-    </div>
-  );
+  return <WritingLayout>{children}</WritingLayout>;
 }
