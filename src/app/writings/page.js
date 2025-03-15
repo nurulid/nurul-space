@@ -19,14 +19,14 @@ const writingPosts = [
     tag: 'react',
     description: 'Some ways to create a component in React',
   },
-  {
-    id: 3,
-    title: 'Responsive Chart',
-    url: '/writings/responsive-chart',
-    created: '5 March, 2025',
-    tag: 'react',
-    description: 'Create a responsive line chart using Recharts',
-  },
+  // {
+  //   id: 3,
+  //   title: 'Responsive Chart',
+  //   url: '/writings/responsive-chart',
+  //   created: '5 March, 2025',
+  //   tag: 'react',
+  //   description: 'Create a responsive line chart using Recharts',
+  // },
 ];
 
 export default function Page() {
