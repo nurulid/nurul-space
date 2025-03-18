@@ -53,7 +53,7 @@ export const Intro = () => {
         transition={{ type: 'spring', delay: 3, stiffness: 1500 }}
         className="text-gray-500 dark:text-gray-400 text-center md:text-right leading-7"
       >
-        Passionate Frontend Developer with 4+ years of experience specializing
+        Passionate Frontend Developer with 5+ years of experience specializing
         in building intuitive and visually appealing user interfaces.
         Enthusiastic about creating seamless user experiences and continuously
         improving UI design and development practices.

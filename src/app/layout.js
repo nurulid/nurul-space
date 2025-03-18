@@ -12,6 +12,7 @@ export const inter = Inter({
 export const metadata = {
   title: "Frontend Developer | Nurul Insani Dewi",
   description: "Nurul's portfolio, ui experiments, etc.",
+  keywords: "nurul insani dewi, nurul insani, nurul, nurul insan, nurul id, nurulid, nurulide",
   icons: {
     icon: "/images/nid.jpeg",
   },

@@ -8,8 +8,9 @@ export const sunflower = Sunflower({
 });
 
 export const metadata = {
-  title: "Arc Browser homepage clone by Nurul Insani Dewi",
+  title: "Arc Browser homepage clone by Nurul | Nurul's website",
   description: "Imitate homepage of Arc from The Browser Company (arc.net).",
+  keyword: "Arc Browser homepage, the browser company, arc, new browser, aesthetic browser"
 };
 
 export default function ArcLayout({children}) {

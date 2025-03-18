@@ -6,3 +6,4 @@ export default function Layout({children}) {
     <ContentLayout>{children}</ContentLayout>
   )
 }
+

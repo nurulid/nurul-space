@@ -11,8 +11,10 @@ import { Github } from 'lucide-react';
 const resume = RESUME_DATA;
 
 export const metadata = {
-  title: `${resume.name} | ${resume.about}`,
+  title: "CV / Resume | Nurul's website",
   description: resume.summary,
+  keyword:
+    "resume web, minimalist resume, resume, cv, minimalist cv, nurul's resume, nurul insani dewi, nurul insani, nurul, nurul insan, nurul id, nurulid, nurulide",
 };
 
 export default function Page() {
