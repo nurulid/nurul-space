@@ -1,8 +1,19 @@
 import { Chip, Tooltip } from '@nextui-org/react';
 import { Github, MoveRight } from 'lucide-react';
 import Image from 'next/image';
+import { Button } from '../ui/Button';
 
-export const PortfolioCard = ({id, title, description, labels, thumbnail, previewURL, codeURL, isDone, isTeam}) => {
+export const PortfolioCard = ({
+  id,
+  title,
+  description,
+  labels,
+  thumbnail,
+  previewURL,
+  codeURL,
+  isDone,
+  isTeam,
+}) => {
   return (
     <div
       className={`p-4 border-[.5px] border-purple-300 dark:border-purple-800/20 rounded-md relative group transition-all bg-purple-100/20 dark:bg-slate-400/10 flex flex-col ${
@@ -10,7 +21,7 @@ export const PortfolioCard = ({id, title, description, labels, thumbnail, previe
       } ${isTeam && 'team-project'}`}
     >
       <div className="h-[250px] w-full overflow-hidden rounded-md">
-        <Tooltip showArrow={true} content="Visit preview">
+        <Tooltip showArrow={true} content="Visit Live Demo">
           <a href={previewURL} target="_blank">
             <Image
               alt={title}
@@ -57,6 +68,16 @@ export const PortfolioCard = ({id, title, description, labels, thumbnail, previe
             {label}
           </Chip>
         ))}
+      </div>
+      <div className="h-5"></div>
+
+      <div className="space-y-2">
+        <Button href={previewURL} external={true}>
+          Visit Live Demo
+        </Button>
+        <Button href={codeURL} external={true} variant="secondary">
+          Github
+        </Button>
       </div>
     </div>
   );
