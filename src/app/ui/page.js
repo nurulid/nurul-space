@@ -14,13 +14,13 @@ export default function Page() {
       <div className="space-y-2">
         <h1 className="text-3xl">UI</h1>
         <p>
-          <span className="opacity-50">Check more UI at my </span>
+          <span className="opacity-50">Check more at </span>
           <Link
-            href="https://nid-ui-component-collections.vercel.app/"
+            href="https://ui.nurrul.com/"
             target="_blank"
             className="text-violet-500 hover:underline transition-all"
           >
-            UI Collections.
+            ui.nurrul.com
           </Link>
         </p>
       </div>
