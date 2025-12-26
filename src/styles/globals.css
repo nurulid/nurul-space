@@ -55,9 +55,14 @@ body {
   .resume .title {
     @apply mb-2 text-2xl font-semibold;
   }
-  .resume p {
+  .resume p, .resume li {
     color: #111827cc;
     @apply font-mono text-resumeGray text-xs leading-[1.5] mb-1;
+  }
+
+    .resume ul {
+    color: #111827cc;
+    @apply list-disc pl-5 space-y-1;
   }
 
   .resume a {

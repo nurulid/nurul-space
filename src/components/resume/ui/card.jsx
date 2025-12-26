@@ -31,7 +31,11 @@ export const Card = ({
       <p className="!text-sm">
         {role} {status && <small> - {status}</small>}
       </p>
-      <p>{description}</p>
+      <ul>
+        {description.map((item, index) => (
+          <li key={index} >{item}</li>
+        ))}
+      </ul>
     </div>
   );
 };

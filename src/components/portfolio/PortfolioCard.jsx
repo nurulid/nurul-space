@@ -75,9 +75,6 @@ export const PortfolioCard = ({
         <Button href={previewURL} external={true}>
           Visit Live Demo
         </Button>
-        <Button href={codeURL} external={true} variant="secondary">
-          Github
-        </Button>
       </div>
     </div>
   );

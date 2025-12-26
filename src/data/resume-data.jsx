@@ -44,7 +44,13 @@ export const RESUME_DATA = {
       end: 'Present',
       location: 'Remote',
       status: '',
-      description: "Developed a SaaS product for an e-commerce business using Gemi to introduce products to potential customers through existing users and designed the UI based on wireframes and project briefs. Additionally, maintained and optimized the BASI key configurator web app (React), built dashboard UI templates for theuiagents.com, created a landing page for Radwah Padang to improve online visibility, and revamped joyhood.com with a WordPress block theme and custom CSS for a modernized look and better performance.",
+      description: [
+        "Developed a SaaS product for an e-commerce business to introduce their products to potential customers through existing users. Designed the UI based on wireframes and project briefs. Using Gemi (Full-stack MVC web framework with SSR React)",
+        "Maintained and optimized the BASI key configurator (2D renderer) web app (React).",
+        "Developed dashboard UI templates for theuiagents.com using Next.js, TypeScript, Radix UI, and Tailwind CSS in collaboration with designers.",
+        "Designed and built a landing page for Radwah Padang to enhance online shop visibility.",
+        "Revamped joyhood.com with a WordPress block theme and custom CSS for a modernized look and improved performance."
+      ],
     },
     {
       role: 'Frontend Developer',
@@ -54,7 +60,7 @@ export const RESUME_DATA = {
       end: '2023',
       location: 'Remote',
       status: 'Full Time',
-      description: "Crafting and refining the user interface of WordPress products, encompassing tasks like designing new features, addressing client issues, and optimizing existing UI elements. It also involves creating landing pages, banners, and email templates using HTML, CSS, and SCSS, with a primary focus on UI design and enhancement.",
+      description: ["Crafting and refining the user interface of WordPress products, encompassing tasks like designing new features, addressing client issues, and optimizing existing UI elements.", "Involves in creating landing pages, banners, and email templates using HTML, CSS, and SCSS, with a primary focus on UI design and enhancement."],
     },
     {
       role: 'Frontend Developer',
@@ -64,7 +70,7 @@ export const RESUME_DATA = {
       end: '2020',
       location: 'Jakarta, Indonesia',
       status: 'Full Time',
-      description: "Converting web mockups from Adobe XD into HTML using CSS, Bootstrap, and jQuery, while also constructing websites for both private and government entities. Additionally, it involves implementing Vue.js with Nuxt.js and Vuetify to integrate material design components into a product.",
+      description: ["Converting web mockups from Adobe XD into HTML using CSS, Bootstrap, and jQuery, while also constructing websites for both private and government entities.", "Additionally, it involves implementing Vue.js with Nuxt.js and Vuetify to integrate material design components into a product."],
     },
     {
       role: 'Frontend Developer',
@@ -74,7 +80,7 @@ export const RESUME_DATA = {
       end: '2018',
       location: 'Jakarta, Indonesia',
       status: '',
-      description: "Debugging and resolving issues, converting new page designs into HTML for both web and mobile views using the Bulma CSS framework, and collaborating closely with the product team.",
+      description: ["Debugging and resolving issues, converting new page designs into HTML for both web and mobile views using the Bulma CSS framework, and collaborating closely with the product team."],
     },
   ],
   education: {
