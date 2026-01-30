@@ -119,6 +119,18 @@
             "category": "frontend",
             "isDone": true,
             "isTeam": false
+        },
+        {
+            "id": 15,
+            "title": "Aplikasi Muslim",
+            "description": "Muslim app with Quran, Dzikir, Asmaul Husna, and reminder widgets.",
+            "previewURL": "https://aplikasi-muslim.vercel.app",
+            "codeURL": "",
+            "thumbnail": "/portfolio/aplikasi-muslim.jpeg",
+            "labels": ["Next.js", "Typescript", "Shadcn", "Tailwind CSS"],
+            "category": "frontend",
+            "isDone": false,
+            "isTeam": false
         }
     ]
 }

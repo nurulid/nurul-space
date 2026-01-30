@@ -43,8 +43,8 @@ body {
   }
 
   .on-progress:before {
-    content: 'In Progress';
-    @apply animate-pulse absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-70%] text-xl inline-flex items-center px-4 py-2 font-semibold leading-6 shadow rounded-full text-purple-500 bg-white dark:bg-slate-800 transition ease-in-out duration-150;
+    content: 'WIP';
+    @apply animate-pulse absolute top-[30%] left-[50%] translate-x-[-50%] translate-y-[-70%] text-xl inline-flex items-center px-4 py-2 font-semibold leading-6 shadow rounded-full text-black bg-white dark:bg-slate-800 transition ease-in-out duration-150;
   }
 
   .team-project:after {
