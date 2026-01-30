@@ -5,7 +5,12 @@ import { PortfolioCard } from './PortfolioCard';
 import { PortfolioFilter } from './PortfolioFilter';
 
 export const PortfolioList = ({ portfolio }) => {
-  const categories = [null, 'CSS', 'frontend', 'fullstack'];
+  const categories = [
+    { label: 'All', value: null },
+    { label: 'CSS', value: 'css' },
+    { label: 'Front-end', value: 'frontend' },
+    { label: 'Full-stack', value: 'fullstack' },
+  ];
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const sortDataDescending = () => {
@@ -18,25 +23,25 @@ export const PortfolioList = ({ portfolio }) => {
 
   // Filter the portfolio items based on the selected category
   const filteredPortfolio = selectedCategory
-    ? sortedData.filter((item) => item.category === selectedCategory)
+    ? sortedData.filter(
+        (item) => item.category.toLowerCase() === selectedCategory,
+      )
     : sortedData;
 
   return (
     <>
-      <h1 id="portfolio" className="text-3xl mb-5 pt-[100px]">
-        My Portfolio
+      <h1 id="projects" className="text-3xl mb-5 pt-[60px]">
+        Projects
       </h1>
       <PortfolioFilter
         {...{ categories, selectedCategory, setSelectedCategory }}
       />
       {portfolio ? (
         <>
-          <h2 className="mt-5 mb-10 text-2xl font-mono capitalize text-center pb-5 border-b border-dashed border-gray-100 dark:border-gray-800">
+          {/* <h2 className="mt-5 mb-10 text-2xl font-mono capitalize text-center pb-5 border-b border-dashed border-gray-100 dark:border-gray-800">
             {selectedCategory === null ? 'all' : selectedCategory}
-          </h2>
-          <div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10"
-          >
+          </h2> */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 my-10">
             {filteredPortfolio.map(
               ({
                 id,
@@ -63,7 +68,7 @@ export const PortfolioList = ({ portfolio }) => {
                     isTeam,
                   }}
                 />
-              )
+              ),
             )}
           </div>
         </>
