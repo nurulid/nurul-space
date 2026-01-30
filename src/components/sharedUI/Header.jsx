@@ -10,7 +10,8 @@ import { LogoHeader } from '../ui/logoHeader';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const menu = [
-  { title: 'Portfolio', link: '/', isExternal: false },
+  // { title: 'Home', link: '/', isExternal: false },
+  { title: 'Projects', link: '/', isExternal: false },
   { title: 'UI', link: '/ui', isExternal: false },
   { title: 'Writings', link: '/writings', isExternal: false },
   { title: 'CV', link: '/resume', isExternal: false },
@@ -80,7 +81,7 @@ export const Header = () => {
   const { scrollY } = useScroll();
 
   // Map the scroll progress to the maxWidth value
-  const maxWidth = useTransform(scrollY, [0, 200], ['1020px', '600px']);
+  const maxWidth = useTransform(scrollY, [0, 200], ['1020px', '700px']);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -114,7 +115,7 @@ export const Header = () => {
           <ul className="flex items-center gap-4 text-sm">
             {menu.map(({ title, link, isExternal }, i) => (
               <li key={i}>
-                <LinkMenu {...{ title, link, isExternal }} />
+                <LinkMenu {...{ title, link, isExternal }} scroll={false} />
               </li>
             ))}
             <ThemeSwitcher />

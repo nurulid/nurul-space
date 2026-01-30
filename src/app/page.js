@@ -12,11 +12,11 @@ export default async function Home() {
   return (
     <>
       <Intro />
-      <div className="border border-gray-100 rounded-full size-10 mx-auto flex justify-center items-center animate-bounce shadow-lg bg-white text-violet-500">
+      {/* <div className="border border-gray-100 rounded-full size-10 mx-auto flex justify-center items-center animate-bounce shadow-lg bg-white text-violet-500">
         <Link href="#portfolio">
           <ArrowDown size={24} />
         </Link>
-      </div>
+      </div> */}
       <PortfolioList portfolio={portfolio} />
     </>
   );
