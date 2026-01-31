@@ -13,10 +13,10 @@ export const PortfolioFilter = ({ categories, selectedCategory, setSelectedCateg
             href="#projects"
             key={label}
             onClick={() => setSelectedCategory(value)}
-            className={`px-4 py-1 rounded-full capitalize relative bg-purple-200 hover:bg-purple-300 text-sm transition-all ${selected ? 'text-purple-800 font-semibold' : 'text-purple-700 font-medium'}`}
+            className={`px-4 py-1 rounded-full capitalize relative bg-gray-200 hover:bg-gray-300 text-sm transition-all ${selected ? 'text-gray-800 font-semibold' : 'text-gray-700 font-medium'}`}
           >
             <span
-              className={[selected && 'text-purple-200', 'relative z-[2]'].join(
+              className={[selected && 'text-gray-200', 'relative z-[2]'].join(
                 ' '
               )}
             >
@@ -27,7 +27,7 @@ export const PortfolioFilter = ({ categories, selectedCategory, setSelectedCateg
               <motion.span
                 layoutId="tab"
                 transition={{ type: 'spring', duration: 0.4 }}
-                className="absolute inset-0 z-0 rounded-full bg-black text-purple-200"
+                className="absolute inset-0 z-0 rounded-full bg-black text-gray-200"
               ></motion.span>
             )}
           </a>

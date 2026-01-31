@@ -107,7 +107,7 @@ export const Header = () => {
         className={[
           'm-2 mx-auto py-3 px-6 ',
           'backdrop-filter backdrop-blur-lg bg-opacity-25 bg-gray-100/10 bg-clip-padding',
-          'shadow-sm rounded-full border-[.5px] border-purple-300',
+          'shadow-sm rounded-md border-[.5px] border-black',
         ].join(' ')}
       >
         <nav className="hidden lg:flex justify-between items-center flex-wrap gap-4">

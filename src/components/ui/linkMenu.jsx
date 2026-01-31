@@ -21,7 +21,7 @@ export const LinkMenu = ({ title, link, isExternal }) => {
         'group whitespace-nowrap',
         isExternal ? 'relative group flex items-center gap-1' : '',
         'inline-block',
-        'data-[active=true]:text-violet-600 data-[active=true]:underline',
+        'data-[active=true]:font-semibold data-[active=true]:underline',
         'hover:underline underline-offset-4 transition-all',
       ].join(' ')}
     >

@@ -13,7 +13,7 @@ const bgThemeReducer = (state, action) => {
 
 export function BgThemeProvider({ children }) {
   const [state, dispatch] = useReducer(bgThemeReducer, {
-    theme: '#94A3B8',
+    theme: '#fff',
   });
 
   const changeBgTheme = (theme) => {

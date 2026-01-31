@@ -27,7 +27,7 @@ export const Layout = ({ children }) => {
         <div className="relative transition-all z-[2]">
           <BgTheme theme={theme}/>
           <Header />
-          <BgThemeSelector />
+          {/* <BgThemeSelector /> */}
           <motion.main
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
