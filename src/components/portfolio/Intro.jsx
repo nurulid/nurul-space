@@ -40,7 +40,7 @@ export const Intro = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: 'tween' }}
-      className="leading-6 max-w-[1020px] mx-auto space-y-4 mt-8"
+      className="leading-6 max-w-[1020px] mx-auto space-y-4 mt-4 md:mt-8"
     >
       <div className="space-y-2">
         <h2 className="text-xl lg:text-2xl font-mono">
