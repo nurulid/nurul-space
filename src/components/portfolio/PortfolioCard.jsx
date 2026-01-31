@@ -20,7 +20,7 @@ export const PortfolioCard = ({
         !isDone && 'on-progress'
       } ${isTeam && 'team-project'}`}
     >
-      <div className="h-[150px] w-full overflow-hidden rounded-md">
+      <div className="h-[150px] w-[250px] md:w-full overflow-hidden rounded-md">
         <Tooltip showArrow={true} content="Visit Live Demo">
           <a href={previewURL} target="_blank">
             <Image

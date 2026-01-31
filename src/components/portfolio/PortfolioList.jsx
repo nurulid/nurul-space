@@ -41,7 +41,7 @@ export const PortfolioList = ({ portfolio }) => {
           {/* <h2 className="mt-5 mb-10 text-2xl font-mono capitalize text-center pb-5 border-b border-dashed border-gray-100 dark:border-gray-800">
             {selectedCategory === null ? 'all' : selectedCategory}
           </h2> */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-10">
+          <div className="flex overflow-y-auto md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-10">
             {filteredPortfolio.map(
               ({
                 id,

@@ -40,44 +40,48 @@ export const Intro = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ type: 'tween' }}
-      className="mt-10 leading-6 max-w-[1020px] mx-auto"
+      className="leading-6 max-w-[1020px] mx-auto space-y-4 mt-8"
     >
-      <h2 className="mb-2 text-xl lg:text-2xl font-mono">
-        Hello there, <br />
-        I'm <span className="font-medium">Nurul</span> a Frontend Developer
-        from Indonesia.
-      </h2>
-      <p
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: 'spring', delay: 3, stiffness: 1500 }}
-        className="text-gray-500 dark:text-gray-400 leading-7"
-      >
-        Passionate Frontend Developer with 5+ years of experience specializing
-        in building intuitive and visually appealing user interfaces. Skilled in
-        HTML, CSS, JavaScript, and modern frameworks like React and Next.js. 
-        Enthusiastic about creating seamless user experiences and continuously
-        improving UI design and development practices.
-      </p>
+      <div className="space-y-2">
+        <h2 className="text-xl lg:text-2xl font-mono">
+          Hello there, <br />
+          I'm <span className="font-medium">Nurul</span> a Frontend Developer
+          from Indonesia.
+        </h2>
 
-      <div className="relative inline group">
+        <p
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ type: 'spring', delay: 3, stiffness: 1500 }}
+          className="text-gray-500 dark:text-gray-400 leading-loose text-sm md:text-base"
+        >
+          Passionate Frontend Developer with 5+ years of experience specializing
+          in building intuitive and visually appealing user interfaces. Skilled
+          in HTML, CSS, JavaScript, and modern frameworks like React and
+          Next.js. Enthusiastic about creating seamless user experiences and
+          continuously improving UI design and development practices.
+        </p>
+      </div>
+
+      <div className="relative group">
         <a
           href="mailto:call.nurulid@gmail.com"
           title="Get in touch"
-          className="text-right inline-block mt-2 mb-4 p-2 bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-gray-800 rounded-xl w-[60%] md:w-[40%] lg:w-[30%] text-sm"
+          className="text-right inline-block p-2 bg-slate-50 dark:bg-slate-800/40 border border-slate-100 dark:border-gray-800 rounded-xl w-[60%] md:w-[40%] lg:w-[30%] text-sm"
         >
           <span className="rounded-md px-6 py-2 bg-white dark:bg-white/90 dark:hover:bg-white shadow-md group-hover:shadow-sm dark:text-black transition-all block text-center">
             Get In Touch
           </span>
         </a>
-        <div className="absolute left-2 -top-3">
+        <div className="absolute left-1 top-1">
           <div className="relative flex h-3 w-3">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
           </div>
         </div>
       </div>
-      <div className="flex justify-start gap-4 items-center mt-4">
+
+      <div className="flex justify-start gap-4 items-center">
         {contact.map(({ title, url, icon: Icon, email }, i) => (
           <LinkIcon key={i} {...{ title, url, Icon, email }} />
         ))}

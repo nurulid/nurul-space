@@ -13,7 +13,7 @@ export const PortfolioFilter = ({ categories, selectedCategory, setSelectedCateg
             href="#projects"
             key={label}
             onClick={() => setSelectedCategory(value)}
-            className={`px-4 py-1 rounded-full capitalize relative bg-gray-200 hover:bg-gray-300 text-sm transition-all ${selected ? 'text-gray-800 font-semibold' : 'text-gray-700 font-medium'}`}
+            className={`px-4 py-1 rounded-full capitalize whitespace-nowrap relative bg-gray-200 hover:bg-gray-300 text-xs md:text-sm transition-all ${selected ? 'text-gray-800 font-semibold' : 'text-gray-700 font-medium'}`}
           >
             <span
               className={[selected && 'text-gray-200', 'relative z-[2]'].join(
