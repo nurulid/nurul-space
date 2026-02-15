@@ -48,12 +48,12 @@ export const Intro = () => {
       <div className="space-y-2">
         <h2 className="font-semibold font-mono">Nurul Insani Dewi</h2>
 
-        <p className="text-gray-500 dark:text-gray-400 leading-loose text-sm md:text-base">
-          I’m a frontend developer who cares about UI and how a product actually
+        <p className="text-gray-500 dark:text-gray-400 leading-loose">
+          I’m Nurul a frontend developer that cares about UI and how a product actually
           feels to use. I like thinking about how users interact with a product
           and making sure the interface feels clear, simple, and functional. And I enjoy shaping ideas into real, and working products.
         </p>
-        <p className="text-gray-500 dark:text-gray-400 leading-loose text-sm md:text-base">
+        <p className="text-gray-500 dark:text-gray-400 leading-loose">
           For me, good design isn’t just about how it looks, but how it works.
         </p>
       </div>

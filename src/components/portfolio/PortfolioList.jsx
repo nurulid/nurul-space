@@ -63,10 +63,10 @@ export const PortfolioList = ({ portfolio }) => {
   }, [highlightProject.length]);
 
   return (
-    <div className="pt-10 space-y-8">
+    <div className="space-y-8">
       <div className="space-y-2">
         <div className="flex items-center justify-between md:justify-start gap-4">
-          <h1 id="projects" className="text-2xl">
+          <h1 id="projects" className="text-2xl font-mono">
             Projects
           </h1>
           <div className="space-x-6 md:space-x-2">
@@ -105,7 +105,7 @@ export const PortfolioList = ({ portfolio }) => {
         <div
           id="projects-wrapper"
           ref={projectsWrapperRef}
-          className="flex overflow-x-auto overflow-y-hidden gap-4 scroll-smooth pb-6"
+          className="flex overflow-x-auto overflow-y-hidden gap-4 scroll-smooth pb-5"
         >
           {highlightProject.map(
             ({

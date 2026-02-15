@@ -2,7 +2,7 @@ import { Dot } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
-const writingPosts = [
+export const writingPosts = [
   {
     id: 1,
     title: 'Active state in Tailwind CSS',
