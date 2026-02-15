@@ -27,7 +27,7 @@ const contact = [
   },
   {
     title: 'LinkedIn',
-    url: 'https://linkedin.com/in/nurul-insani-dewi/',
+    url: 'https://linkedin.com/in/nurul-insani-dewi',
     icon: Linkedin,
     email: false,
   },

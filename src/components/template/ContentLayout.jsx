@@ -10,7 +10,7 @@ export default function ContentLayout({ children }) {
 
   return (
     <>
-      <BgTheme theme={theme} isPatternOnly/>
+      {/* <BgTheme theme={theme} isPatternOnly/> */}
       <ContentReveal className="max-w-2xl w-full mx-auto pt-4 pb-10 sm:py-10">
         {children}
       </ContentReveal>

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 
@@ -14,6 +14,10 @@ export const Layout = ({ children }) => {
   const currentPath = usePathname();
   const { theme } = useBgTheme();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPath]);
+
   if (
     currentPath.startsWith('/landing-page') ||
     currentPath.startsWith('/ui/mail')
@@ -25,7 +29,7 @@ export const Layout = ({ children }) => {
     return (
       <div className="flex flex-col justify-between min-h-screen">
         <div className="relative transition-all z-[2]">
-          <BgTheme theme={theme}/>
+          {/* <BgTheme theme={theme}/> */}
           <Header />
           {/* <BgThemeSelector /> */}
           <motion.main

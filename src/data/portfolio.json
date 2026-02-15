@@ -1,25 +1,13 @@
 {
     "portfolio": [
         {
-            "id": 4,
-            "title": "Shawn Cruz",
-            "description": "",
-            "previewURL": "https://nurulid.github.io/shawn-cruz",
-            "codeURL": "https://github.com/nurulid/shawn-cruz",
-            "thumbnail": "/portfolio/shawn-cruz-lp.jpeg",
-            "labels": ["slicing", "vanilla CSS", "responsive", "landing page"],
-            "category": "CSS",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
             "id": 5,
             "title": "Radwah Padang",
-            "description": "Promotional Web built with Vue.js and Tailwind CSS",
+            "description": "Promotional website.",
             "previewURL": "https://radwah-padang.vercel.app/",
             "codeURL": "https://github.com/nurulid/radwahpadang",
             "thumbnail": "/portfolio/radwah-padang.jpeg",
-            "labels": ["Vite","Tailwind CSS", "landing page"],
+            "labels": ["Tailwind"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false
@@ -27,11 +15,11 @@
         {
             "id": 6,
             "title": "Bento Profile",
-            "description": "Bento layout, made with Tailwind CSS.",
+            "description": "Bento layout.",
             "previewURL": "https://nurul-bento-profile.vercel.app/",
             "codeURL": "https://github.com/nurulid/nurul-bento-profile",
             "thumbnail": "/portfolio/Nurul_s Personal Website.jpeg",
-            "labels": ["Tailwind CSS", "bento", "layout", "responsive"],
+            "labels": ["Tailwind"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false
@@ -50,12 +38,12 @@
         },
         {
             "id": 10,
-            "title": "Arc Browser homepage",
-            "description": "Imitate homepage of Arc from The Browser Company (arc.net).",
+            "title": "Arc Browser Landing",
+            "description": "Arc from The Browser Company landing page clone.",
             "previewURL": "/landing-page/arc",
             "codeURL": "https://github.com/nurulid/nurul-space/tree/main/src/components/arc",
             "thumbnail": "/portfolio/arc-homepage.jpeg",
-            "labels": ["Tailwind CSS", "CSS", "landing page"],
+            "labels": ["Tailwind"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false
@@ -63,11 +51,11 @@
         {
             "id": 11,
             "title": "Mail AI Dashboard",
-            "description": "Mail Dashboard UI for AI app built with Tailwind CSS.",
+            "description": "Mail Dashboard UI for AI app.",
             "previewURL": "https://mail-ai-dashboard-ui.vercel.app",
             "codeURL": "https://github.com/nurulid/mail-ai-dashboard",
             "thumbnail": "/portfolio/mail-dashboard-ui.jpeg",
-            "labels": ["Next.js", "Tailwind CSS", "Dashboard"],
+            "labels": ["React", "Tailwind"],
             "category": "CSS",
             "isDone": true,
             "isTeam": false

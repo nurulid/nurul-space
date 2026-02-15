@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { PortfolioCard } from './PortfolioCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -9,13 +9,11 @@ export const PortfolioList = ({ portfolio }) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  const sortDataDescending = () => {
-    // Sort the portfolio array by id in descending order
-    const sortedData = [...portfolio].sort((a, b) => b.id - a.id);
-    return sortedData;
-  };
-
-  const sortedData = sortDataDescending();
+  // Sort the portfolio array by id in descending order
+  const sortedData = useMemo(
+    () => [...(portfolio ?? [])].sort((a, b) => Number(b.id) - Number(a.id)),
+    [portfolio],
+  );
 
   const highlightProject = sortedData.filter(
     (item) => item.category === 'fullstack' || item.category === 'frontend',

@@ -17,7 +17,7 @@ export default function WritingLayout({ children }) {
 
   return (
     <>
-      <BgTheme theme={theme} isPatternOnly/>
+      {/* <BgTheme theme={theme} isPatternOnly/> */}
       <ContentReveal className="max-w-2xl w-full mx-auto py-2 sm:py-9 prose relative">
         {isWritingIndex ? (
           <>{children}</>
@@ -25,7 +25,7 @@ export default function WritingLayout({ children }) {
           <>
             <Link
               href="/writing"
-              className="group p-1 size-[34px] sticky top-20 sm:top-7 md:top-9 inline-flex items-center justify-center bg-purple-50 rounded-md no-underline z-20"
+              className="group p-1 size-[34px] sticky top-20 md:top-24 inline-flex items-center justify-center bg-purple-50 rounded-md no-underline z-20"
             >
               <ArrowLeft
                 size={20}
