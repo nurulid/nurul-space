@@ -17,7 +17,7 @@ export const PortfolioCard = ({
 }) => {
   return (
     <div
-      className={`p-4 border-[.5px] border-gray-300 hover:border-purple-600 rounded-md relative group transition-all bg-gray-100/20 dark:bg-slate-400/10 flex flex-col ${
+      className={`p-4 border-[.5px] border-gray-300 hover:border-purple-600 hover:shadow-md rounded-md relative group transition-all bg-gray-100/20 dark:bg-slate-400/10 flex flex-col ${
         !isDone && 'on-progress'
       } ${isTeam && 'team-project'}`}
     >
