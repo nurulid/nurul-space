@@ -1,14 +1,21 @@
 import React from 'react';
 
-export const LinkIcon = ({title, url, Icon, email}) => {
+export const LinkIcon = ({ title, url, Icon, email, onHoverChange }) => {
+  const displayUrl = url;
+
   return (
     <a
-      href={email ? `mailto:${url}` : url}
-      target={email ? "_self" : "_blank" }
+      href={displayUrl}
+      target={email ? '_self' : '_blank'}
+      rel={email ? undefined : 'noreferrer noopener'}
       title={title}
-      className="hover:scale-105 transition-all text-gray-600 hover:text-gray-800 dark:text-gray-100 dark:hover:text-white"
+      onMouseEnter={() => onHoverChange?.(displayUrl)}
+      onMouseLeave={() => onHoverChange?.('')}
+      onFocus={() => onHoverChange?.(displayUrl)}
+      onBlur={() => onHoverChange?.('')}
+      className="hover:scale-125 transition-all text-gray-500 hover:text-gray-800 dark:text-gray-100 dark:hover:text-white p-1"
     >
-      <Icon />
+      <Icon className="size-4" />
     </a>
   );
 };

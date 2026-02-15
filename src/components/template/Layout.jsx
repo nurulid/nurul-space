@@ -32,7 +32,7 @@ export const Layout = ({ children }) => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'tween' }}
-            className="max-w-7xl w-full mx-auto h-full py-6 px-5 lg:px-10"
+            className="max-w-[1020px] w-full mx-auto h-full py-6 px-5 lg:px-10"
           >
             {children}
           </motion.main>

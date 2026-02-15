@@ -37,18 +37,6 @@
             "isTeam": false
         },
         {
-            "id": 7,
-            "title": "Todo Lister",
-            "description": "CRUD Todo List, made with Next.js and Tailwind CSS",
-            "previewURL": "https://todo-lister.vercel.app/",
-            "codeURL": "https://github.com/nurulid/todo-lister",
-            "thumbnail": "/portfolio/ToDo Lister.jpeg",
-            "labels": ["Next.js", "Tailwind CSS", "frontend", "CRUD"],
-            "category": "frontend",
-            "isDone": true,
-            "isTeam": false
-        },
-        {
             "id": 8,
             "title": "Adopt Hunt",
             "description": "Where pet lovers meet! A platform designed to make pet adoption easy and joyful.",

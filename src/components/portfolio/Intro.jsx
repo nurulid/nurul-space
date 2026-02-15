@@ -1,16 +1,16 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Dribbble } from 'lucide-react';
-import { XIcon } from '@/components/resume/icons/xIcon';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { Github, Linkedin, Mail, Dribbble, X, Twitter } from 'lucide-react';
 
 import { LinkIcon } from '@/components/ui/linkIcon';
 
 const contact = [
   {
-    title: 'X',
-    url: 'http://x.com/nurulide',
-    icon: XIcon,
+    title: 'X/Twitter',
+    url: 'https://x.com/nurulide',
+    icon: Twitter,
     email: false,
   },
   {
@@ -27,7 +27,7 @@ const contact = [
   },
   {
     title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/nurul-insani-dewi/',
+    url: 'https://linkedin.com/in/nurul-insani-dewi/',
     icon: Linkedin,
     email: false,
   },
@@ -35,6 +35,9 @@ const contact = [
 ];
 
 export const Intro = () => {
+  const [hoveredUrl, setHoveredUrl] = useState('');
+  const displayedUrl = hoveredUrl.replace(/^https?:\/\//, '');
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -43,27 +46,20 @@ export const Intro = () => {
       className="leading-6 max-w-[1020px] mx-auto space-y-4 mt-4 md:mt-8"
     >
       <div className="space-y-2">
-        <h2 className="text-xl lg:text-2xl font-mono">
-          Hello there, <br />
-          I'm <span className="font-medium">Nurul</span> a Frontend Developer
-          from Indonesia.
-        </h2>
+        <h2 className="font-semibold font-mono">Nurul Insani Dewi</h2>
 
-        <p
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', delay: 3, stiffness: 1500 }}
-          className="text-gray-500 dark:text-gray-400 leading-loose text-sm md:text-base"
-        >
-          Passionate Frontend Developer with 5+ years of experience specializing
-          in building intuitive and visually appealing user interfaces. Skilled
-          in HTML, CSS, JavaScript, and modern frameworks like React and
-          Next.js. Enthusiastic about creating seamless user experiences and
-          continuously improving UI design and development practices.
+        <p className="text-gray-500 dark:text-gray-400 leading-loose text-sm md:text-base">
+          I’m a frontend developer who cares about UI and how a product actually
+          feels to use. I like thinking about how users interact with a product
+          and making sure the interface feels clear, simple, and functional. And I enjoy shaping ideas into real, and working products.
+        </p>
+        <p className="text-gray-500 dark:text-gray-400 leading-loose text-sm md:text-base">
+          For me, good design isn’t just about how it looks, but how it works.
         </p>
       </div>
 
-      <div className="relative group">
+      {/* get in thouch */}
+      {/* <div className="relative group">
         <a
           href="mailto:call.nurulid@gmail.com"
           title="Get in touch"
@@ -79,12 +75,34 @@ export const Intro = () => {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-yellow-500"></span>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="flex justify-start gap-4 items-center">
-        {contact.map(({ title, url, icon: Icon, email }, i) => (
-          <LinkIcon key={i} {...{ title, url, Icon, email }} />
-        ))}
+      <div className="flex gap-4 items-center">
+        <div className="flex justify-start gap-4 items-center">
+          {contact.map(({ title, url, icon: Icon, email }, i) => (
+            <LinkIcon
+              key={i}
+              {...{ title, url, Icon, email }}
+              onHoverChange={setHoveredUrl}
+            />
+          ))}
+        </div>
+        <div className="min-h-4 overflow-hidden">
+          <AnimatePresence mode="wait" initial={false}>
+            {hoveredUrl ? (
+              <motion.p
+                key={hoveredUrl}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 8 }}
+                transition={{ duration: 0.22, ease: 'easeOut' }}
+                className="text-xs text-gray-800 dark:text-gray-400"
+              >
+                {displayedUrl}
+              </motion.p>
+            ) : null}
+          </AnimatePresence>
+        </div>
       </div>
     </motion.div>
   );

@@ -2,6 +2,7 @@ import { Chip, Tooltip } from '@nextui-org/react';
 import { Github, MoveRight } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '../ui/Button';
+import Link from 'next/link';
 
 export const PortfolioCard = ({
   id,
@@ -16,11 +17,11 @@ export const PortfolioCard = ({
 }) => {
   return (
     <div
-      className={`p-4 border-[.5px] border-gray-300 dark:border-gray-800/20 rounded-md relative group transition-all bg-gray-100/20 dark:bg-slate-400/10 flex flex-col ${
+      className={`p-4 border-[.5px] border-gray-300 hover:border-purple-600 rounded-md relative group transition-all bg-gray-100/20 dark:bg-slate-400/10 flex flex-col ${
         !isDone && 'on-progress'
       } ${isTeam && 'team-project'}`}
     >
-      <div className="h-[150px] w-[250px] md:w-full overflow-hidden rounded-md">
+      <div className="h-[150px] w-[250px] overflow-hidden rounded-md">
         <Tooltip showArrow={true} content="Visit Live Demo">
           <a href={previewURL} target="_blank">
             <Image
@@ -34,7 +35,7 @@ export const PortfolioCard = ({
         </Tooltip>
       </div>
       <a href={previewURL} target="_blank">
-        <h2 className="mt-5 mb-3 text-xl font-mono group-hover:text-purple-600 transition-all">
+        <h2 className="mt-5 mb-3 font-mono group-hover:text-purple-600 transition-all">
           {title}
           <MoveRight
             size={18}
@@ -63,19 +64,14 @@ export const PortfolioCard = ({
             size="sm"
             variant="flat"
             color="default"
-            className="mr-1 mb-1 card-label"
+            className="mr-2 mb-2 card-label"
           >
             {label}
           </Chip>
         ))}
       </div>
-      <div className="h-5"></div>
 
-      <div className="space-y-2">
-        <Button href={previewURL} external={true}>
-          Visit Live Demo
-        </Button>
-      </div>
+      <Link href={previewURL} target="_blank" className='absolute inset-0'> </Link>
     </div>
   );
 };

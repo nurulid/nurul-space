@@ -17,7 +17,13 @@ export default async function Home() {
           <ArrowDown size={24} />
         </Link>
       </div> */}
+
+      {/* Projects */}
       <PortfolioList portfolio={portfolio} />
+
+      {/* UI */}
+
+      {/* Writings */}
     </>
   );
 }

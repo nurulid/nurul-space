@@ -28,21 +28,31 @@ export const PortfolioList = ({ portfolio }) => {
       )
     : sortedData;
 
+  const highlightProject = sortedData.filter(
+    (item) => item.category === 'fullstack' || item.category === 'frontend',
+  );
+
   return (
-    <>
-      <h1 id="projects" className="text-3xl mb-5 pt-[60px]">
-        Projects
-      </h1>
-      <PortfolioFilter
+    <div className="pt-10 space-y-8">
+      <div className="space-y-2">
+        <h1 id="projects" className="text-2xl">
+          Projects
+        </h1>
+        <p className="text-gray-500 dark:text-gray-400">
+          Here are some of my projects. Click on the project title to see the
+          live demo.
+        </p>
+      </div>
+      {/* <PortfolioFilter
         {...{ categories, selectedCategory, setSelectedCategory }}
-      />
+      /> */}
       {portfolio ? (
         <>
           {/* <h2 className="mt-5 mb-10 text-2xl font-mono capitalize text-center pb-5 border-b border-dashed border-gray-100 dark:border-gray-800">
             {selectedCategory === null ? 'all' : selectedCategory}
           </h2> */}
-          <div className="flex overflow-y-auto md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-10">
-            {filteredPortfolio.map(
+          <div className="flex overflow-y-auto gap-4">
+            {highlightProject.map(
               ({
                 id,
                 title,
@@ -73,6 +83,6 @@ export const PortfolioList = ({ portfolio }) => {
           </div>
         </>
       ) : null}
-    </>
+    </div>
   );
 };
