@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import React, { useMemo } from 'react';
 
-export const SectionList = ({ projects }) => {
+export const SectionList = ({ projects, isFullWidth }) => {
   const sortedData = useMemo(
     () => [...(projects ?? [])].sort((a, b) => Number(b.id) - Number(a.id)),
     [projects],
   );
 
   return (
-    <ul className="w-full md:w-1/2">
+    <ul className={`"w-full" ${isFullWidth ? '' : 'md:w-1/2'}`}>
       {sortedData.map(
         ({ id, title, previewURL, url, description, tag, created }) => {
           return (
@@ -36,7 +36,7 @@ export const SectionList = ({ projects }) => {
               </span>
               <Link
                 href={previewURL ? previewURL : url}
-                target={previewURL ? "_blank" : "_self"}
+                target={previewURL ? '_blank' : '_self'}
                 className="absolute inset-0"
               ></Link>
             </li>
