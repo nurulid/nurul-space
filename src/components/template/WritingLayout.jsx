@@ -18,7 +18,7 @@ export default function WritingLayout({ children }) {
   return (
     <>
       {/* <BgTheme theme={theme} isPatternOnly/> */}
-      <ContentReveal className="max-w-2xl w-full mx-auto py-2 sm:py-9 prose relative">
+      <ContentReveal className="max-w-2xl w-full mx-auto py-2 sm:py-9 prose prose-slate dark:prose-invert dark:prose-headings:text-gray-100 dark:prose-p:text-gray-300 dark:prose-li:text-gray-300 dark:prose-strong:text-gray-100 dark:prose-a:text-violet-300 dark:prose-code:text-gray-200 relative">
         {isWritingIndex ? (
           <>{children}</>
         ) : (
