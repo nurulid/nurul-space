@@ -10,7 +10,6 @@ import { LogoHeader } from '../ui/logoHeader';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const menu = [
-  // { title: 'Home', link: '/', isExternal: false },
   { title: 'Projects', link: '/', isExternal: false },
   { title: 'UI', link: '/ui', isExternal: false },
   { title: 'Writings', link: '/writings', isExternal: false },
@@ -115,7 +114,7 @@ export const Header = () => {
           <ul className="flex items-center gap-4 text-sm">
             {menu.map(({ title, link, isExternal }, i) => (
               <li key={i}>
-                <LinkMenu {...{ title, link, isExternal }} scroll={false} />
+                <LinkMenu {...{ title, link, isExternal }} />
               </li>
             ))}
             <ThemeSwitcher />
