@@ -14,10 +14,10 @@ export const SectionList = ({ projects, isFullWidth }) => {
           return (
             <li
               key={id}
-              className="py-2 border-b border-dashed hover:border-solid space-y-1 group relative transition-all"
+              className="py-2 border-b border-dashed border-border hover:border-solid space-y-1 group relative transition-all"
             >
               <p
-                className="inline-block group-hover:text-purple-600"
+                className="inline-block group-hover:text-brand"
                 key={id}
                 href={previewURL ? previewURL : url}
               >
@@ -25,13 +25,13 @@ export const SectionList = ({ projects, isFullWidth }) => {
                 {tag && (
                   <>
                     -{' '}
-                    <span className="px-2 py-1 text-xs border rounded text-gray-500 bg-gray-50">
+                    <span className="px-2 py-1 text-xs border rounded text-muted bg-surfaceMuted">
                       {tag}
                     </span>
                   </>
                 )}
               </p>
-              <span className="text-xs text-gray-500 block">
+              <span className="text-xs text-muted block">
                 {created ? created : description}
               </span>
               <Link

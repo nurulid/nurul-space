@@ -28,7 +28,7 @@ export default async function Page() {
           <Link
             href="https://ui.nurrul.com/"
             target="_blank"
-            className="text-violet-500 hover:underline transition-all"
+            className="text-brand hover:underline transition-all"
           >
             ui.nurrul.com
           </Link>
