@@ -15,11 +15,21 @@ module.exports = {
     },
     extend: {
       colors: {
-        mailBlack: '#090A1A',
-        mailPurple: '#535AFF',
-        mailOrange: '#EF655F',
-        mailGray: '#B0B3B9',
-        resumeGray: '#6b7280',
+        background: 'hsl(var(--color-bg) / <alpha-value>)',
+        surface: 'hsl(var(--color-surface) / <alpha-value>)',
+        surfaceMuted: 'hsl(var(--color-surface-muted) / <alpha-value>)',
+        border: 'hsl(var(--color-border) / <alpha-value>)',
+        text: 'hsl(var(--color-text) / <alpha-value>)',
+        muted: 'hsl(var(--color-text-muted) / <alpha-value>)',
+        brand: 'hsl(var(--color-brand) / <alpha-value>)',
+        brandForeground: 'hsl(var(--color-brand-foreground) / <alpha-value>)',
+        warning: 'hsl(var(--color-warning) / <alpha-value>)',
+        warningForeground: 'hsl(var(--color-warning-foreground) / <alpha-value>)',
+        mailBlack: 'hsl(var(--color-mail-black) / <alpha-value>)',
+        mailPurple: 'hsl(var(--color-mail-purple) / <alpha-value>)',
+        mailOrange: 'hsl(var(--color-mail-orange) / <alpha-value>)',
+        mailGray: 'hsl(var(--color-mail-gray) / <alpha-value>)',
+        resumeGray: 'hsl(var(--color-resume-gray) / <alpha-value>)',
       },
       keyframes: {
         wiggle: {

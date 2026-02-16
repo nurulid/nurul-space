@@ -4,15 +4,60 @@
 
 :root {
   --background: 234 17% 98%;
+  --color-bg: 234 17% 98%;
+  --color-surface: 0 0% 100%;
+  --color-surface-muted: 220 20% 97%;
+  --color-border: 220 13% 91%;
+  --color-text: 222 47% 11%;
+  --color-text-muted: 220 9% 46%;
+  --color-brand: 236 96% 60%;
+  --color-brand-foreground: 0 0% 100%;
+  --color-warning: 42 96% 48%;
+  --color-warning-foreground: 24 9% 10%;
+  --color-mail-black: 236 49% 7%;
+  --color-mail-purple: 237 100% 66%;
+  --color-mail-orange: 3 82% 65%;
+  --color-mail-gray: 220 7% 71%;
+  --color-resume-gray: 220 9% 46%;
 }
 
 html.dark,
 [data-theme='dark'] {
   --nextui-background: 234 17% 10%;
+  --color-bg: 234 17% 10%;
+  --color-surface: 231 22% 14%;
+  --color-surface-muted: 232 20% 18%;
+  --color-border: 228 14% 26%;
+  --color-text: 210 20% 98%;
+  --color-text-muted: 215 16% 71%;
+  --color-brand: 236 96% 70%;
+  --color-brand-foreground: 232 31% 11%;
+  --color-warning: 42 96% 54%;
+  --color-warning-foreground: 24 9% 10%;
 }
 
 body {
   font-family: var(--font-inter);
+  background-color: hsl(var(--color-bg));
+  color: hsl(var(--color-text));
+}
+
+@layer utilities {
+  .text-brand {
+    color: hsl(var(--color-brand));
+  }
+
+  .text-muted {
+    color: hsl(var(--color-text-muted));
+  }
+
+  .bg-surfaceMuted {
+    background-color: hsl(var(--color-surface-muted));
+  }
+
+  .border-border {
+    border-color: hsl(var(--color-border));
+  }
 }
 
 @layer components {
@@ -56,12 +101,12 @@ body {
     @apply mb-2 text-2xl font-semibold;
   }
   .resume p, .resume li {
-    color: #111827cc;
+    color: hsl(var(--color-text) / 0.8);
     @apply font-mono text-resumeGray text-xs leading-[1.5] mb-1;
   }
 
-    .resume ul {
-    color: #111827cc;
+  .resume ul {
+    color: hsl(var(--color-text) / 0.8);
     @apply list-disc pl-5 space-y-1;
   }
 
@@ -120,7 +165,8 @@ body {
 
   /* Arc Landing Page */
   .arc-link {
-    @apply text-[#3239FB] font-bold;
+    color: hsl(var(--color-brand));
+    @apply font-bold;
   }
 
   .arc-header {
