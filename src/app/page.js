@@ -22,11 +22,12 @@ export default async function Home() {
 
       {/* UI */}
       <div className="space-y-8">
-        <SectionHeader title="UI" description="Slicing with tailwind" />
+        <SectionHeader title="UI" description="Slicing with Tailwind and CSS." />
         <SectionList
           projects={projects.filter(
             (item) => item.category.toLowerCase() === 'css',
           )}
+          showHoverPreview={true}
         />
       </div>
 

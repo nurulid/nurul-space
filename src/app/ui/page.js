@@ -23,12 +23,12 @@ export default async function Page() {
         <h1 className="text-3xl">UI</h1>
         <p>
           <span className="opacity-50">
-            Slicing with tailwind. Check more at{' '}
+            Slicing with Tailwind and CSS. Check more at{' '}
           </span>
           <Link
             href="https://ui.nurrul.com/"
             target="_blank"
-            className="text-violet-500 hover:underline transition-all"
+            className="text-brand hover:underline transition-all"
           >
             ui.nurrul.com
           </Link>
@@ -39,6 +39,7 @@ export default async function Page() {
           (item) => item.category.toLowerCase() === 'css',
         )}
         isFullWidth={true}
+        showHoverPreview={true}
       />
       <div className="pb-4 md:pb-10 space-y-6 lg:space-y-10">
         <UiBox
