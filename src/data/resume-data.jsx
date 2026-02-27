@@ -113,7 +113,7 @@ export const RESUME_DATA = {
       title: 'UI Collections',
       techStack: ['Next.js', 'Typescript', 'Tailwind CSS', 'Radix UI', 'Motion'],
       description: 'UI components made with Tailwind CSS, Motion, along with prototypes.',
-      link: 'https://nid-ui-component-collections.vercel.app',
+      link: 'https://ui.nurrul.com',
       isDone: false,
     },
     {

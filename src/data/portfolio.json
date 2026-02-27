@@ -100,7 +100,7 @@
             "id": 15,
             "title": "Aplikasi Muslim",
             "description": "Muslim app with Quran, Dzikir, Asmaul Husna, and reminder widgets.",
-            "previewURL": "https://aplikasi-muslim-seven.vercel.app/",
+            "previewURL": "https://aplikasi-muslim.nurulinsanid.workers.dev",
             "codeURL": "",
             "thumbnail": "/portfolio/aplikasi-muslim.jpeg",
             "labels": ["Next.js", "Typescript", "Shadcn", "Tailwind CSS"],
