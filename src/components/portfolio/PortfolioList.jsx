@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { PortfolioCard } from './PortfolioCard';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { sortByIdDesc } from '@/lib/utils';
 
 export const PortfolioList = ({ portfolio }) => {
   const projectsWrapperRef = useRef(null);
@@ -10,14 +11,7 @@ export const PortfolioList = ({ portfolio }) => {
   const [canScrollRight, setCanScrollRight] = useState(false);
 
   // Sort the portfolio array by id in descending order
-  const sortedData = useMemo(
-    () => [...(portfolio ?? [])].sort((a, b) => Number(b.id) - Number(a.id)),
-    [portfolio],
-  );
-
-  const highlightProject = sortedData.filter(
-    (item) => item.category === 'fullstack' || item.category === 'frontend',
-  );
+  const sortedData = useMemo(() => sortByIdDesc(portfolio ?? []), [portfolio]);
 
   const updateScrollState = () => {
     const el = projectsWrapperRef.current;
@@ -58,7 +52,7 @@ export const PortfolioList = ({ portfolio }) => {
       el.removeEventListener('scroll', updateScrollState);
       window.removeEventListener('resize', updateScrollState);
     };
-  }, [highlightProject.length]);
+  }, [sortedData.length]);
 
   return (
     <div className="space-y-8">
@@ -105,15 +99,15 @@ export const PortfolioList = ({ portfolio }) => {
           ref={projectsWrapperRef}
           className="flex overflow-x-auto overflow-y-hidden gap-4 scroll-smooth pb-5"
         >
-          {highlightProject.map(
+          {sortedData.map(
             ({
               id,
               title,
               description,
-              labels,
+              techStack,
               thumbnail,
-              previewURL,
-              codeURL,
+              link,
+              repository,
               isDone,
               isTeam,
             }) => (
@@ -123,10 +117,10 @@ export const PortfolioList = ({ portfolio }) => {
                   id,
                   title,
                   description,
-                  labels,
+                  techStack,
                   thumbnail,
-                  previewURL,
-                  codeURL,
+                  link,
+                  repository,
                   isDone,
                   isTeam,
                 }}

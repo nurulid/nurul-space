@@ -8,22 +8,22 @@ export const PortfolioCard = ({
   id,
   title,
   description,
-  labels,
+  techStack,
   thumbnail,
-  previewURL,
-  codeURL,
+  link,
+  repository,
   isDone,
   isTeam,
 }) => {
   return (
     <div
       className={`p-4 border-[.5px] border-gray-300 hover:border-purple-600 hover:shadow-md rounded-md relative group transition-all bg-gray-100/20 dark:bg-slate-400/10 flex flex-col ${
-        !isDone && 'on-progress'
-      } ${isTeam && 'team-project'}`}
+        isDone === 'FALSE' && 'on-progress'
+      } ${isTeam === 'TRUE' && 'team-project'}`}
     >
       <div className="h-[150px] w-[250px] overflow-hidden rounded-md">
         <Tooltip showArrow={true} content="Visit Live Demo">
-          <a href={previewURL} target="_blank">
+          <Link href={link} target="_blank">
             <Image
               alt={title}
               className="object-cover"
@@ -31,10 +31,10 @@ export const PortfolioCard = ({
               width={700}
               height={100}
             />
-          </a>
+          </Link>
         </Tooltip>
       </div>
-      <a href={previewURL} target="_blank">
+      <Link href={link} target="_blank">
         <h2 className="mt-5 mb-3 font-mono group-hover:text-purple-600 transition-all">
           {title}
           <MoveRight
@@ -42,36 +42,38 @@ export const PortfolioCard = ({
             className="inline-block ml-2 group-hover:rotate-[-45deg] transition-all"
           />
         </h2>
-      </a>
+      </Link>
       <p className="mb-5 text-gray-500 dark:text-gray-400 text-sm">
         {description}
       </p>
-      {codeURL && (
+      {repository && (
         <Tooltip showArrow={true} content="Souce code">
-          <a
+          <Link
             target="_blank"
-            href={codeURL}
+            href={repository ?? '/'}
             className="p-2 bg-gray-900 inline-block rounded-md absolute top-2 left-2 hover:opacity-80"
           >
             <Github size={17} color="white" />
-          </a>
+          </Link>
         </Tooltip>
       )}
       <div className="mt-auto">
-        {labels.map((label, index) => (
+        {(techStack?.split(',') ?? []).map((item, i) => (
           <Chip
-            key={index}
+            key={i}
             size="sm"
             variant="flat"
             color="default"
             className="mr-2 mb-2 card-label"
           >
-            {label}
+            {item}
           </Chip>
         ))}
       </div>
 
-      <Link href={previewURL} target="_blank" className='absolute inset-0'> </Link>
+      <Link href={link} target="_blank" className="absolute inset-0">
+        {' '}
+      </Link>
     </div>
   );
 };

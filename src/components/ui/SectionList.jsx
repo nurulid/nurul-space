@@ -32,7 +32,7 @@ export const SectionList = ({
           ({
             id,
             title,
-            previewURL,
+            link,
             url,
             description,
             tag,
@@ -74,8 +74,8 @@ export const SectionList = ({
                   {created ? created : description}
                 </span>
                 <Link
-                  href={previewURL ? previewURL : url}
-                  target={previewURL ? '_blank' : '_self'}
+                  href={link ? link : url}
+                  target={link ? '_blank' : '_self'}
                   className="absolute inset-0"
                 ></Link>
               </li>

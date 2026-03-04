@@ -1,28 +1,32 @@
 import { PortfolioList } from '@/components/portfolio/PortfolioList';
-import { promises as fs } from 'fs';
 import { Intro } from '@/components/portfolio/Intro';
 import { writingPosts } from './writings/page';
 import { SectionList } from '@/components/ui/SectionList';
 import { SectionHeader } from '@/components/ui/SectionHeader';
+import { getResumeData } from '@/lib/fetch-resume';
 
 export default async function Home() {
-  const file = await fs.readFile(
-    process.cwd() + '/src/data/portfolio.json',
-    'utf8',
-  );
-  const data = JSON.parse(file);
-  const projects = data.portfolio;
+  const cv = await getResumeData();
+  const projects = cv.portfolio;
 
   return (
     <div className="space-y-10 pb-10">
       <Intro />
 
       {/* Projects */}
-      <PortfolioList portfolio={projects} />
+      <PortfolioList
+        portfolio={projects.filter(
+          (item) =>
+            item.category === 'fullstack' || item.category === 'frontend',
+        )}
+      />
 
       {/* UI */}
       <div className="space-y-8">
-        <SectionHeader title="UI" description="Slicing with Tailwind and CSS." />
+        <SectionHeader
+          title="UI"
+          description="Slicing with Tailwind and CSS."
+        />
         <SectionList
           projects={projects.filter(
             (item) => item.category.toLowerCase() === 'css',
