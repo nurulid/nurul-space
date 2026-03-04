@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-export const Education = ({data}) => {
+export const Education = ({ data }) => {
   return (
     <section>
       <h2 className="title">Education</h2>
@@ -16,5 +16,5 @@ export const Education = ({data}) => {
         <p>{data.degree}</p>
       </div>
     </section>
-  )
-}
+  );
+};

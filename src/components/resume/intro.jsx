@@ -1,51 +1,70 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Globe, Mail } from 'lucide-react';
+import { Dot, Dribbble, Github, Globe, Linkedin } from 'lucide-react';
 import { LinkIcon } from './ui/linkIcon';
+import { XIcon } from './icons/xIcon';
 
-export const Intro = ({ data }) => {
+export const Intro = ({ data, social }) => {
+  const iconMap = {
+    GitHub: Github,
+    LinkedIn: Linkedin,
+    Dribbble: Dribbble,
+    'X/Twitter': XIcon,
+  };
+
   return (
-    <section className="flex gap-4 justify-between items-center">
-      <div className="pr-0 sm:pr-10 md:pr-20">
-        <h1 className="title">{data.name}</h1>
-        <p className="font-mono">{data.about}</p>
-        <p>
-          <Link
-            href={data.location.link}
-            target="_blank"
-            className="flex gap-1 items-center"
-          >
-            <Globe size={14} />
-            {data.location.state}
-          </Link>
-        </p>
-        <div className="flex gap-1 items-center mt-3">
-          <LinkIcon
-            link={`mailto:${data.contact.email}`}
-            title="Get in touch"
-            Icon={Mail}
-          />
-          {data.contact.social.map(({ name, link, icon: Icon }, i) => (
-            <LinkIcon
-              key={i}
-              link={link}
+    <>
+      <section className="flex gap-4 justify-between items-center">
+        <div className="pr-0 sm:pr-10 md:pr-20">
+          <h1 className="text-lg font-bold">{data[0].value}</h1>
+          <p className="font-mono">{data[1].value}</p>
+          <p className='flex items-center'>
+            <Link
+              href={data[2].value}
               target="_blank"
-              title={name}
-              Icon={Icon}
-            />
-          ))}
+              className="flex gap-1 items-center"
+            >
+              <Globe size={14} />
+              {data[2].value}
+            </Link>
+
+            <Dot />
+
+            <span>{data[4].value}</span>
+          </p>
+          <div className="flex gap-1 items-center mt-3">
+            {social.map(({ id, platform, link }) => {
+              const Icon = iconMap[platform];
+
+              if (!Icon) return null;
+
+              return (
+                <LinkIcon
+                  key={id ?? platform}
+                  link={link}
+                  target="_blank"
+                  title={platform}
+                  Icon={Icon}
+                />
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <div className="rounded-md">
-        <Image
-          src="/images/nid.jpeg"
-          width={170}
-          height={170}
-          alt="Avatar"
-          className="rounded-md"
-        />
-      </div>
-    </section>
+        <div className="rounded-md">
+          <Image
+            src="/images/nid.jpeg"
+            width={170}
+            height={170}
+            alt="Avatar"
+            className="rounded-md"
+          />
+        </div>
+      </section>
+      <section>
+        <h2 className="title">About</h2>
+        <p>{data[5].value}</p>
+      </section>
+    </>
   );
 };

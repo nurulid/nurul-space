@@ -59,3 +59,8 @@ export function getFirstCharacter(names) {
 export function getCurrentYear() {
   return new Date().getFullYear();
 }
+
+// Sort list by id descending
+export function sortByIdDesc(items = []) {
+  return [...items].sort((a, b) => Number(b.id) - Number(a.id));
+}

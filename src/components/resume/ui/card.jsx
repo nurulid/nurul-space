@@ -11,6 +11,14 @@ export const Card = ({
   status,
   description,
 }) => {
+  let descItems = [];
+
+  try {
+    descItems = Array.isArray(description) ? description : JSON.parse(description);
+  } catch {
+    descItems = [];
+  }
+
   return (
     <div>
       <div className="flex justify-between items-start gap-4">
@@ -31,9 +39,10 @@ export const Card = ({
       <p className="!text-sm">
         {role} {status && <small> - {status}</small>}
       </p>
+
       <ul>
-        {description.map((item, index) => (
-          <li key={index} >{item}</li>
+        {descItems.map((item, i) => (
+          <li key={i}>{item}</li>
         ))}
       </ul>
     </div>
