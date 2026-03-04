@@ -1,4 +1,4 @@
-import React, { cache } from 'react';
+import React from 'react';
 import { Intro } from '@/components/resume/intro';
 import { Work } from '@/components/resume/work';
 import { Skills } from '@/components/resume/skills';
@@ -7,10 +7,10 @@ import { Education } from '@/components/resume/education';
 import { Github } from 'lucide-react';
 import { getResumeData } from '@/lib/fetch-resume';
 
-const getCv = cache(getResumeData);
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata() {
-  const cv = await getCv();
+  const cv = await getResumeData();
 
   return {
     title: "CV / Resume | Nurul's website",
@@ -21,7 +21,7 @@ export async function generateMetadata() {
 }
 
 export default async function Page() {
-  const cv = await getCv();
+  const cv = await getResumeData();
 
   return (
     <>

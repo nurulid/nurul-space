@@ -1,5 +1,6 @@
 'use client';
 
+import { sortByIdDesc } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
@@ -9,10 +10,8 @@ export const SectionList = ({
   isFullWidth,
   showHoverPreview = false,
 }) => {
-  const sortedData = useMemo(
-    () => [...(projects ?? [])].sort((a, b) => Number(b.id) - Number(a.id)),
-    [projects],
-  );
+  const sortedData = useMemo(() => sortByIdDesc(projects ?? []), [projects]);
+
   const [hoveredThumbnail, setHoveredThumbnail] = useState(null);
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
   const clearPreviewTimeoutRef = useRef(null);
@@ -29,16 +28,7 @@ export const SectionList = ({
     <div className={`w-full ${showHoverPreview ? 'md:flex md:gap-8' : ''}`}>
       <ul className={`w-full ${isFullWidth ? '' : 'md:w-1/2'}`}>
         {sortedData.map(
-          ({
-            id,
-            title,
-            link,
-            url,
-            description,
-            tag,
-            created,
-            thumbnail,
-          }) => {
+          ({ id, title, link, url, description, tag, created, thumbnail }) => {
             return (
               <li
                 key={id}

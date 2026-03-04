@@ -1,20 +1,15 @@
 import Link from 'next/link';
-import { promises as fs } from 'fs';
-
 import { UI_EXPERIMENTS } from '@/data/ui-experiments';
 import { AllBadges } from '@/components/ui-experiments/allBadges';
 import { Search } from '@/components/ui-experiments/search';
 import { ShareDialog } from '@/components/ui-experiments/shareDialog';
 import { UiBox } from '@/components/ui-experiments/uiBox';
 import { SectionList } from '@/components/ui/SectionList';
+import { getResumeData } from '@/lib/fetch-resume';
 
 export default async function Page() {
-  const file = await fs.readFile(
-    process.cwd() + '/src/data/portfolio.json',
-    'utf8',
-  );
-  const data = JSON.parse(file);
-  const projects = data.portfolio;
+  const cv = await getResumeData();
+  const projects = cv.portfolio;
   const uiExperiments = UI_EXPERIMENTS;
 
   return (
