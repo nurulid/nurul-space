@@ -31,7 +31,7 @@ const contact = [
     icon: Linkedin,
     email: false,
   },
-  { title: 'Mail', url: 'call.nurulid@gmail.com', icon: Mail, email: true },
+  { title: 'Mail', url: 'mailto:call.nurulid@gmail.com', icon: Mail, email: true },
 ];
 
 export const Intro = () => {

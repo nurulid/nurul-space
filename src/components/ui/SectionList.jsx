@@ -1,6 +1,7 @@
 'use client';
 
 import { sortByIdDesc } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
@@ -32,7 +33,7 @@ export const SectionList = ({
             return (
               <li
                 key={id}
-                className="py-2 border-b border-dashed border-border hover:border-solid space-y-1 group relative transition-all"
+                className="py-2 border-b border-dashed border-border hover:border-solid hover:border-purple-200 space-y-1 group relative transition-all"
                 onMouseEnter={() => {
                   if (!showHoverPreview) return;
                   if (clearPreviewTimeoutRef.current) {
@@ -49,14 +50,18 @@ export const SectionList = ({
                   }, 220);
                 }}
               >
-                <p className="inline-block group-hover:text-brand">
+                <p className="inline-block group-hover:text-brand group-hover:text-purple-600">
                   {title}{' '}
+                  {!tag && (
+                    <ArrowRight className="inline-block size-4 opacity-0 -translate-x-1 transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100 ml-2" />
+                  )}
                   {tag && (
                     <>
                       -{' '}
                       <span className="px-2 py-1 text-xs border rounded text-muted bg-surfaceMuted">
                         {tag}
                       </span>
+                      <ArrowRight className="inline-block size-4 opacity-0 -translate-x-1 transition-all duration-200 ease-out group-hover:translate-x-0 group-hover:opacity-100 ml-2" />
                     </>
                   )}
                 </p>
