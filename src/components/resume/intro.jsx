@@ -21,7 +21,7 @@ export const Intro = ({ data, social }) => {
           <p className="font-mono">{data[1].value}</p>
           <p className='flex items-center'>
             <Link
-              href={data[2].value}
+              href={data[3].value}
               target="_blank"
               className="flex gap-1 items-center"
             >
